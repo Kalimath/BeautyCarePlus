@@ -1,7 +1,6 @@
 package ui.controller;
 
 import domain.model.cure.ExcellPlusCure;
-import domain.model.personal.Client;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +12,7 @@ public class ShowClient extends RequestHandler {
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int clientId = (int) request.getSession().getAttribute("clientId");
         ExcellPlusCure cure = getDatabaseService().getExcellPlusCureFromClientWithId(clientId);
-        request.setAttribute("clientsCurrentCure", cure);
+        request.getSession().setAttribute("clientsCurrentCure", cure);
         request.getRequestDispatcher("clientView.jsp").forward(request,response);
     }
 }

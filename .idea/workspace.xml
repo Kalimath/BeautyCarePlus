@@ -6,7 +6,26 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4458b4d3-da1c-41cf-93a2-cfd5a5de3548" name="Default Changelist" comment="" />
+    <list default="true" id="4458b4d3-da1c-41cf-93a2-cfd5a5de3548" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddTurnsToCureExcellPlus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddTurnsToCureExcellPlus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/CreateExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/CreateExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ShowClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ShowClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/clientView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/clientView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/META-INF/BC-Support.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddTurnsToCureExcellPlus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddTurnsToCureExcellPlus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/CreateExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/CreateExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ShowClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ShowClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BC-Support/TestFormClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BC-Support/TestFormClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/excellPlusCure/ExcellPlusCureDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/excellPlusCure/ExcellPlusCureDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/AddTurnsToCureExcellPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/AddTurnsToCureExcellPlus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/CreateExcellPlusCure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/CreateExcellPlusCure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/ShowClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/ShowClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/TestFormClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/TestFormClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/clientView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/clientView.jsp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +92,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -83,9 +105,10 @@
   <component name="ProjectId" id="1PV5zoqrwUIiaZ5VhypQorZtgjI" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Fase 1/Webontwikkeling2/JUnit4/hamcrest-core-1.3.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -275,55 +298,52 @@
       <workItem from="1570282475194" duration="1275000" />
       <workItem from="1570531697346" duration="24188000" />
       <workItem from="1571662640343" duration="2045000" />
-      <workItem from="1571748708979" duration="12579000" />
+      <workItem from="1571748708979" duration="15271000" />
+      <workItem from="1571769986074" duration="3582000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/testing/TestFormClient.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ui/controller/AddTurnsToCureExcellPlus.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ui/controller/AddTurnsToCureExcellPlus.java</url>
           <line>13</line>
-          <option name="timeStamp" value="9" />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ui/controller/AddClient.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ui/controller/AddClient.java</url>
-          <line>116</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/domain/model/DatabaseService.java</url>
-          <line>113</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/testing/TestFormClient.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ui/controller/UserLogIn.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/domain/db/client/ClientDbSql.java</url>
-          <line>127</line>
-          <properties class="domain.db.client.ClientDbSql" method="getClientId">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/src/ui/controller/CreateExcellPlusCure.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BeautyCarePlus$Tomcat_9_0_5.ic" NAME="Tomcat 9.0.5 Coverage Results" MODIFIED="1571771449207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -1,5 +1,6 @@
-import domain.model.DatabaseService;
-import org.junit.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,12 +35,8 @@ public class TestFormClient {
         phoneForm.clear();
 
         //clear text in birthday elements
-        WebElement dayForm = driver.findElement(By.id("day"));
-        WebElement monthForm = driver.findElement(By.id("month"));
-        WebElement yearForm = driver.findElement(By.id("year"));
-        dayForm.clear();
-        monthForm.clear();
-        yearForm.clear();
+        WebElement birthdayForm = driver.findElement(By.id("birthday"));
+        birthdayForm.clear();
 
         //clear text in address elements
         WebElement placeForm = driver.findElement(By.id("place"));

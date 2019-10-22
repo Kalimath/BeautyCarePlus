@@ -12,6 +12,9 @@ public class AddTurnsToCureExcellPlus extends RequestHandler {
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int clientId = (int) request.getSession().getAttribute("clientId");
         ExcellPlusCure cure = getDatabaseService().getExcellPlusCureFromClientWithId(clientId);
+        //if(cure==null) cure = new ExcellPlusCure();
+        System.out.println("turns = "+request.getParameter("turns"));
+        cure.addTurnsToCure(Integer.parseInt(request.getParameter("turns")));
         getDatabaseService().updateExcellPlusCure(cure);
 
         if (cure.getTurnsLeft() == 1 || cure.getTurnsLeft() == 12 || cure.getTurnsLeft() == 20) {

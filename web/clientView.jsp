@@ -47,60 +47,63 @@
             </table>
 
         </article>
-        <c:choose>
-        <c:when test="${clientsCurrentCure!=null}">
         <div>
             <c:choose>
-                <c:when test="${clientsCurrentCure.turnsLeft>0}">
-                    <article class="cure">
-                        <h2>Behandeling starten</h2>
-                        <c:if test="${errorStart!=null}">
-                            <p class="error-message"> ${errorStart}</p>
-                        </c:if>
-                        <form method="post" action="Controller?command=StartCureExcellPlus">
-                            <input type="submit" value=" Starten " class="button">
+                <c:when test="${clientsCurrentCure!=null}">
+
+                    <article>
+                        <h2>Beurten resterend</h2>
+                        <h3>${clientsCurrentCure.turnsLeft}</h3>
+                    </article>
+                    <article>
+                        <h2>Beurten toevoegen</h2>
+                        <form method="post" action="Controller?command=AddTurnsToCureExcellPlus">
+
+                            <input type="radio" name="turns" value="1" id="radio1" class="form-radio" checked>
+                            <label for="radio1">testbeurt</label>
+
+                            <input type="radio" name="turns" value="12" id="radio2" class="form-radio">
+                            <label for="radio2">12 beurten</label>
+
+                            <input type="radio" name="turns" value="20" id="radio3" class="form-radio">
+                            <label for="radio3">20 beurten</label>
+
+
+                            <p>
+                                <input type="submit" value="Voeg toe" class="button">
+                            </p>
                         </form>
                     </article>
+                    <c:choose>
+                        <c:when test="${clientsCurrentCure.turnsLeft>0}">
+                            <article class="cure">
+                                <h2>Behandeling starten</h2>
+                                <c:if test="${errorStart!=null}">
+                                    <p class="error-message"> ${errorStart}</p>
+                                </c:if>
+                                <form method="post" action="Controller?command=StartCureExcellPlus">
+                                    <input type="submit" value=" Starten " class="button">
+                                </form>
+                            </article>
+                        </c:when>
+                    </c:choose>
+
+                    <c:if test="${clientsCurrentCure.latestCheckup!=null}">
+                        <article>
+                            <h2>Laatste opmeting</h2>
+                            <h3>${clientsCurrentCure.latestCheckup}</h3>
+                        </article>
+                    </c:if>
                 </c:when>
+                <c:otherwise>
+                    <article>
+                        <a href="Controller?command=CreateExcellPlusCure"><h2>Creër kuur</h2></a>
+                    </article>
+                </c:otherwise>
             </c:choose>
-            <article>
-                <h2>Beurten resterend</h2>
-                <h3>${clientsCurrentCure.turnsLeft}</h3>
-            </article>
-            <c:if test="${clientsCurrentCure.latestCheckup!=null}">
-                <article>
-                    <h2>Laatste opmeting</h2>
-                    <h3>${clientsCurrentCure.latestCheckup}</h3>
-                </article>
-            </c:if>
-            </c:when>
-            <c:otherwise>
-                <article>
-                    <a href="Controller?command=CreateExcellPlusCure"><h2>Creër kuur</h2></a>
-                </article>
-            </c:otherwise>
-            </c:choose>
-            <article>
-                <h2>Beurten toevoegen</h2>
-                <form method="post" action="Controller?command=AddTurnsToCureExcellPlus">
 
-                    <input type="radio" name="turns" value="1" id="radio1" class="form-radio" checked>
-                    <label for="radio1">testbeurt</label>
-
-                    <input type="radio" name="turns" value="12" id="radio2" class="form-radio">
-                    <label for="radio2">12 beurten</label>
-
-                    <input type="radio" name="turns" value="20" id="radio3" class="form-radio">
-                    <label for="radio3">20 beurten</label>
-
-
-                    <p>
-                        <input type="submit" value="Voeg toe" class="button">
-                    </p>
-                </form>
-            </article>
         </div>
-        </div>
+    </div>
 </main>
 </body>
 </html>

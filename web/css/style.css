@@ -1,0 +1,692 @@
+header nav {
+    clear: both;
+    padding-left: 5px;
+}
+
+header nav li ul {
+    justify-content: space-between;
+}
+
+.hc {
+    padding: 5px;
+    background-color: #B38D59;
+    height: 100%;
+
+}
+.hc p{
+    padding: 8px;
+    font-family: Bellefair;
+    font-size: 140%;
+
+}
+
+.hc .navTitle{
+    border-bottom: solid 2px black;
+}
+
+body {
+
+    font-size: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+header nav a {
+    /*font-family: Bellefair;
+    color: white;
+    display: block;
+    padding: 8px;
+    text-align: center;
+    font-size: 120%;*/
+
+    font-family: Bellefair;
+    color: black;
+    display: block;
+    padding: 8px;
+    text-align: center;
+    font-size: 120%;
+    background-color: #B38D59;
+}
+
+header nav a:hover {
+    /*transition: 0.4s;
+    background-color: white;
+    color: black;
+    border-color: white;*/
+
+    transition: 0.4s;
+    background-color: #666666;
+    color: white;
+}
+
+
+
+header {
+
+    height: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-content: center;
+    width: 25%;
+}
+
+header h1 {
+    font-size: 440%;
+    padding: 25px;
+    font-family: 'Poiret One';
+    text-align: center;
+
+    
+}
+
+header p{
+    color: #cccccc;
+}
+
+header .slog {
+    margin-bottom: 15px;
+    font-family: great vibes;
+    font-size: 180%;
+    padding-top: 8px;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p a:hover{
+    text-decoration: underline;
+}
+h3 a:hover{
+    text-decoration: underline;
+}
+
+main .subLink {
+    color: #B38D59;
+    text-decoration: underline;
+}
+
+main .subLink:hover {
+
+    color: #706259;
+}
+
+a:focus {
+    outline: 2px ridge cornflowerblue;
+}
+
+
+
+main {
+    width: 100%;
+    background: url("../images/80932 BEATRIZ FDEZ 6.jpg") no-repeat center;
+    background-size: cover;
+    font-size: 120%;
+    padding: 15px;
+    color: #706259;
+    text-align: center;
+    vertical-align: center;
+
+}
+
+.error-message{
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    border-radius: 10em;
+    padding-bottom: 10px;
+
+}
+
+.info_container{
+    /*background-color: #999999;
+    padding: 20px;
+    max-width: 300px*/
+}
+
+.form-radio
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
+}
+.form-radio:checked::before
+{
+    position: absolute;
+    font: 13px/1 'Open Sans', sans-serif;
+    left: 11px;
+    top: 7px;
+    content: '\02143';
+    transform: rotate(40deg);
+}
+.form-radio:hover
+{
+    background-color: #f7f7f7;
+}
+.form-radio:checked
+{
+    background-color: #f1f1f1;
+}
+label
+{
+    font: 15px/1.7 'Open Sans', sans-serif;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
+}
+
+select{
+    border-color: #B38D59;
+    background-color: #FFFFFF;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+/* zebra strepen
+tr:nth-of-type(2n+1) {
+    background: #eee;
+}*/
+
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+
+}
+
+td, th {
+    padding: 6px;
+    border: 1px solid #eee;
+
+}
+
+td{
+    text-align: left;
+}
+
+main h2 {
+    padding: 10px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 250%;
+    font-family: 'Montserrat Alternates';
+    /*color: white;*/
+}
+
+main article {
+    padding: 20px;
+    background: rgb(204,204,204, .8);
+    /*background: rgb(223,11,85, .6);*/
+
+margin: 10px;
+border-style: solid;
+border-width: 5px;
+border-color: #ccc;
+
+}
+
+main article ul.summary {
+padding-bottom: 30px;
+font-family: inherit;
+border: 2px;
+color: #B38D59;
+align-items: center;
+
+}
+
+
+
+main article ul.summary li {
+line-height: 2;
+font-size: inherit;
+padding-left: 5px;
+text-align: left;
+list-style: disc;
+list-style-position: outside;
+
+}
+
+li .noMark {
+list-style-type: lower-roman;
+}
+
+main article p {
+font-family: Bellefair;
+font-size: 120%;
+line-height: 1.4;
+padding: 10px 0px 30px 0px;
+}
+
+.imagenarrow {
+padding-top: 10px;
+padding-bottom: 10px;
+max-width: 400px;
+width: 100%;
+margin: auto;
+height: auto;
+
+}
+
+.imageround{
+padding-top: 10px;
+padding-bottom: 10px;
+max-width: 400px;
+max-height: 400px;
+width: 100%;
+margin: auto;
+height: 100%;
+border-radius: 50%;
+
+}
+
+.imageround:after{
+display: block;
+}
+
+.imagewide{
+padding-top: 20px;
+padding-bottom: 10px;
+max-width: 700px;
+width: 100%;
+margin: auto;
+height: auto;
+}
+
+.imagelong{
+padding-top: 10px;
+padding-bottom: 10px;
+max-width: 300px;
+max-height: 500px;
+width: 100%;
+margin: auto;
+height: auto;
+}
+
+main .centered {
+width: 70%;
+height: 400px;
+}
+
+.videoframe {
+padding-top: 10px;
+padding-bottom: 10px;
+max-width: 500px;
+width: 100%;
+margin: auto;
+min-height: 300px;
+max-height: 400px;
+}
+
+.frame {
+padding-top: 10px;
+padding-bottom: 10px;
+width: 70%;
+height: 100%;
+max-height: 395px;
+width: 100%;
+max-width: 500px;
+
+}
+
+h3 {
+display: block;
+font-size: 190%;
+font-weight: bold;
+color: #B38D59;
+padding: 15px 0px 18px 0px;
+}
+
+em {
+color: #B38D59;
+font-size: 130%;
+}
+
+b {
+text-decoration: underline;
+}
+
+.black {
+color: black;
+font-size: 5vw;
+}
+
+.quote > p {
+padding-top: 5px;
+font-family: handlee;
+font-size: 140%
+}
+
+.ac{
+    opacity:0.6;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+
+}
+
+/*.article-container article{
+    max-width: 50%;
+}*/
+
+.grid-container {
+    height: auto;
+    font-family: Bellefair;
+}
+
+.alertContainer{
+    height: auto;
+    display: grid;
+    grid-template-columns: 40% 50%;
+
+}
+
+.alertContainer div{
+    padding-left: 30px;
+}
+
+.alertIcon {
+    text-align: right;
+    vertical-align: center;
+
+}
+
+/*---FORM STYLES---*/
+
+input, select, textarea {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+
+    box-sizing: border-box;
+}
+
+/*input[type=submit] {
+    margin: 2%;
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    width: 20%;
+    box-sizing: border-box;
+}*/
+
+/*input[type=submit]:hover {
+    background-color: #45a049;
+}*/
+input[type=submit] {
+    color: #B38D59;
+    border-radius: 10em;
+    font-family: Bellefair;
+    font-size: 130%;
+    margin: 20px;
+    padding: 5px 10px 5px 10px;
+    background: rgb(204,204,204, .9);
+    border-color: #B38D59;
+    border-style: solid;
+    width: auto;
+}
+
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+.col-25 {
+    float: left;
+    text-align: right;
+    width: 35%;
+    margin-top: 6px;
+
+    box-sizing: border-box;
+}
+
+.col-75 {
+    float: left;
+    width: 65%;
+    margin-top: 6px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.col-75 textarea{
+    width: 70%;
+}
+
+.checkboxFormItem{
+    width: auto;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+/* Clear floats after the columns
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}*/
+
+/*---FORM STYLES---*/
+
+/*---AUTOCOMPLETE STYLES---*/
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+    background-color: #e9e9e9;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+
+/*---AUTOCOMPLETE STYLES---*/
+
+.textarea {
+    width: 20%;
+    height: 75px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: vertical;
+}
+
+
+.gallery-container:hover {
+    border: 2px solid #706259;
+    transition: 0.4s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.link {
+    color: #B38D59;
+
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+input[type=submit]:hover{
+    color: #706259;
+    border-color: #706259;
+}
+
+.search{
+    text-align: center;
+    background-image: url("/images/search.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+footer {
+    background-color: black;
+    height: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+
+.footer{
+    color: #999999;
+    font-family: Calibri;
+    width: 15%;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 30px;
+    bottom: 0;
+    padding: 30px;
+    text-align: center;
+
+}
+
+.copyright {
+    padding: 8px;
+    font-size: 90%;
+    bottom: 0;
+}
+
+/*Queries*/
+
+@media only screen and (max-device-width: 1366px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main article {
+        font-size: 100%;
+    }
+    main article ul.summary li {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+
+@media screen and (min-width: 801px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 20% 50% 20%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    main article {
+        font-size: 90%;
+    }
+    main article ul.summary li {
+        margin-left: 40%;
+
+    }
+
+    .article-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+
+    }
+
+    .article-container div{
+        align-self: center;
+    }
+
+}
+
+.containerHeader {
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 1fr;
+
+}
+
+.containerHeader div,p,h1,h2,h3{
+
+    align-self: center;
+}
+

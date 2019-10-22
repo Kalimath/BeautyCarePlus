@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="web3">
+    <output-path>$PROJECT_DIR$/out/artifacts/web3</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jstl-1.2" />
+          <element id="library" level="project" name="mysql-connector" />
+          <element id="library" level="project" name="junit-4.13-beta-3" />
+          <element id="library" level="project" name="hamcrest-core-1.3" />
+        </element>
+        <element id="directory" name="classes">
+          <element id="module-output" name="BC-Support" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="BC-Support/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://81.82.179.4:3306/klanten</param-value>
+    </context-param>
+    <!--    voor als het op de server staat gebruik onderste url param-->
+    <!--<context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/klanten</param-value>
+    </context-param>-->
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>kalimath</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>bxSe8685</param-value>
+    </context-param>
+    <context-param>
+        <param-name>currentSchema</param-name>
+        <param-value>klanten</param-value>
+    </context-param>
+    <!--<context-param>
+        <param-name>ssl</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sslfactory</param-name>
+        <param-value>org.postgresql.ssl.NonValidatingFactory</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sslmode</param-name>
+        <param-value>prefer</param-value>
+    </context-param>-->
+    
+    <error-page>
+        <location>/error.jsp</location>
+    </error-page>
+</web-app>

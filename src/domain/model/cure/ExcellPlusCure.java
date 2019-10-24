@@ -1,25 +1,49 @@
 package domain.model.cure;
 
-import domain.model.measures.CheckUp;
-import domain.model.personal.Client;
+import domain.model.measures.Checkup;
+import domain.model.visit.Visit;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.ZoneId;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class ExcellPlusCure implements Serializable {
+    private Date cureStart;
     private int turnsLeft;
-    private List<List<Date>> pastCures;
-    private List<LocalDate> visits;
-    private List<CheckUp> checkUps;
+    private List<Visit> visits;
 
     public ExcellPlusCure() {
-        checkUps = new ArrayList<>();
         visits = new ArrayList<>();
-        pastCures = new ArrayList<>();
         turnsLeft = 0;
+        setCureStart();
+    }
+
+    public ExcellPlusCure(Date cureStart, int turnsLeft){
+        setCureStart(cureStart);
+        setTurnsLeft(turnsLeft);
+    }
+
+    public void setVisits(List<Visit> visits) {
+        this.visits = visits;
+    }
+
+    private void setTurnsLeft(int turnsLeft) {
+        this.turnsLeft = turnsLeft;
+    }
+
+    public Date getCureStart() {
+        return cureStart;
+    }
+
+    public void setCureStart(Date cureStart) {
+        this.cureStart = cureStart;
+    }
+
+    public void setCureStart() {
+        this.cureStart = new Date(System.currentTimeMillis());
     }
 
     public void addTurnsToCure(int turns) {
@@ -29,47 +53,48 @@ public class ExcellPlusCure implements Serializable {
     }
 
     public void startCureOneTime(){
-        visits.add(LocalDate.now());
+        Visit visit = new Visit();
+        visits.add(visit);
         turnsLeft--;
     }
 
-    public void doCheckUp(double weight, double length){
-        checkUps.add(new CheckUp(weight,length));
+    /*public void doCheckUp(double weight, double length){
+        checkups.add(new Checkup(weight,length));
+    }*/
+
+    public List<Checkup> getAllCheckUps(){
+        List<Checkup> checkups = new ArrayList<>();
+        for(Visit v : visits) checkups.add(v.getCheckup());
+        return checkups;
     }
 
-    public List<CheckUp> getAllCheckUps(){
-        return checkUps;
-    }
-
-    public CheckUp getLatestCheckup(){
-        CheckUp latest = null;
-        if(this.getAllCheckUps()==null||this.getAllCheckUps().isEmpty()) {
+    public Visit getLatestVisitWithCheckup(){
+        Visit latestVisitWithCheckup = null;
+        List<Checkup> checkups = this.getAllCheckUps();
+        if(checkups==null||checkups.isEmpty()) {
             return null;
         }else{
-        for(CheckUp c : getAllCheckUps()){
-            if(latest==null||c.getAppointment().isAfter(latest.getAppointment())) {
-                latest = c;
+            for (Visit v: visits) {
+                if(latestVisitWithCheckup==null||v.getMoment().after(latestVisitWithCheckup.getMoment())){
+                    latestVisitWithCheckup = v;
+                }
             }
-        }}
-        return latest;
+        }
+        return latestVisitWithCheckup;
+    }
+
+    public Checkup getLatestCheckup(){
+        return getLatestVisitWithCheckup().getCheckup();
     }
 
     public int getTurnsLeft() {
         return turnsLeft;
     }
 
-    public int getTotalTurnsPast(){
-        int tp = 0;
-       for(List<Date> visits: pastCures){
-           tp = tp + visits.size();
-       }
-       return tp;
-    }
-
-    private boolean checkupTooLongAgo(){
+    public boolean checkupTooLongAgo(){
             Date current = new Date(System.currentTimeMillis());
             LocalDate today =  LocalDate.now();
-            LocalDate latest = getLatestCheckup().getAppointment();
+            LocalDate latest = getLatestVisitWithCheckup().getMoment().toLocalDateTime().toLocalDate();
             Period between = Period.between(today,latest);
             if(between.getMonths()>=2) {
                 return true;
@@ -78,18 +103,4 @@ public class ExcellPlusCure implements Serializable {
             }
         }
 
-    private int getInCureNow(){
-        int cures = pastCures.size();
-        if(visits.size()>1) cures++;
-        return cures;
-    }
-
-    public boolean isCheckupNeeded() {
-        boolean needed = false;
-        if((checkUps.size()>=0&&this.getInCureNow()>=1&&(turnsLeft==12||turnsLeft==4)) ||
-           ((this.getLatestCheckup()==null||this.checkupTooLongAgo())&&(turnsLeft>=12))){
-            needed = true;
-        }
-        return needed;
-    }
 }

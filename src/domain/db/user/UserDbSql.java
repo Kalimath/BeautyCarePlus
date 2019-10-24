@@ -44,7 +44,11 @@ public class UserDbSql implements UserDb {
 
     @Override
     public void update(User newUser) {
+        try {
+            throw new InstantiationException("updating user to database failed: method is not implemented yet");
+        } catch (Exception e) {
 
+        }
     }
 
     @Override

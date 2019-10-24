@@ -7,4 +7,10 @@ import java.util.List;
 public interface ExcellPlusCureDb {
     List<ExcellPlusCure> getAllFromClient(int clientId);
     void add(int clientId, ExcellPlusCure cure);
+    void delete(int clientId);
+    void update(ExcellPlusCure cure, int clientId);
+    ExcellPlusCure get(int clientId);
+    List<ExcellPlusCure> getAll();
+    int getCurrentExcellPlusCureId(int clientId);
+    int getPastCures(int clientId);
 }

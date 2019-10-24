@@ -17,6 +17,7 @@ public class CreateExcellPlusCure extends RequestHandler {
             ExcellPlusCure newCure = new ExcellPlusCure();
             //Client client = (Client)request.getSession().getAttribute("client");
             getDatabaseService().addExcellPlusCure(clientId, newCure);
+            request.getSession().setAttribute("cureId",getDatabaseService().getCurrentExcellPlusCureId());
             request.getSession().setAttribute("clientsCurrentCure", newCure);
             request.getRequestDispatcher("clientView.jsp").forward(request,response);
         }

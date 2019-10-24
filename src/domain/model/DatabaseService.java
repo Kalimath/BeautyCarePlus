@@ -1,18 +1,25 @@
 package domain.model;
 
 import domain.db.DbException;
-import domain.db.ObjectDb;
+import domain.db.address.AddressDb;
 import domain.db.address.AddressDbSql;
+import domain.db.client.ClientDb;
 import domain.db.client.ClientDbSql;
+import domain.db.error.ErrorDb;
 import domain.db.error.ErrorDbSql;
+import domain.db.excellPlusCure.ExcellPlusCureDb;
 import domain.db.excellPlusCure.ExcellPlusCureDbSql;
-import domain.db.heights.HeightsDbSql;
+import domain.db.measures.heights.HeightsDb;
+import domain.db.measures.heights.HeightsDbSql;
+import domain.db.sport.SportDb;
 import domain.db.sport.SportDbSql;
+import domain.db.user.UserDb;
 import domain.db.user.UserDbSql;
 import domain.model.cure.ExcellPlusCure;
 import domain.model.debug.DomainException;
 import domain.model.debug.Error;
-import domain.model.measures.CheckUp;
+import domain.model.measures.Checkup;
+import domain.model.measures.Heights;
 import domain.model.personal.Address;
 import domain.model.personal.Client;
 
@@ -23,11 +30,13 @@ import java.util.Properties;
 
 public class DatabaseService {
     private Properties properties;
-    private ObjectDb heightsDb, errorDb, sportDb;
-    private ClientDbSql clientDb;
-    private UserDbSql userDb;
-    private ExcellPlusCureDbSql excellPlusCureDb;
-    private AddressDbSql addressDb;
+    private HeightsDb heightsDb;
+    private ErrorDb errorDb;
+    private SportDb sportDb;
+    private ClientDb clientDb;
+    private UserDb userDb;
+    private ExcellPlusCureDb excellPlusCureDb;
+    private AddressDb addressDb;
 
     public DatabaseService(Properties p) {
         setProperties(p);
@@ -41,7 +50,7 @@ public class DatabaseService {
     }
 
     //CHECKUP METHODS
-    public List<CheckUp> getAllClientsCheckups(String name) {
+    public List<Checkup> getAllClientsCheckups(String name) {
         return null;
     }
 
@@ -98,8 +107,7 @@ public class DatabaseService {
     }
 
     public void addClient(Client client) {
-        Object clientO = client;
-        clientDb.add(clientO);
+        clientDb.add(client);
     }
 
     public void deleteClient(String name) {
@@ -121,22 +129,7 @@ public class DatabaseService {
     }
 
     public List<Client> getAllClients() {
-        List<Object> clientsO = clientDb.getAll();
-        List<Client> clients = new ArrayList<>();
-        try {
-            for (Object o : clientsO) {
-                Client user = null;
-                if (o instanceof Client) {
-                    clients.add((Client) o);
-                } else {
-                    throw new DbException("retrieving clients from database failed: object ain't an instance of client," + this.getClass().getSimpleName());
-                }
-            }
-        } catch (Exception e) {
-            errorDb.add(new Error(e.getMessage()));
-            e.printStackTrace();
-        }
-        return clients;
+        return clientDb.getAll();
     }
 
     // EXCELLPLUSCURE METHODS
@@ -149,10 +142,10 @@ public class DatabaseService {
         }
     }
 
-    public void updateExcellPlusCure(ExcellPlusCure cure) {
+    public void updateExcellPlusCure(ExcellPlusCure cure, int clientId) {
         try {
 
-            this.excellPlusCureDb.update(cure);
+            this.excellPlusCureDb.update(cure,clientId);
         } catch (Exception e) {
             errorDb.add(new Error(e.getMessage()));
             throw new DomainException("No cure found for this client");
@@ -169,14 +162,14 @@ public class DatabaseService {
     }
 
     public void addExcellPlusCure(int clientId, ExcellPlusCure cure) {
-        excellPlusCureDb.add(clientId,cure);
+        excellPlusCureDb.add(clientId, cure);
     }
 
     //ERROR METHODS
     public List<Error> getAllErrors() {
         List<Error> errors = new ArrayList<>();
-        for(Object o : errorDb.getAll()){
-            if(o instanceof Error){
+        for (Object o : errorDb.getAll()) {
+            if (o instanceof Error) {
                 errors.add((Error) o);
             }
         }
@@ -184,8 +177,8 @@ public class DatabaseService {
     }
 
 
-    public void addAddress(int clientId,Address tempAddress) {
-        addressDb.add(clientId,tempAddress);
+    public void addAddress(int clientId, Address tempAddress) {
+        addressDb.add(clientId, tempAddress);
     }
 
     public Address getAddress(int clientId) {
@@ -197,12 +190,25 @@ public class DatabaseService {
         }
     }
 
-    public User getUser(String email){
-        try{
+    public User getUser(String email) {
+        try {
             return userDb.get(email);
         } catch (Exception e) {
             errorDb.add(new Error(e.getMessage()));
-            throw new DomainException("No user found with email= \""+email+'\"');
+            throw new DomainException("No user found with email= \"" + email + '\"');
         }
+    }
+
+    public Heights getHeightsFromClient(int clientId) {
+        try {
+            throw new InstantiationException("getting heights of client from database failed: method is not implemented yet, "+ this.getClass().getSimpleName());
+        } catch (Exception e) {
+
+        }
+        return null;
+    }
+
+    public int getCurrentExcellPlusCureId(int clientId) {
+        return excellPlusCureDb.getCurrentExcellPlusCureId(clientId);
     }
 }

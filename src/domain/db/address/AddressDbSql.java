@@ -3,11 +3,9 @@ package domain.db.address;
 import domain.db.DbException;
 import domain.db.ObjectDb;
 import domain.model.personal.Address;
-import domain.observer.Observer;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
@@ -18,17 +16,7 @@ public class AddressDbSql extends ObjectDb implements AddressDb {
     }
 
     @Override
-    public void add(Object o) {
-
-    }
-
-    @Override
-    public void update(Object o) {
-
-    }
-
-    @Override
-    public void add(int clientId,Address address) {
+    public void add(int clientId, Address address) {
         try(Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())){
 
             int adresId = getNewRandomId();
@@ -54,14 +42,9 @@ public class AddressDbSql extends ObjectDb implements AddressDb {
     }
 
 
-    public void update(int clientId,Object addressO) {
+    @Override
+    public void update(int clientId, Address address) {
         try(Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())){
-            Address address;
-            if (addressO instanceof Address) {
-                address = (Address) addressO;
-            } else {
-                throw new InstantiationException("adding address to database failed: object ain't an instance of address"+this.getClass().getSimpleName());
-            }
             int adresId = getNewRandomId();
             String place = address.getPlace();
             String street = address.getStreet();
@@ -85,9 +68,14 @@ public class AddressDbSql extends ObjectDb implements AddressDb {
 
     @Override
     public void delete(int id) {
+        try {
+            throw new InstantiationException("deleting address from database failed: method is not implemented yet");
+        } catch (Exception e) {
 
+        }
     }
 
+    @Override
     public Address get(int clientId){
         Address res = null;
         try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties());
@@ -111,8 +99,8 @@ public class AddressDbSql extends ObjectDb implements AddressDb {
     }
 
     @Override
-    public List<Object> getAll() {
-        List<Object> objects = new ArrayList<>();
+    public List<Address> getAll() {
+        List<Address> addresses = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties());
              Statement statement = connection.createStatement()){
             ResultSet result = statement.executeQuery("SELECT * FROM adres");
@@ -122,14 +110,14 @@ public class AddressDbSql extends ObjectDb implements AddressDb {
                 String street = result.getString("straat");
                 int zip = result.getInt("zip");
                 String housenr = result.getString("huisnrenbus");
-                objects.add(new Address(zip,place,housenr,street));
+                addresses.add(new Address(zip,place,housenr,street));
             }
         }catch (Exception se){
             se.printStackTrace();
             throw new DbException(se.getMessage());
 
         }
-        return null;
+        return addresses;
     }
 
 }

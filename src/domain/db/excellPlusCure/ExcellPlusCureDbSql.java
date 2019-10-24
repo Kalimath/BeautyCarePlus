@@ -2,45 +2,128 @@ package domain.db.excellPlusCure;
 
 import domain.db.DbException;
 import domain.db.ObjectDb;
+import domain.db.Visit.VisitDb;
+import domain.db.Visit.VisitDbSql;
 import domain.model.cure.ExcellPlusCure;
+import domain.model.visit.Visit;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import java.sql.*;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
 public class ExcellPlusCureDbSql extends ObjectDb implements ExcellPlusCureDb {
+    private VisitDb visitDb = new VisitDbSql(getProperties());
     public ExcellPlusCureDbSql(Properties p) {
         super(p);
     }
 
-    @Override
-    public void add(Object o) {
 
+    @Override
+    public void update(ExcellPlusCure cure, int clientId) {
+        try {
+            throw new InstantiationException("updating cure to database failed: method is not implemented yet");
+        } catch (Exception e) {
+
+        }
     }
 
     @Override
-    public void update(Object o) {
-
+    public void delete(int clientId) {
+        try (Connection connection = DriverManager.getConnection(this.getUrl(), this.getProperties())){
+            String querie = "DELETE from adres where klantid = ?";
+            PreparedStatement statementp = connection.prepareStatement(querie);
+            statementp.setInt(1,clientId);
+            statementp.execute();
+            statementp.close();
+        }catch (Exception se){
+            throw new DbException(se.getMessage());
+        }
     }
 
     @Override
-    public void delete(int id) {
+    public ExcellPlusCure get(int clientId) {
+        ExcellPlusCure excellPlusCure = null;
+        int cureId = 0;
+        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
+            String querie= "SELECT kuurid,beurtenover,startdatum FROM excellplus where klantid = ?";
+            PreparedStatement statementp = connection.prepareStatement(querie);
+            statementp.setInt(1,clientId);
+            ResultSet result = statementp.executeQuery();
+            while (result.next()) {
+                cureId = result.getInt("kuurid");
+                int turnsleft = result.getInt("beurtenover");
+                java.sql.Date cureStart = result.getDate("startdatum");
+                excellPlusCure = new ExcellPlusCure(cureStart,turnsleft);
+                excellPlusCure.setVisits(visitDb.getAllFromCure(cureId));
+            }
+        }catch (Exception se){
+            se.printStackTrace();
+            throw new DbException(se.getMessage());
 
+        }
+        VisitDbSql visitDb = new VisitDbSql(getProperties());
+        List<Visit> visits = visitDb.getAllFromCure(cureId);
+        excellPlusCure.setVisits(visits);
+
+
+        return  excellPlusCure;
     }
 
     @Override
-    public Object get(int id) {
+    public List<ExcellPlusCure> getAll() {
+        try {
+            throw new InstantiationException("getting all cures from database failed: method is not implemented yet");
+        } catch (Exception e) {
+
+        }
         return null;
     }
 
     @Override
-    public List<Object> getAll() {
-        return null;
+    public int getCurrentExcellPlusCureId(int clientId) {
+        int cureId = 0;
+        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
+            String querie= "SELECT kuurid FROM excellplus where klantid = 1936 ORDER BY startdatum DESC LIMIT 1";
+            PreparedStatement statementp = connection.prepareStatement(querie);
+            statementp.setInt(1,clientId);
+            ResultSet result = statementp.executeQuery();
+            if(result.next()) {
+                cureId = result.getInt("kuurid");
+            }
+        }catch (Exception se){
+            se.printStackTrace();
+            throw new DbException(se.getMessage());
+
+        }
+        return  cureId;
+    }
+
+    @Override
+    public int getPastCures(int clientId) {
+        int pastCures = 0;
+        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
+            String querie= "SELECT count(kuurid) as pastCures FROM excellplus where klantid = ?";
+            PreparedStatement statementp = connection.prepareStatement(querie);
+            statementp.setInt(1,clientId);
+            ResultSet result = statementp.executeQuery();
+            while (result.next()) {
+                pastCures = result.getInt("pastCures");
+            }
+        }catch (Exception se){
+            se.printStackTrace();
+            throw new DbException(se.getMessage());
+
+        }
+        return  pastCures;
     }
 
     public List<ExcellPlusCure> getAllFromClient(int clientId) {
+        try {
+            throw new InstantiationException("getting all cures from client with id from database failed: method is not implemented yet");
+        } catch (Exception e) {
+
+        }
         return null;
     }
 
@@ -50,17 +133,13 @@ public class ExcellPlusCureDbSql extends ObjectDb implements ExcellPlusCureDb {
 
             int cureId = getNewRandomId();
             int turnsLeft = cure.getTurnsLeft();
-            String startDate = cure.;
-            int zip = cure.getZip();
-            String housenumber = cure.getNumber();
-            String querie = "INSERT INTO adres(kuurid,beurtenover,startdatum,einddatum,klantid) values (?,?,?,?,?)";
+            Date cureStart = cure.getCureStart();
+            String querie = "INSERT INTO adres(kuurid,beurtenover,startdatum,klantid) values (?,?,?,?)";
             PreparedStatement statementp = connection.prepareStatement(querie);
             statementp.setInt(1,cureId);
             statementp.setInt(2,turnsLeft);
-            statementp.setString(3,street);
-            statementp.setInt(4,zip);
-            statementp.setString(5,housenumber);
-            statementp.setInt(6,clientId);
+            statementp.setDate(3,new java.sql.Date(cureStart.getTime()));
+            statementp.setInt(4,clientId);
 
             statementp.execute();
             statementp.close();

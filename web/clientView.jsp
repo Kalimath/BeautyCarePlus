@@ -55,25 +55,27 @@
                         <h2>Beurten resterend</h2>
                         <h3>${clientsCurrentCure.turnsLeft}</h3>
                     </article>
-                    <article>
-                        <h2>Beurten toevoegen</h2>
-                        <form method="post" action="Controller?command=AddTurnsToCureExcellPlus">
+                    <c:if test="${clientsCurrentCure.visits.size()>0}">
+                        <article>
+                            <h2>Beurten toevoegen</h2>
+                            <form method="post" action="Controller?command=AddTurnsToCureExcellPlus">
 
-                            <input type="radio" name="turns" value="1" id="radio1" class="form-radio" checked>
-                            <label for="radio1">testbeurt</label>
+                                <input type="radio" name="turns" value="1" id="radio1" class="form-radio" checked>
+                                <label for="radio1">testbeurt</label>
 
-                            <input type="radio" name="turns" value="12" id="radio2" class="form-radio">
-                            <label for="radio2">12 beurten</label>
+                                <input type="radio" name="turns" value="12" id="radio2" class="form-radio">
+                                <label for="radio2">12 beurten</label>
 
-                            <input type="radio" name="turns" value="20" id="radio3" class="form-radio">
-                            <label for="radio3">20 beurten</label>
+                                <input type="radio" name="turns" value="20" id="radio3" class="form-radio">
+                                <label for="radio3">20 beurten</label>
 
 
-                            <p>
-                                <input type="submit" value="Voeg toe" class="button">
-                            </p>
-                        </form>
-                    </article>
+                                <p>
+                                    <input type="submit" value="Voeg toe" class="button">
+                                </p>
+                            </form>
+                        </article>
+                    </c:if>
                     <c:choose>
                         <c:when test="${clientsCurrentCure.turnsLeft>0}">
                             <article class="cure">

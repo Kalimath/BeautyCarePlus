@@ -2,15 +2,11 @@ package domain.db.client;
 
 import domain.db.DbException;
 import domain.db.ObjectDb;
-import domain.db.error.ErrorDbSql;
-import domain.model.personal.Address;
 import domain.model.personal.Client;
-import domain.model.personal.Sport;
 
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
@@ -21,8 +17,8 @@ public class ClientDbSql extends ObjectDb implements ClientDb {
 
     //needs to be rewritten
     @Override
-    public List<Object> getAll() {
-        List<Object> clients = new ArrayList<>();
+    public List<Client> getAll() {
+        List<Client> clients = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties());
              Statement statement = connection.createStatement()) {
 
@@ -52,14 +48,9 @@ public class ClientDbSql extends ObjectDb implements ClientDb {
 
     //written not tested
     @Override
-    public void add(Object clientO) {
+    public void add(Client client) {
         try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())) {
-            Client client;
-            if (clientO instanceof Client) {
-                client = (Client) clientO;
-            } else {
-                throw new InstantiationException("adding client to database failed: object ain't an instance of client," + this.getClass().getSimpleName());
-            }
+
             int klantid = getNewRandomId();
             String name = client.getName();
             LocalDate birthDate = client.getBirthDate();
@@ -83,14 +74,8 @@ public class ClientDbSql extends ObjectDb implements ClientDb {
 
     //needs to be written
     @Override
-    public void update(Object clientO) {
+    public void update(Client client) {
         try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())) {
-            Client client;
-            if (clientO instanceof Client) {
-                client = (Client) clientO;
-            } else {
-                throw new InstantiationException("adding client to database failed: object ain't an instance of client," + this.getClass().getSimpleName());
-            }
             String name = client.getName();
             LocalDate birthDate = client.getBirthDate();
             String email = client.getEmail();
@@ -125,6 +110,7 @@ public class ClientDbSql extends ObjectDb implements ClientDb {
         }
     }
 
+    @Override
     public int getClientId(String clientName) {
         int clientId = 0;
         try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties());

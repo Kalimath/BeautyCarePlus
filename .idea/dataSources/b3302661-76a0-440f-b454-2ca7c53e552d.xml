@@ -1188,40 +1188,49 @@
       <ColNames>bezoekid</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="284" parent="233" name="controleomtrekkenFK">
+    <index id="284" parent="233" name="controlewegingenFK">
+      <ColNames>wegingid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="285" parent="233" name="controleomtrekkenFK">
       <ColNames>omtrekkenid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="285" parent="233" name="PRIMARY">
+    <key id="286" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>controleid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="286" parent="233" name="bezoekcontroleFK">
+    <foreign-key id="287" parent="233" name="bezoekcontroleFK">
       <ColNames>bezoekid</ColNames>
       <RefTableName>bezoek</RefTableName>
       <RefColNames>bezoekid</RefColNames>
     </foreign-key>
-    <foreign-key id="287" parent="233" name="controleomtrekkenFK">
+    <foreign-key id="288" parent="233" name="controlewegingenFK">
+      <ColNames>wegingid</ColNames>
+      <RefTableName>wegingen</RefTableName>
+      <RefColNames>wegingenid</RefColNames>
+    </foreign-key>
+    <foreign-key id="289" parent="233" name="controleomtrekkenFK">
       <ColNames>omtrekkenid</ColNames>
       <RefTableName>omtrekken</RefTableName>
       <RefColNames>omtrekkenid</RefColNames>
     </foreign-key>
-    <column id="288" parent="234" name="errorid">
+    <column id="290" parent="234" name="errorid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="234" name="cause">
+    <column id="291" parent="234" name="cause">
       <Position>2</Position>
       <Comment>errorlog</Comment>
       <DataType>varchar(512)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="234" name="moment">
+    <column id="292" parent="234" name="moment">
       <Position>3</Position>
       <Comment>moment of failure</Comment>
       <DataType>timestamp|0s</DataType>
@@ -1230,18 +1239,18 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <key id="291" parent="234" name="PRIMARY">
+    <key id="293" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>errorid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="292" parent="235" name="kuurid">
+    <column id="294" parent="235" name="kuurid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="235" name="beurtenover">
+    <column id="295" parent="235" name="beurtenover">
       <Position>2</Position>
       <Comment>turns left</Comment>
       <DataType>tinyint(4)|0s</DataType>
@@ -1249,127 +1258,135 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="235" name="startdatum">
+    <column id="296" parent="235" name="startdatum">
       <Position>3</Position>
       <Comment>date that the cure has started</Comment>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="235" name="klantid">
+    <column id="297" parent="235" name="aantalbeurten">
       <Position>4</Position>
+      <Comment>total turns in this cure</Comment>
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="298" parent="235" name="klantid">
+      <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="296" parent="235" name="klantexcellplusFK">
+    <index id="299" parent="235" name="klantexcellplusFK">
       <ColNames>klantid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="297" parent="235" name="PRIMARY">
+    <key id="300" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>kuurid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="298" parent="235" name="klantexcellplusFK">
+    <foreign-key id="301" parent="235" name="klantexcellplusFK">
       <ColNames>klantid</ColNames>
       <RefTableName>klant</RefTableName>
       <RefColNames>klantid</RefColNames>
     </foreign-key>
-    <column id="299" parent="236" name="gezondheidsficheid">
+    <column id="302" parent="236" name="gezondheidsficheid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="236" name="voedingsadvies">
+    <column id="303" parent="236" name="voedingsadvies">
       <Position>2</Position>
       <Comment>advice about food</Comment>
       <DataType>mediumtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="236" name="ontstaankgproblemen">
+    <column id="304" parent="236" name="ontstaankgproblemen">
       <Position>3</Position>
       <Comment>weight problems arise</Comment>
       <DataType>mediumtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="236" name="probleemvoedsel">
+    <column id="305" parent="236" name="probleemvoedsel">
       <Position>4</Position>
       <Comment>conflicting food</Comment>
       <DataType>mediumtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="236" name="conditie">
+    <column id="306" parent="236" name="conditie">
       <Position>5</Position>
       <Comment>condition</Comment>
       <DataType>varchar(32)|0s</DataType>
       <DefaultExpression>&apos;normaal&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="236" name="dieetverleden">
+    <column id="307" parent="236" name="dieetverleden">
       <Position>6</Position>
       <Comment>past diets</Comment>
       <DataType>mediumtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="236" name="klachten">
+    <column id="308" parent="236" name="klachten">
       <Position>7</Position>
       <Comment>complaints</Comment>
       <DataType>mediumtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="236" name="lichaamstype">
+    <column id="309" parent="236" name="lichaamstype">
       <Position>8</Position>
       <Comment>body type</Comment>
       <DataType>varchar(32)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="236" name="afvalgebieden">
+    <column id="310" parent="236" name="afvalgebieden">
       <Position>9</Position>
       <Comment>zones to lose weight</Comment>
       <DataType>mediumtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="236" name="initieelgewicht">
+    <column id="311" parent="236" name="initieelgewicht">
       <Position>10</Position>
       <Comment>initial weight in kg</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="236" name="doelgewicht">
+    <column id="312" parent="236" name="doelgewicht">
       <Position>11</Position>
       <Comment>target weight</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="236" name="klantid">
+    <column id="313" parent="236" name="klantid">
       <Position>12</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="311" parent="236" name="klantgezondheidsficheFK">
+    <index id="314" parent="236" name="klantgezondheidsficheFK">
       <ColNames>klantid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="312" parent="236" name="PRIMARY">
+    <key id="315" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>gezondheidsficheid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="313" parent="236" name="klantgezondheidsficheFK">
+    <foreign-key id="316" parent="236" name="klantgezondheidsficheFK">
       <ColNames>klantid</ColNames>
       <RefTableName>klant</RefTableName>
       <RefColNames>klantid</RefColNames>
     </foreign-key>
-    <column id="314" parent="237" name="hoogtesid">
+    <column id="317" parent="237" name="hoogtesid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="237" name="knie">
+    <column id="318" parent="237" name="knie">
       <Position>2</Position>
       <Comment>knee height</Comment>
       <DataType>double|0s</DataType>
@@ -1377,7 +1394,7 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="237" name="dij">
+    <column id="319" parent="237" name="dij">
       <Position>3</Position>
       <Comment>thigh height</Comment>
       <DataType>double|0s</DataType>
@@ -1385,7 +1402,7 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="237" name="taille">
+    <column id="320" parent="237" name="taille">
       <Position>4</Position>
       <Comment>waist height</Comment>
       <DataType>double|0s</DataType>
@@ -1393,14 +1410,14 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="237" name="arm">
+    <column id="321" parent="237" name="arm">
       <Position>5</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="237" name="heup">
+    <column id="322" parent="237" name="heup">
       <Position>6</Position>
       <Comment>hip height</Comment>
       <DataType>double|0s</DataType>
@@ -1408,7 +1425,7 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="237" name="kuit">
+    <column id="323" parent="237" name="kuit">
       <Position>7</Position>
       <Comment>calf height</Comment>
       <DataType>double|0s</DataType>
@@ -1416,7 +1433,7 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="237" name="volledigelengte">
+    <column id="324" parent="237" name="volledigelengte">
       <Position>8</Position>
       <Comment>full length</Comment>
       <DataType>double|0s</DataType>
@@ -1424,351 +1441,351 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="322" parent="237" name="klantid">
+    <column id="325" parent="237" name="klantid">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="323" parent="237" name="commentaar">
+    <column id="326" parent="237" name="commentaar">
       <Position>10</Position>
       <DataType>mediumtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="324" parent="237" name="klanthoogtesFK">
+    <index id="327" parent="237" name="klanthoogtesFK">
       <ColNames>klantid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="325" parent="237" name="PRIMARY">
+    <key id="328" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>hoogtesid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="326" parent="237" name="klanthoogtesFK">
+    <foreign-key id="329" parent="237" name="klanthoogtesFK">
       <ColNames>hoogtesid</ColNames>
       <RefTableName>klant</RefTableName>
       <RefColNames>klantid</RefColNames>
     </foreign-key>
-    <column id="327" parent="238" name="klantid">
+    <column id="330" parent="238" name="klantid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="328" parent="238" name="naam">
+    <column id="331" parent="238" name="naam">
       <Position>2</Position>
       <Comment>full or partial name</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="329" parent="238" name="gebdatum">
+    <column id="332" parent="238" name="gebdatum">
       <Position>3</Position>
       <Comment>birthdate</Comment>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="330" parent="238" name="email">
+    <column id="333" parent="238" name="email">
       <Position>4</Position>
       <Comment>email is optional</Comment>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="331" parent="238" name="commentaar">
+    <column id="334" parent="238" name="commentaar">
       <Position>5</Position>
       <Comment>comment is optional</Comment>
       <DataType>mediumtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="332" parent="238" name="telefoonnr">
+    <column id="335" parent="238" name="telefoonnr">
       <Position>6</Position>
       <DataType>varchar(16)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="238" name="lengtesHid">
+    <column id="336" parent="238" name="lengtesHid">
       <Position>7</Position>
       <Comment>costumer&apos;s lengths calibration</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="334" parent="238" name="klantid">
+    <index id="337" parent="238" name="klantid">
       <ColNames>klantid</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="335" parent="238" name="lengtesklantHFK">
+    <index id="338" parent="238" name="lengtesklantHFK">
       <ColNames>lengtesHid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="336" parent="238" name="PRIMARY">
+    <key id="339" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>klantid</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="337" parent="238" name="klantid">
+    <key id="340" parent="238" name="klantid">
       <ColNames>klantid</ColNames>
       <UnderlyingIndexName>klantid</UnderlyingIndexName>
     </key>
-    <foreign-key id="338" parent="238" name="lengtesklantHFK">
+    <foreign-key id="341" parent="238" name="lengtesklantHFK">
       <ColNames>lengtesHid</ColNames>
       <RefTableName>hoogtes</RefTableName>
       <RefColNames>hoogtesid</RefColNames>
     </foreign-key>
-    <column id="339" parent="239" name="omtrekkenid">
+    <column id="342" parent="239" name="omtrekkenid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="340" parent="239" name="heupomtrek">
+    <column id="343" parent="239" name="heupomtrek">
       <Position>2</Position>
       <Comment>hip</Comment>
       <DataType>double|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="341" parent="239" name="controleid">
+    <column id="344" parent="239" name="controleid">
       <Position>3</Position>
       <Comment>circumferences from checkup</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="239" name="tailleomtrek">
+    <column id="345" parent="239" name="tailleomtrek">
       <Position>4</Position>
       <Comment>waist</Comment>
       <DataType>double|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="239" name="dijomtrek">
+    <column id="346" parent="239" name="dijomtrek">
       <Position>5</Position>
       <Comment>thigh</Comment>
       <DataType>double|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="344" parent="239" name="kuitomtrek">
+    <column id="347" parent="239" name="kuitomtrek">
       <Position>6</Position>
       <Comment>calf</Comment>
       <DataType>double|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="345" parent="239" name="armomtrek">
+    <column id="348" parent="239" name="armomtrek">
       <Position>7</Position>
       <Comment>arm</Comment>
       <DataType>double|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="346" parent="239" name="controleomtrekkenFK">
+    <index id="349" parent="239" name="controleomtrekkenFK">
       <ColNames>controleid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="347" parent="239" name="PRIMARY">
+    <key id="350" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>omtrekkenid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="348" parent="240" name="sportid">
+    <column id="351" parent="240" name="sportid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="349" parent="240" name="sportnaam">
+    <column id="352" parent="240" name="sportnaam">
       <Position>2</Position>
       <Comment>sport name</Comment>
       <DataType>varchar(16)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="350" parent="240" name="keerperweek">
+    <column id="353" parent="240" name="keerperweek">
       <Position>3</Position>
       <Comment>frequentie per week</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="351" parent="240" name="klantid">
+    <column id="354" parent="240" name="klantid">
       <Position>4</Position>
       <Comment>participated by costumer</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="352" parent="240" name="klantsportFK">
+    <index id="355" parent="240" name="klantsportFK">
       <ColNames>klantid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="353" parent="240" name="PRIMARY">
+    <key id="356" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sportid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="354" parent="240" name="klantsportFK">
+    <foreign-key id="357" parent="240" name="klantsportFK">
       <ColNames>klantid</ColNames>
       <RefTableName>klant</RefTableName>
       <RefColNames>klantid</RefColNames>
     </foreign-key>
-    <column id="355" parent="241" name="userid">
+    <column id="358" parent="241" name="userid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="356" parent="241" name="email">
+    <column id="359" parent="241" name="email">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="357" parent="241" name="voornaam">
+    <column id="360" parent="241" name="voornaam">
       <Position>3</Position>
       <DataType>varchar(32)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="358" parent="241" name="achternaam">
+    <column id="361" parent="241" name="achternaam">
       <Position>4</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="241" name="password">
+    <column id="362" parent="241" name="password">
       <Position>5</Position>
       <Comment>Hashed password</Comment>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="241" name="role">
+    <column id="363" parent="241" name="role">
       <Position>6</Position>
       <DataType>varchar(64)|0s</DataType>
       <DefaultExpression>&apos;unauthorized&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="361" parent="241" name="PRIMARY">
+    <key id="364" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="362" parent="242" name="wegingenid">
+    <column id="365" parent="242" name="wegingenid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="363" parent="242" name="gewicht">
+    <column id="366" parent="242" name="gewicht">
       <Position>2</Position>
       <Comment>weight in kg</Comment>
       <DataType>double|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="364" parent="242" name="metabolischeleeftijd">
+    <column id="367" parent="242" name="metabolischeleeftijd">
       <Position>3</Position>
       <Comment>metabolic age in years</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="365" parent="242" name="bmr">
+    <column id="368" parent="242" name="bmr">
       <Position>4</Position>
       <Comment>basal metabolism</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="366" parent="242" name="vetmassa">
+    <column id="369" parent="242" name="vetmassa">
       <Position>5</Position>
       <Comment>mass of fat in kg</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="367" parent="242" name="spiermassa">
+    <column id="370" parent="242" name="spiermassa">
       <Position>6</Position>
       <Comment>mass of muscles in kg</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="368" parent="242" name="vochtmassa">
+    <column id="371" parent="242" name="vochtmassa">
       <Position>7</Position>
       <Comment>mass of bodymoisture in kg</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="369" parent="242" name="idealevetmassa">
+    <column id="372" parent="242" name="idealevetmassa">
       <Position>8</Position>
       <Comment>ideal body fat in kg</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="370" parent="242" name="controleid">
+    <column id="373" parent="242" name="controleid">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="371" parent="242" name="controlewegingenFK">
+    <index id="374" parent="242" name="controlewegingenFK">
       <ColNames>controleid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="372" parent="242" name="PRIMARY">
+    <key id="375" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>wegingenid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="373" parent="243" name="werkid">
+    <column id="376" parent="243" name="werkid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="374" parent="243" name="isZitten">
+    <column id="377" parent="243" name="isZitten">
       <Position>2</Position>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="375" parent="243" name="isStaan">
+    <column id="378" parent="243" name="isStaan">
       <Position>3</Position>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="376" parent="243" name="isZwaar">
+    <column id="379" parent="243" name="isZwaar">
       <Position>4</Position>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="377" parent="243" name="heeftOnregelmatigeUren">
+    <column id="380" parent="243" name="heeftOnregelmatigeUren">
       <Position>5</Position>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="378" parent="243" name="klantid">
+    <column id="381" parent="243" name="klantid">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="379" parent="243" name="klantwerkFK">
+    <index id="382" parent="243" name="klantwerkFK">
       <ColNames>klantid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="380" parent="243" name="PRIMARY">
+    <key id="383" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>werkid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="381" parent="243" name="klantwerkFK">
+    <foreign-key id="384" parent="243" name="klantwerkFK">
       <ColNames>klantid</ColNames>
       <RefTableName>klant</RefTableName>
       <RefColNames>klantid</RefColNames>

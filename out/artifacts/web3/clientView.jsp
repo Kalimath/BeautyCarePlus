@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
@@ -13,10 +14,9 @@
 
 </jsp:include>
 <main>
-    <article>
-        <h2 id="pageTitle"><em style="font-weight: bolder">Overzicht</em></h2>
-    </article>
+    <article><h2>${client.name}</h2></article>
     <div class="article-container">
+
         <article>
             <h2>Gegevens</h2>
             <table>
@@ -45,34 +45,33 @@
                 </c:if>
 
             </table>
-
         </article>
+        <c:if test="${client.comment!=null||client.comment!=''}">
+            <article>
+                <h2>Commentaar</h2>
+                <p>${client.comment}</p>
+            </article>
+        </c:if>
         <div>
             <c:choose>
                 <c:when test="${clientsCurrentCure!=null}">
-
-                    <article>
-                        <h2>Beurten resterend</h2>
-                        <h3>${clientsCurrentCure.turnsLeft}</h3>
-                    </article>
-                    <c:choose>
-                        <c:when test="${clientsCurrentCure.turnsLeft>0}">
-                            <article class="cure">
-                                <h2>Behandeling starten</h2>
-                                <c:if test="${errorStart!=null}">
-                                    <p class="error-message"> ${errorStart}</p>
-                                </c:if>
-                                <form method="post" action="Controller?command=StartCureExcellPlus">
-                                    <input type="submit" value=" Starten " class="button">
-                                </form>
-                            </article>
-                        </c:when>
-                    </c:choose>
-
-                    <c:if test="${clientsCurrentCure.latestCheckup!=null}">
+                    <c:if test="${fn:length(clientsCurrentCure.visits)==0&&clientsCurrentCure.turnsLeft==0}">
                         <article>
-                            <h2>Laatste opmeting</h2>
-                            <h3>${clientsCurrentCure.latestCheckup}</h3>
+                            <h2>Excell+ kuur aanmaken</h2>
+                            <form method="post" action="Controller?command=CreateExcellPlusCureWithTurns">
+
+                                <input type="radio" name="turns" value="1" id="radio1" class="form-radio" checked>
+                                <label for="radio1">testbeurt</label>
+
+                                <input type="radio" name="turns" value="12" id="radio2" class="form-radio">
+                                <label for="radio2">12 beurten</label>
+
+                                <input type="radio" name="turns" value="20" id="radio3" class="form-radio">
+                                <label for="radio3">20 beurten</label>
+                                <p>
+                                    <input type="submit" value="maak aan" class="button">
+                                </p>
+                            </form>
                         </article>
                     </c:if>
                 </c:when>
@@ -82,25 +81,7 @@
                     </article>
                 </c:otherwise>
             </c:choose>
-            <article>
-                <h2>Beurten toevoegen</h2>
-                <form method="post" action="Controller?command=AddTurnsToCureExcellPlus">
 
-                    <input type="radio" name="turns" value="1" id="radio1" class="form-radio" checked>
-                    <label for="radio1">testbeurt</label>
-
-                    <input type="radio" name="turns" value="12" id="radio2" class="form-radio">
-                    <label for="radio2">12 beurten</label>
-
-                    <input type="radio" name="turns" value="20" id="radio3" class="form-radio">
-                    <label for="radio3">20 beurten</label>
-
-
-                    <p>
-                        <input type="submit" value="Voeg toe" class="button">
-                    </p>
-                </form>
-            </article>
         </div>
     </div>
 </main>

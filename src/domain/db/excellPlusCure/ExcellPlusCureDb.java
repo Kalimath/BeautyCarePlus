@@ -10,7 +10,8 @@ public interface ExcellPlusCureDb {
     void delete(int clientId);
     void update(ExcellPlusCure cure, int clientId);
     ExcellPlusCure get(int clientId);
-    List<ExcellPlusCure> getAll();
+    ExcellPlusCure getCurrent(int clientId);
     int getCurrentExcellPlusCureId(int clientId);
-    int getPastCures(int clientId);
+    int getNumberOfPastCures(int clientId);
+    List<ExcellPlusCure> getPastCures(int clientId);
 }

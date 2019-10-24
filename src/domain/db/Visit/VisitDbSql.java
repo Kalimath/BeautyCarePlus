@@ -10,14 +10,18 @@ package domain.db.Visit;
 
 import domain.db.DbException;
 import domain.db.ObjectDb;
+import domain.db.checkup.CheckupDb;
 import domain.db.checkup.CheckupDbSql;
 import domain.model.visit.Visit;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
 public class VisitDbSql extends ObjectDb implements VisitDb {
+    CheckupDb checkupDb = new CheckupDbSql(getProperties());
+
     public VisitDbSql(Properties p) {
         super(p);
     }
@@ -78,12 +82,23 @@ public class VisitDbSql extends ObjectDb implements VisitDb {
 
     @Override
     public List<Visit> getAllFromCure(int cureId){
-        try {
-            throw new InstantiationException("getting all visits of cure from database failed: method is not implemented yet");
-        } catch (Exception e) {
+        List<Visit> visits = new ArrayList<>();
+        try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties());
+             Statement statement = connection.createStatement()) {
+
+            ResultSet result = statement.executeQuery("SELECT * FROM bezoek");
+            while (result.next()) {
+                int visitId = result.getInt("bezoekid");
+                String comment = result.getString("commentaar");
+                Timestamp moment = result.getTimestamp("moment");
+                visits.add(new Visit(moment, checkupDb.get(visitId), comment));
+            }
+        } catch (Exception se) {
+            se.printStackTrace();
+            throw new DbException(se.getMessage());
 
         }
-        return null;
+        return visits;
     }
 
     @Override

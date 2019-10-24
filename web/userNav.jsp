@@ -18,10 +18,12 @@
     <p class="navTitle">Gebruiker</p>
     <ul>
         <li><a href="Controller">Profiel</a></li>
+        <li><a href="#">Bug melden</a></li>
         <li><a href="Controller?command=LogOffUser">Uitloggen</a></li>
         <c:if test="${user.role=='ADMIN'}">
             <li><a href="Controller?command=ShowAllClients">Klanten</a></li>
             <li><a href="userForm.jsp">Add User</a></li>
+            <li><a href="Controller?command=ShowErrors">Errors</a></li>
         </c:if>
     </ul>
 </nav>

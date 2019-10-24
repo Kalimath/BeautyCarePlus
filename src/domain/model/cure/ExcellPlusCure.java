@@ -1,5 +1,6 @@
 package domain.model.cure;
 
+import domain.model.debug.DomainException;
 import domain.model.measures.Checkup;
 import domain.model.visit.Visit;
 
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class ExcellPlusCure implements Serializable {
     private Date cureStart;
-    private int turnsLeft;
+    private int turnsLeft,turnsTotal;
     private List<Visit> visits;
 
     public ExcellPlusCure() {
@@ -21,9 +22,27 @@ public class ExcellPlusCure implements Serializable {
         setCureStart();
     }
 
-    public ExcellPlusCure(Date cureStart, int turnsLeft){
+    public ExcellPlusCure(Date cureStart, int turnsLeft,int turnsTotal){
+        this();
         setCureStart(cureStart);
         setTurnsLeft(turnsLeft);
+        setTurnsTotal(turnsTotal);
+    }
+
+    public int getTurnsTotal() {
+        return turnsTotal;
+    }
+
+    public void setTurnsTotal(int turnsTotal) {
+        this.turnsTotal = turnsTotal;
+    }
+
+    public boolean isTestCure() {
+        if(turnsTotal==1){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     public void setVisits(List<Visit> visits) {
@@ -52,6 +71,14 @@ public class ExcellPlusCure implements Serializable {
         }
     }
 
+    public void addVisit(Visit newVisit){
+        if(turnsLeft>0){
+            visits.add(newVisit);
+        }else{
+            throw new DomainException("Visit can't be added to this cure: no turns left!");
+        }
+    }
+
     public void startCureOneTime(){
         Visit visit = new Visit();
         visits.add(visit);
@@ -64,17 +91,45 @@ public class ExcellPlusCure implements Serializable {
 
     public List<Checkup> getAllCheckUps(){
         List<Checkup> checkups = new ArrayList<>();
-        for(Visit v : visits) checkups.add(v.getCheckup());
+        if(this.visits!=null||!this.visits.isEmpty()){
+            for(Visit v : visits) {
+                try {
+                    checkups.add(v.getCheckup());
+                }catch (Exception e){
+
+                }
+            }
+        }
         return checkups;
+    }
+
+    public Visit getLatestVisit(){
+        Visit latestVisit = null;
+        if(this.visits!=null||!this.visits.isEmpty()){
+            for(Visit v : visits) {
+                if(latestVisit==null||latestVisit.getMoment().before(v.getMoment())){
+                    latestVisit=v;
+                }
+            }
+        }
+        return latestVisit;
+    }
+
+    public Visit getTodaysVisit(){
+        Visit todaysVisit = null;
+        if(getLatestVisit().getMoment().toLocalDateTime().equals(LocalDate.now())){
+            todaysVisit = getLatestVisit();
+        }
+        return todaysVisit;
     }
 
     public Visit getLatestVisitWithCheckup(){
         Visit latestVisitWithCheckup = null;
-        List<Checkup> checkups = this.getAllCheckUps();
-        if(checkups==null||checkups.isEmpty()) {
+        if(this.getAllCheckUps()==null||this.getAllCheckUps().isEmpty()) {
             return null;
         }else{
-            for (Visit v: visits) {
+
+            for (Visit v: this.getVisits()) {
                 if(latestVisitWithCheckup==null||v.getMoment().after(latestVisitWithCheckup.getMoment())){
                     latestVisitWithCheckup = v;
                 }
@@ -84,7 +139,12 @@ public class ExcellPlusCure implements Serializable {
     }
 
     public Checkup getLatestCheckup(){
-        return getLatestVisitWithCheckup().getCheckup();
+        if(getLatestVisitWithCheckup()==null||getLatestVisitWithCheckup().getCheckup()==null){
+            return  null;
+        }else{
+            return getLatestVisitWithCheckup().getCheckup();
+        }
+
     }
 
     public int getTurnsLeft() {
@@ -103,4 +163,7 @@ public class ExcellPlusCure implements Serializable {
             }
         }
 
+    public List<Visit> getVisits() {
+        return visits;
+    }
 }

@@ -16,15 +16,14 @@
         <div class="ac">
             <table>
                 <tr>
-                    <th>Naam</th>
-                    <th>E-mail</th>
-                    <th>Geboortedatum</th>
+                    <th>Tijdstip</th>
+                    <th>Oorzaak</th>
+
                 </tr>
 
                 <tr>
+                    <td><c:out value="${error.moment}"/></td>
                     <td><c:out value="${error.cause}"/></td>
-                    <td><c:out value="${error.}"/></td>
-                    <td><c:out value="${error.birthdate}"/></td>
                 </tr>
 
             </table>

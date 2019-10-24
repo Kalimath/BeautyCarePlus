@@ -17,13 +17,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <nav class="hc">
-    <p class="navTitle">${client.name}</p>
+    <p class="navTitle"><a href="clientView.jsp">${client.name}</a></p>
     <ul>
-        <li><a href="clientView.jsp">Overzicht</a></li>
-        <li><a href="clientData.jsp">Klantgegevens</a></li>
+        <li><a href="#">Gezondheidsfiche</a></li>
         <c:if test="${clientsCurrentCure!=null}">
-            <li><a href="#">Excell+</a></li>
+            <li><a href="cureView.jsp">Excell+</a></li>
         </c:if>
+        <c:if test="${clientsCurrentCure.getLatestCheckup()!=null}">
         <li><a href="#">Laatste meting</a></li>
+        </c:if>
     </ul>
 </nav>

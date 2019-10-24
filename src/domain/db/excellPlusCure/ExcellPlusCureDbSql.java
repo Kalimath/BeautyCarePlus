@@ -46,7 +46,7 @@ public class ExcellPlusCureDbSql extends ObjectDb implements ExcellPlusCureDb {
         ExcellPlusCure excellPlusCure = null;
         int cureId = 0;
         try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
-            String querie= "SELECT kuurid,beurtenover,startdatum FROM excellplus where klantid = ?";
+            String querie= "SELECT kuurid,beurtenover,startdatum,aantalbeurten FROM excellplus where klantid = ?";
             PreparedStatement statementp = connection.prepareStatement(querie);
             statementp.setInt(1,clientId);
             ResultSet result = statementp.executeQuery();
@@ -54,7 +54,8 @@ public class ExcellPlusCureDbSql extends ObjectDb implements ExcellPlusCureDb {
                 cureId = result.getInt("kuurid");
                 int turnsleft = result.getInt("beurtenover");
                 java.sql.Date cureStart = result.getDate("startdatum");
-                excellPlusCure = new ExcellPlusCure(cureStart,turnsleft);
+                int turnsTotal = result.getInt("aantalbeurten");
+                excellPlusCure = new ExcellPlusCure(cureStart,turnsleft,turnsTotal);
                 excellPlusCure.setVisits(visitDb.getAllFromCure(cureId));
             }
         }catch (Exception se){
@@ -71,20 +72,35 @@ public class ExcellPlusCureDbSql extends ObjectDb implements ExcellPlusCureDb {
     }
 
     @Override
-    public List<ExcellPlusCure> getAll() {
-        try {
-            throw new InstantiationException("getting all cures from database failed: method is not implemented yet");
-        } catch (Exception e) {
+    public ExcellPlusCure getCurrent(int clientId) {
+        ExcellPlusCure excellPlusCure = null;
+        int cureId = 0;
+        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
+            String querie= "SELECT * FROM excellplus where klantid = ? and beurtenover>0 LIMIT 1";
+            PreparedStatement statementp = connection.prepareStatement(querie);
+            statementp.setInt(1,clientId);
+            ResultSet result = statementp.executeQuery();
+            if(result.next()) {
+                cureId = result.getInt("kuurid");
+                int turnsleft = result.getInt("beurtenover");
+                java.sql.Date cureStart = result.getDate("startdatum");
+                int turnsTotal = result.getInt("aantalbeurten");
+                excellPlusCure = new ExcellPlusCure(cureStart,turnsleft,turnsTotal);
+                excellPlusCure.setVisits(visitDb.getAllFromCure(cureId));
+            }
+        }catch (Exception se){
+            se.printStackTrace();
+            throw new DbException(se.getMessage());
 
         }
-        return null;
+        return  excellPlusCure;
     }
 
     @Override
     public int getCurrentExcellPlusCureId(int clientId) {
         int cureId = 0;
         try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
-            String querie= "SELECT kuurid FROM excellplus where klantid = 1936 ORDER BY startdatum DESC LIMIT 1";
+            String querie= "SELECT kuurid FROM excellplus where klantid = ? ORDER BY startdatum DESC LIMIT 1";
             PreparedStatement statementp = connection.prepareStatement(querie);
             statementp.setInt(1,clientId);
             ResultSet result = statementp.executeQuery();
@@ -100,7 +116,7 @@ public class ExcellPlusCureDbSql extends ObjectDb implements ExcellPlusCureDb {
     }
 
     @Override
-    public int getPastCures(int clientId) {
+    public int getNumberOfPastCures(int clientId) {
         int pastCures = 0;
         try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
             String querie= "SELECT count(kuurid) as pastCures FROM excellplus where klantid = ?";
@@ -116,6 +132,13 @@ public class ExcellPlusCureDbSql extends ObjectDb implements ExcellPlusCureDb {
 
         }
         return  pastCures;
+    }
+
+    @Override
+    public List<ExcellPlusCure> getPastCures(int clientId) {
+        List<ExcellPlusCure> pastCures = getAllFromClient(clientId);
+        pastCures.remove(getCurrent(clientId));
+        return pastCures;
     }
 
     public List<ExcellPlusCure> getAllFromClient(int clientId) {
@@ -134,7 +157,7 @@ public class ExcellPlusCureDbSql extends ObjectDb implements ExcellPlusCureDb {
             int cureId = getNewRandomId();
             int turnsLeft = cure.getTurnsLeft();
             Date cureStart = cure.getCureStart();
-            String querie = "INSERT INTO adres(kuurid,beurtenover,startdatum,klantid) values (?,?,?,?)";
+            String querie = "INSERT INTO excellplus(kuurid,beurtenover,startdatum,klantid) values (?,?,?,?)";
             PreparedStatement statementp = connection.prepareStatement(querie);
             statementp.setInt(1,cureId);
             statementp.setInt(2,turnsLeft);

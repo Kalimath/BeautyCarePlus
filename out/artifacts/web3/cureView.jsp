@@ -19,28 +19,41 @@
 </jsp:include>
 <body>
     <main>
-       <article><h2>Behandeling Excell+</h2></article>
+
+       <article><h2>Excell+</h2></article>
+        <div class="article-container">
             <c:choose>
                 <c:when test="${checkupNeeded}">
                 <article>
                     <h2>Opmeting aangeraden</h2>
                     <form method="post" action="Controller?command=CureStartedWithCheckup">
-                        <input type="submit" value="Start opmeting">
+                        <input type="submit" value="Start nieuwe behandeling opmeting">
                     </form>
                     <form method="post" action="Controller?command=CureStarted">
-                        <input type="submit" value="Start zonder opmeting">
+                        <input type="submit" value="Start nieuwe behandeling zonder opmeting">
                     </form>
                 </article>
                 </c:when>
                 <c:otherwise>
                     <article>
                         <form method="post" action="Controller?command=CureStarted">
-                            <input type="submit" value="Start">
+                            <input type="submit" value="Start nieuwe behandeling">
                         </form>
                     </article>
                 </c:otherwise>
             </c:choose>
+            <article>
+                <h2>Beurten resterend</h2>
+                <h3>${clientsCurrentCure.turnsLeft}</h3>
+            </article>
+            <c:if test="${clientsCurrentCure.latestCheckup!=null}">
+                <article>
+                    <h2>Laatste opmeting</h2>
+                    <h3>${clientsCurrentCure.latestCheckup}</h3>
+                </article>
+            </c:if>
 
+        </div>
     </main>
 </body>
 </html>

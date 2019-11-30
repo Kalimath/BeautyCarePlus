@@ -11,11 +11,12 @@
     <jsp:param name="title" value="Beauty Care +"/>
 </jsp:include>
 <main>
+    <jsp:include page="errorHeader.jsp">
+        <jsp:param name="message" value="er ging iets fout"/>
+    </jsp:include>
     <article>
-        <h2>Error</h2>
-        <p class="error-message">(<c:out value="${pageContext.exception.message}"/>)</p>
-		<h3><a href="Controller?command=Home">Keer terug</a></h3>
-
+        <h3>Oorzaak:</h3>
+        <p><c:out value="${pageContext.exception}"/></p>
     </article>
 </main>
 </body>

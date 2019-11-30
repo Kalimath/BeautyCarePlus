@@ -53,6 +53,21 @@
             </article>
         </c:if>
         <div>
+
+            <article>
+                <h2>Meethoogtes</h2>
+                <c:choose>
+                <c:when test="${heights==null}">
+                <h3><a href="Controller?command=DefineHeightsForm">Definieer hoogtes (eenmalig)</a></h3>
+                </c:when>
+                    <c:otherwise>
+                        <p> ~implementeer de table voor de hoogtes</p>
+                    </c:otherwise>
+                </c:choose>
+            </article>
+
+        </div>
+        <div>
             <c:choose>
                 <c:when test="${clientsCurrentCure!=null}">
                     <c:if test="${fn:length(clientsCurrentCure.visits)==0&&clientsCurrentCure.turnsLeft==0}">
@@ -77,7 +92,7 @@
                 </c:when>
                 <c:otherwise>
                     <article>
-                        <a href="Controller?command=CreateExcellPlusCure"><h2>Creër kuur</h2></a>
+                        <a href="Controller?command=CreateExcellPlusCure"><h2>Creër nieuwe kuur</h2></a>
                     </article>
                 </c:otherwise>
             </c:choose>

@@ -8,8 +8,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<div class="footer,hc">
-    <img src="<c:url value="/images/logobody.png"/>" alt="logo Bodysculptor" class="imagenarrow" style="max-width: 60%">
-    <p class="copyright">Designed by MB-Development</p>
+<div class="hc">
+    <%--<img src="<c:url value="/images/logobody.png"/>" alt="logo Bodysculptor" class="imagenarrow" style="max-width: 60%">--%>
+    <%--<p class="copyright">Designed by MB-Development</p>--%>
 </div>
 </html>

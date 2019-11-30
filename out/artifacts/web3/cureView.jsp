@@ -36,8 +36,9 @@
                 </c:when>
                 <c:otherwise>
                     <article>
-                        <form method="post" action="Controller?command=CureStarted">
-                            <input type="submit" value="Start nieuwe behandeling">
+                        <h2>Nieuwe behandeling</h2>
+                        <form method="post" action="Controller?command=StartCureExcellPlus">
+                            <input type="submit" value=" Start ">
                         </form>
                     </article>
                 </c:otherwise>

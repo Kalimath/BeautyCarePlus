@@ -26,5 +26,11 @@
         <c:if test="${clientsCurrentCure.getLatestCheckup()!=null}">
         <li><a href="#">Laatste meting</a></li>
         </c:if>
+        <c:if test="${todaysVisit!=null}">
+            <li><a href="#">behandeling</a></li>
+        </c:if>
+        <c:if test="${client!=null}">
+            <li><a href="Controller?command=InvalidateClient">Sluiten</a></li>
+        </c:if>
     </ul>
 </nav>

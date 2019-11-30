@@ -148,6 +148,11 @@ main {
     max-width: 300px*/
 }
 
+input:invalid {
+    border-color: red;
+    background-color: lightcoral;
+}
+
 .form-radio
 {
     -webkit-appearance: none;

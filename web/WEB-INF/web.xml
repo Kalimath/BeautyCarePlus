@@ -8,6 +8,10 @@
         <param-name>url</param-name>
         <param-value>jdbc:mysql://81.82.179.4:3306/klanten</param-value>
     </context-param>
+    <!--<context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://192.168.0.125:3306/klanten</param-value>
+    </context-param>-->
     <!--    voor als het op de server staat gebruik onderste url param-->
     <!--<context-param>
         <param-name>url</param-name>
@@ -37,8 +41,12 @@
         <param-name>sslmode</param-name>
         <param-value>prefer</param-value>
     </context-param>-->
-    
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404.jsp</location>
+    </error-page>
     <error-page>
         <location>/error.jsp</location>
     </error-page>
+
 </web-app>

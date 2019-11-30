@@ -13,6 +13,8 @@ public class ShowClient extends RequestHandler {
         int clientId = (int) request.getSession().getAttribute("clientId");
         ExcellPlusCure cure = getDatabaseService().getExcellPlusCureFromClientWithId(clientId);
         request.getSession().setAttribute("clientsCurrentCure", cure);
+        //Heights
+        request.getSession().setAttribute("clientMeasureHeights",getDatabaseService().getHeightsFromClient(clientId));
         request.getRequestDispatcher("clientView.jsp").forward(request,response);
     }
 }

@@ -36,9 +36,11 @@
             </div>
         </article>
     </c:if>
-    <article>
-        <form method="post" action="Controller?command=AddClient" class="red" validate>
-            <p>
+
+    <form method="post" action="Controller?command=AddClient" class="red" validate>
+        <div class="article-container">
+            <article>
+                <p>
                 <p class="row">
                 <div class="col-25">
                     <label for="name" class="control-label">Naam:</label></div>
@@ -60,7 +62,14 @@
                 <div class="col-25"><label for="birthday" class="control-label">Geboortedatum:</label></div>
                 <div class="col-75"><input type="date" id="birthday" name="birthday"
                                            value="${previousValueBirthday}"></div>
-                 </p>
+                </p>
+                <p class="row">
+                <div class="col-25"><label for="comment" class="control-label">Opmerkingen:</label></div>
+                <div class="col-75"><textarea type="text" id="comment" name="comment" placeholder="nieuw adres"
+                                              value="${previousValueComment}" class="textarea"></textarea></div>
+                </p>
+            </article>
+            <article>
                 <p class="row">
                 <div class="col-25"><label for="place" class="control-label">Woonplaats:</label></div>
                 <div class="col-75"><input type="text" id="place" name="place" placeholder="Peulis"
@@ -81,20 +90,17 @@
                 <div class="col-75"><input type="text" id="number" name="number" placeholder="124F"
                                            value="${previousValueNumber}"></div>
                 </p>
+                </fieldset>
 
+            </article>
+        </div>
+        <article>
+            <p class="row">
+                <input type="submit" value="Voeg klant toe" id="submit">
+            </p>
+        </article>
+    </form>
 
-                <p class="row">
-                <div class="col-25"><label for="comment" class="control-label">Opmerkingen:</label></div>
-                <div class="col-75"><textarea type="text" id="comment" name="comment" placeholder="nieuw adres"
-                                              value="${previousValueComment}" class="textarea"></textarea></div>
-                </p>
-
-                <p class="row">
-                    <input type="submit" value="Voeg klant toe" id="submit">
-                </p>
-            </fieldset>
-        </form>
-    </article>
 </main>
 </body>
 </html>

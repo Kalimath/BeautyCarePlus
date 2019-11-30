@@ -14,33 +14,33 @@
 <header class="containerHeader">
 
     <h1>Beauty Care<em style="color: #B38D59">+</em></h1>
-    <nav class="hc">
-        <p class="navTitle">Algemeen</p>
-        <ul>
-            <li><a href="Controller">Home</a></li>
-            <li><a href="Controller?command=AddClientForm">Voeg klant toe</a></li>
-        </ul>
-    </nav>
-
-
-    <c:choose>
-        <c:when test="${client!=null}">
-        <jsp:include page="clientNav.jsp">
-            <jsp:param name="" value=""/>
-        </jsp:include>
-        </c:when>
-        <c:otherwise>
-            <div class="hc">
-                    <%--<h2>Klant:</h2>
-            <h3>${param.name}</h3>--%>
-            </div>
-        </c:otherwise>
-    </c:choose>
-
 
 
     <c:choose>
         <c:when test="${user!=null}">
+            <nav class="hc">
+                <p class="navTitle">Algemeen</p>
+                <ul>
+                    <li><a href="Controller">Home</a></li>
+                    <li><a href="Controller?command=AddClientForm">Voeg klant toe</a></li>
+                </ul>
+            </nav>
+
+            <c:choose>
+                <c:when test="${client!=null}">
+                    <jsp:include page="clientNav.jsp">
+                        <jsp:param name="" value=""/>
+                    </jsp:include>
+                </c:when>
+                <c:otherwise>
+                    <div class="hc">
+                            <%--<h2>Klant:</h2>
+                    <h3>${param.name}</h3>--%>
+                    </div>
+                </c:otherwise>
+            </c:choose>
+
+
             <jsp:include page="userNav.jsp">
                 <jsp:param name="" value=""/>
             </jsp:include>
@@ -49,12 +49,18 @@
             <div class="hc">
 
             </div>
+            <div class="hc">
+
+            </div>
+            <div class="hc">
+
+            </div>
         </c:otherwise>
     </c:choose>
 
-    <jsp:include page="Foot.jsp">
+    <%--<jsp:include page="Foot.jsp">
         <jsp:param name="" value=""/>
-    </jsp:include>
+    </jsp:include>--%>
 
 </header>
 

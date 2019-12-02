@@ -57,7 +57,7 @@ public class UserLogIn extends RequestHandler {
                 System.out.println("Errors bij login: "+errors.size());
                 request.getRequestDispatcher(destination).forward(request,response);
             }else{
-                new ControllerFactory().getController("Home",this.getDatabaseService()).handleRequest(request,response);
+                this.getControllerFactory().getController("Home",this.getDatabaseService()).handleRequest(request,response);
             }
 
 

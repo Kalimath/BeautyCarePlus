@@ -21,6 +21,10 @@ public abstract class RequestHandler {
 	public DatabaseService getDatabaseService() {
 		return databaseService;
 	}
+
+	public ControllerFactorySingleton getControllerFactory(){
+		return ControllerFactorySingleton.getInstance();
+	}
 	
 	
 }

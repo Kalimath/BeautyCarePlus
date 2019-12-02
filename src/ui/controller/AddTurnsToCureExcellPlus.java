@@ -20,7 +20,7 @@ public class AddTurnsToCureExcellPlus extends RequestHandler {
         if (cure.getTurnsLeft() == 1 || cure.getTurnsLeft() == 12 || cure.getTurnsLeft() == 20) {
             response.sendRedirect("clientForm.jsp");
         } else {
-            (new ControllerFactory().getController("ShowClient", getDatabaseService())).handleRequest(request, response);
+            this.getControllerFactory().getController("ShowClient", getDatabaseService()).handleRequest(request, response);
         }
 
 

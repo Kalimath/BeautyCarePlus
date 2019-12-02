@@ -20,17 +20,17 @@
 <body>
     <main>
 
-       <article><h2>Excell+</h2></article>
+       <article><h2 id="title">Excell+</h2></article>
         <div class="article-container">
             <c:choose>
                 <c:when test="${checkupNeeded}">
                 <article>
                     <h2>Opmeting aangeraden</h2>
                     <form method="post" action="Controller?command=CureStartedWithCheckup">
-                        <input type="submit" value="Start nieuwe behandeling opmeting">
+                        <input type="submit" value="Start nieuwe behandeling opmeting" id="submitStartCureWithCheckup">
                     </form>
                     <form method="post" action="Controller?command=CureStarted">
-                        <input type="submit" value="Start nieuwe behandeling zonder opmeting">
+                        <input type="submit" value="Start nieuwe behandeling zonder opmeting" id="submitStartCureWithoutCheckup">
                     </form>
                 </article>
                 </c:when>
@@ -38,7 +38,7 @@
                     <article>
                         <h2>Nieuwe behandeling</h2>
                         <form method="post" action="Controller?command=StartCureExcellPlus">
-                            <input type="submit" value=" Start ">
+                            <input type="submit" value=" Start " id="submitStartCure">
                         </form>
                     </article>
                 </c:otherwise>

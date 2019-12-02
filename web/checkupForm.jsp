@@ -19,50 +19,44 @@
     <form method="post" action="#" class="red" validate>
         <div class="article-container">
             <article>
-
+                <h2>Omtrek van:</h2>
                 <p style="padding: 0">
                 <p class="row">
                 <div class="col-25">
-                    <label for="knieH" class="control-label">Knie:</label></div>
+                    <label for="knieO" class="control-label">Knie:</label></div>
                 <div class="col-75">
-                    <input type="number" id="knieH" name="knieH" placeholder="in centimeter" min="0" step="1"
-                           value="${previousValueKnieH}"></div>
+                    <input type="number" id="knieO" name="knieO" placeholder="in centimeter" min="0" step="0.1"
+                           value="${previousValueKnieO}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="dijH" class="control-label">Dij:</label></div>
-                <div class="col-75"><input type="number" id="dijH" name="dijH" placeholder="in centimeter" min="0"
-                                           step="1"
-                                           value="${previousValueDijH}"></div>
+                <div class="col-25"><label for="dijO" class="control-label">Dij:</label></div>
+                <div class="col-75"><input type="number" id="dijO" name="dijO" placeholder="in centimeter" min="0"
+                                           step="0.1"
+                                           value="${previousValueDijO}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="tailleH" class="control-label">Taille:</label></div>
-                <div class="col-75"><input type="number" id="tailleH" name="tailleH" placeholder="in centimeter" min="0"
-                                           step="1"
-                                           value="${previousValueTailleH}"></div>
+                <div class="col-25"><label for="tailleO" class="control-label">Taille:</label></div>
+                <div class="col-75"><input type="number" id="tailleO" name="tailleO" placeholder="in centimeter" min="0"
+                                           step="0.1"
+                                           value="${previousValueTailleO}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="armH" class="control-label">Arm:</label></div>
-                <div class="col-75"><input type="number" id="armH" name="armH" placeholder="in centimeter" min="0"
-                                           step="1"
-                                           value="${previousValueArmH}"></div>
+                <div class="col-25"><label for="armO" class="control-label">Arm:</label></div>
+                <div class="col-75"><input type="number" id="armO" name="armO" placeholder="in centimeter" min="0"
+                                           step="0.1"
+                                           value="${previousValueArmO}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="heupH" class="control-label">Heup:</label></div>
-                <div class="col-75"><input type="number" id="heupH" name="heupH" placeholder="in centimeter" min="0"
-                                           step="1"
-                                           value="${previousValueHeupH}"></div>
+                <div class="col-25"><label for="heupO" class="control-label">Heup:</label></div>
+                <div class="col-75"><input type="number" id="heupO" name="heupO" placeholder="in centimeter" min="0"
+                                           step="0.1"
+                                           value="${previousValueHeupO}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="kuitH" class="control-label">Kuit:</label></div>
-                <div class="col-75"><input type="number" id="kuitH" name="kuitH" placeholder="in centimeter" min="0"
-                                           step="1"
-                                           value="${previousValueKuitH}"></div>
-                </p>
-                <p class="row">
-                <div class="col-25"><label for="lengtePersoonH" class="control-label">Lengte persoon:</label></div>
-                <div class="col-75"><input type="number" id="lengtePersoonH" name="lengtePersoonH"
-                                           placeholder="in centimeter" min="0" step="1"
-                                           value="${previousValueLengtePersoonH}"></div>
+                <div class="col-25"><label for="kuitO" class="control-label">Kuit:</label></div>
+                <div class="col-75"><input type="number" id="kuitO" name="kuitO" placeholder="in centimeter" min="0"
+                                           step="0.1"
+                                           value="${previousValueKuitO}"></div>
                 </p>
                 </fieldset>
 
@@ -106,12 +100,6 @@
                 <div class="col-75"><input type="number" id="kuitH" name="kuitH" placeholder="in centimeter" min="0"
                                            step="1"
                                            value="${previousValueKuitH}"></div>
-                </p>
-                <p class="row">
-                <div class="col-25"><label for="lengtePersoonH" class="control-label">Lengte persoon:</label></div>
-                <div class="col-75"><input type="number" id="lengtePersoonH" name="lengtePersoonH"
-                                           placeholder="in centimeter" min="0" step="1"
-                                           value="${previousValueLengtePersoonH}"></div>
                 </p>
                 </fieldset>
 

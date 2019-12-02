@@ -31,12 +31,12 @@ public class StartCureExcellPlus extends RequestHandler {
                 if (checkupNeeded) {
                     request.getRequestDispatcher("checkupForm.jsp").forward(request, response);
                 } else {
-                    (new ControllerFactory().getController("ShowClient", getDatabaseService())).handleRequest(request, response);
+                    this.getControllerFactory().getController("ShowClient", getDatabaseService()).handleRequest(request, response);
                 }
             } else {
                 request.setAttribute("errorStart", "Voeg eerst beurten toe!");
 
-                (new ControllerFactory().getController("ShowClient", getDatabaseService())).handleRequest(request, response);
+                this.getControllerFactory().getController("ShowClient", getDatabaseService()).handleRequest(request, response);
             }
 
 

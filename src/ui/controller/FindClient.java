@@ -1,7 +1,5 @@
 package ui.controller;
 
-import domain.model.personal.Client;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +17,7 @@ public class FindClient extends RequestHandler {
             request.getSession().setAttribute("clientId", clientId);
             request.getSession().setAttribute("client", getDatabaseService().getClientWithId(clientId));
             request.getSession().setAttribute("clientAddress", getDatabaseService().getAddress(clientId));
-            (new ControllerFactory().getController("ShowClient", getDatabaseService())).handleRequest(request, response);
+            this.getControllerFactory().getController("ShowClient", getDatabaseService()).handleRequest(request, response);
         } catch (Exception e) {
             request.setAttribute("error", "Geen resultaten voor opgegeven naam: \""+clientName+"\"");
             request.setAttribute("clientNames", getDatabaseService().getClientnames());

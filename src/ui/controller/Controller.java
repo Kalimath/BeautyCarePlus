@@ -19,7 +19,7 @@ public class Controller extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     private DatabaseService databaseService;
-    private ControllerFactory controllerFactory = new ControllerFactory();
+    private ControllerFactorySingleton controllerFactorySingleton = ControllerFactorySingleton.getInstance();
 
     public Controller() {
         super();
@@ -59,10 +59,10 @@ public class Controller extends HttpServlet {
         }else{
             if (action != null) {
                 RequestHandler handler;
-                handler = controllerFactory.getController(action, databaseService);
+                handler = controllerFactorySingleton.getController(action, databaseService);
                 handler.handleRequest(request, response);
             }else{
-                controllerFactory.getController("Home", databaseService).handleRequest(request,response);
+                controllerFactorySingleton.getController("Home", databaseService).handleRequest(request,response);
             }
         }
 

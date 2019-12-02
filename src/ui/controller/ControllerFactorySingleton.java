@@ -2,13 +2,19 @@ package ui.controller;
 
 import domain.model.DatabaseService;
 
-public class ControllerFactory {
+public class ControllerFactorySingleton {
+	private static ControllerFactorySingleton uniqueInstance;
+
+	private ControllerFactorySingleton(){}
 	
-    public RequestHandler getController(String key, DatabaseService model) {
-        return createHandler(key, model);
+    public static ControllerFactorySingleton getInstance() {
+		if (uniqueInstance == null) {
+			uniqueInstance = new ControllerFactorySingleton ();
+		}
+		return uniqueInstance;
     }
     
-	private RequestHandler createHandler(String handlerName, DatabaseService model) {
+	public RequestHandler getController(String handlerName, DatabaseService model) {
 		RequestHandler handler = null;
 		try {
 			Class<?> handlerClass = Class.forName("ui.controller."+ handlerName);
@@ -23,3 +29,4 @@ public class ControllerFactory {
 
 
 }
+

@@ -13,7 +13,7 @@
 </head>
 <header class="containerHeader">
 
-    <h1>Beauty Care<em style="color: #B38D59">+</em></h1>
+    <logoText>Beauty Care<em style="color: #B38D59">+</em></logoText>
 
 
     <c:choose>

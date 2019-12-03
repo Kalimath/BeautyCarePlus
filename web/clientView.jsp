@@ -14,7 +14,7 @@
 
 </jsp:include>
 <main>
-    <article><h2>${client.name}</h2></article>
+    <article><h1>${client.name}</h1></article>
     <div class="article-container">
 
         <article>

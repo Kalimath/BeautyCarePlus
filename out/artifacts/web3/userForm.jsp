@@ -16,7 +16,7 @@
 </jsp:include>
 <main>
     <article>
-        <h2>Voeg gebruiker toe</h2>
+        <h1>Voeg gebruiker toe</h1>
     </article>
 </main>
 </body>

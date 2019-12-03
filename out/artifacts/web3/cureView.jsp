@@ -20,7 +20,7 @@
 <body>
     <main>
 
-       <article><h2 id="title">Excell+</h2></article>
+       <article><h1 id="title">Excell+</h1></article>
         <div class="article-container">
             <c:choose>
                 <c:when test="${checkupNeeded}">

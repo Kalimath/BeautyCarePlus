@@ -13,14 +13,15 @@ header nav li ul {
     height: 100%;
 
 }
-.hc p{
+
+.hc p {
     padding: 8px;
     font-family: Bellefair;
     font-size: 140%;
 
 }
 
-.hc .navTitle{
+.hc .navTitle {
     border-bottom: solid 2px black;
 }
 
@@ -61,7 +62,6 @@ header nav a:hover {
 }
 
 
-
 header {
     min-font-size: 170px;
     height: auto;
@@ -73,16 +73,14 @@ header {
     max-width: 250px;
 }
 
-header h1 {
+header logoText {
     font-size: 440%;
     padding: 25px;
     font-family: 'Poiret One';
     text-align: center;
-
-    
 }
 
-header p{
+header p {
     color: #cccccc;
 }
 
@@ -99,10 +97,11 @@ a {
     text-decoration: none;
 }
 
-p a:hover{
+p a:hover {
     text-decoration: underline;
 }
-h3 a:hover{
+
+h3 a:hover {
     text-decoration: underline;
 }
 
@@ -121,10 +120,8 @@ a:focus {
 }
 
 
-
 main {
-
-    width: auto;
+    width: 100%;
     background: url("../images/80932 BEATRIZ FDEZ 6.jpg") no-repeat center;
     background-size: cover;
     font-size: 120%;
@@ -135,7 +132,7 @@ main {
 
 }
 
-.error-message{
+.error-message {
     text-align: center;
     color: red;
     font-size: 20px;
@@ -144,7 +141,7 @@ main {
 
 }
 
-.info_container{
+.info_container {
     /*background-color: #999999;
     padding: 20px;
     max-width: 300px*/
@@ -155,8 +152,7 @@ input:invalid {
     background-color: lightcoral;
 }
 
-.form-radio
-{
+.form-radio {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -173,8 +169,8 @@ input:invalid {
     margin-right: 7px;
     outline: none;
 }
-.form-radio:checked::before
-{
+
+.form-radio:checked::before {
     position: absolute;
     font: 13px/1 'Open Sans', sans-serif;
     left: 11px;
@@ -182,16 +178,16 @@ input:invalid {
     content: '\02143';
     transform: rotate(40deg);
 }
-.form-radio:hover
-{
+
+.form-radio:hover {
     background-color: #f7f7f7;
 }
-.form-radio:checked
-{
+
+.form-radio:checked {
     background-color: #f1f1f1;
 }
-label
-{
+
+label {
     font: 15px/1.7 'Open Sans', sans-serif;
     color: #333;
     -webkit-font-smoothing: antialiased;
@@ -199,7 +195,7 @@ label
     cursor: pointer;
 }
 
-select{
+select {
     border-color: #B38D59;
     background-color: #FFFFFF;
 }
@@ -229,11 +225,11 @@ td, th {
 
 }
 
-td{
+td {
     text-align: left;
 }
 
-main h2 {
+main h1 {
     padding: 10px;
     padding-bottom: 20px;
     font-weight: bold;
@@ -244,149 +240,148 @@ main h2 {
 
 main article {
     padding: 20px;
-    background: rgb(204,204,204, .8);
+    background: rgb(204, 204, 204, .8);
     /*background: rgb(223,11,85, .6);*/
 
-margin: 10px;
-border-style: solid;
-border-width: 5px;
-border-color: #ccc;
+    margin: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ccc;
 
 }
 
 main article ul.summary {
-padding-bottom: 30px;
-font-family: inherit;
-border: 2px;
-color: #B38D59;
-align-items: center;
+    padding-bottom: 30px;
+    font-family: inherit;
+    border: 2px;
+    color: #B38D59;
+    align-items: center;
 
 }
 
 
-
 main article ul.summary li {
-line-height: 2;
-font-size: inherit;
-padding-left: 5px;
-text-align: left;
-list-style: disc;
-list-style-position: outside;
+    line-height: 2;
+    font-size: inherit;
+    padding-left: 5px;
+    text-align: left;
+    list-style: disc;
+    list-style-position: outside;
 
 }
 
 li .noMark {
-list-style-type: lower-roman;
+    list-style-type: lower-roman;
 }
 
 main article p {
-font-family: Bellefair;
-font-size: 120%;
-line-height: 1.4;
-padding: 10px 0px 30px 0px;
+    font-family: Bellefair;
+    font-size: 120%;
+    line-height: 1.4;
+    padding: 10px 0px 30px 0px;
 }
 
 .imagenarrow {
-padding-top: 10px;
-padding-bottom: 10px;
-max-width: 400px;
-width: 100%;
-margin: auto;
-height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    height: auto;
 
 }
 
-.imageround{
-padding-top: 10px;
-padding-bottom: 10px;
-max-width: 400px;
-max-height: 400px;
-width: 100%;
-margin: auto;
-height: 100%;
-border-radius: 50%;
+.imageround {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    border-radius: 50%;
 
 }
 
-.imageround:after{
-display: block;
+.imageround:after {
+    display: block;
 }
 
-.imagewide{
-padding-top: 20px;
-padding-bottom: 10px;
-max-width: 700px;
-width: 100%;
-margin: auto;
-height: auto;
+.imagewide {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+    height: auto;
 }
 
-.imagelong{
-padding-top: 10px;
-padding-bottom: 10px;
-max-width: 300px;
-max-height: 500px;
-width: 100%;
-margin: auto;
-height: auto;
+.imagelong {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 300px;
+    max-height: 500px;
+    width: 100%;
+    margin: auto;
+    height: auto;
 }
 
 main .centered {
-width: 70%;
-height: 400px;
+    width: 70%;
+    height: 400px;
 }
 
 .videoframe {
-padding-top: 10px;
-padding-bottom: 10px;
-max-width: 500px;
-width: 100%;
-margin: auto;
-min-height: 300px;
-max-height: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    min-height: 300px;
+    max-height: 400px;
 }
 
 .frame {
-padding-top: 10px;
-padding-bottom: 10px;
-width: 70%;
-height: 100%;
-max-height: 395px;
-width: 100%;
-max-width: 500px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 70%;
+    height: 100%;
+    max-height: 395px;
+    width: 100%;
+    max-width: 500px;
 
 }
 
-h3 {
-display: block;
-font-size: 190%;
-font-weight: bold;
-color: #B38D59;
-padding: 15px 0px 18px 0px;
+h2 {
+    display: block;
+    font-size: 190%;
+    font-weight: bold;
+    color: #B38D59;
+    padding: 15px 0px 18px 0px;
 }
 
 em {
-color: #B38D59;
-font-size: 130%;
+    color: #B38D59;
+    font-size: 130%;
 }
 
 b {
-text-decoration: underline;
+    text-decoration: underline;
 }
 
 .black {
-color: black;
-font-size: 5vw;
+    color: black;
+    font-size: 5vw;
 }
 
 .quote > p {
-padding-top: 5px;
-font-family: handlee;
-font-size: 140%
+    padding-top: 5px;
+    font-family: handlee;
+    font-size: 140%
 }
 
-.ac{
-    opacity:0.6;
+.ac {
+    opacity: 0.6;
 }
 
 div.desc {
@@ -404,14 +399,14 @@ div.desc {
     font-family: Bellefair;
 }
 
-.alertContainer{
+.alertContainer {
     height: auto;
     display: grid;
     grid-template-columns: 40% 50%;
 
 }
 
-.alertContainer div{
+.alertContainer div {
     padding-left: 30px;
 }
 
@@ -462,7 +457,7 @@ input[type=submit] {
     font-size: 130%;
     margin: 20px;
     padding: 5px 10px 5px 10px;
-    background: rgb(204,204,204, .9);
+    background: rgb(204, 204, 204, .9);
     border-color: #B38D59;
     border-style: solid;
     width: auto;
@@ -494,11 +489,11 @@ input[type=submit] {
     box-sizing: border-box;
 }
 
-.col-75 textarea{
+.col-75 textarea {
     width: 70%;
 }
 
-.checkboxFormItem{
+.checkboxFormItem {
     width: auto;
     padding-left: 5px;
     padding-right: 10px;
@@ -582,12 +577,12 @@ footer a:hover {
     text-decoration: underline;
 }
 
-input[type=submit]:hover{
+input[type=submit]:hover {
     color: #706259;
     border-color: #706259;
 }
 
-.search{
+.search {
     text-align: center;
     background-image: url("/images/search.png");
     background-position: 10px 10px;
@@ -606,7 +601,7 @@ footer {
 }
 
 
-.footer{
+.footer {
     color: #999999;
     font-family: Calibri;
     width: 15%;
@@ -628,9 +623,9 @@ footer {
 /*Queries*/
 
 @media only screen and (max-device-width: 1366px) {
-  body {
-    background-attachment: scroll;
-  }
+    body {
+        background-attachment: scroll;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -650,12 +645,13 @@ footer {
     main article {
         font-size: 100%;
     }
+
     main article ul.summary li {
         margin-left: 25%;
         margin-right: 25%;
     }
 
-    main{
+    main {
         width: auto;
     }
 }
@@ -668,9 +664,11 @@ footer {
         justify-content: space-around;
         flex-wrap: wrap;
     }
+
     main article {
         font-size: 90%;
     }
+
     main article ul.summary li {
         margin-left: 40%;
 
@@ -683,7 +681,7 @@ footer {
 
     }
 
-    .article-container div{
+    .article-container div {
         align-self: center;
     }
 
@@ -696,7 +694,7 @@ footer {
 
 }
 
-.containerHeader div,p,h1,h2,h3{
+.containerHeader div, p, h1, h2, h3 {
 
     align-self: center;
 }

@@ -7,40 +7,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4458b4d3-da1c-41cf-93a2-cfd5a5de3548" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ui/controller/DeleteClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddTurnsToCureExcellPlus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddTurnsToCureExcellPlus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/FindClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/FindClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/RequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/RequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/StartCureExcellPlus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/StartCureExcellPlus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/UserLogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/UserLogIn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/allClientsView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/allClientsView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/checkupForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/checkupForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/clientNav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/clientNav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/clientExcellPlusCure.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/clientExcellPlusCure.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/clientForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/clientForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/clientView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/clientView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/cureView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/cureView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/META-INF/BC-Support.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddTurnsToCureExcellPlus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddTurnsToCureExcellPlus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ControllerFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/FindClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/FindClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/RequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/RequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/StartCureExcellPlus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/StartCureExcellPlus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/UserLogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/UserLogIn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BC-Support/TestCureClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BC-Support/TestCureClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/AddTurnsToCureExcellPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/AddTurnsToCureExcellPlus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/ControllerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/ControllerFactorySingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/FindClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/FindClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/InvalidateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/InvalidateClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/RequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/StartCureExcellPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/StartCureExcellPlus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/UserLogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/UserLogIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/TestCureClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/TestCureClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/logInForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/logInForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/userForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/userForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/allClientsView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/allClientsView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/checkupForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/checkupForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/clientNav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/clientNav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/clientExcellPlusCure.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/clientExcellPlusCure.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/clientForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/clientForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/clientView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/clientView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/cureView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/cureView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/defineHeightsForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/defineHeightsForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/errorHeader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/errorHeader.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/logInForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logInForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/userForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/userForm.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +123,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -323,7 +314,8 @@
       <workItem from="1574424133726" duration="2235000" />
       <workItem from="1575109530536" duration="14955000" />
       <workItem from="1575289969955" duration="2912000" />
-      <workItem from="1575306720208" duration="6138000" />
+      <workItem from="1575306720208" duration="6317000" />
+      <workItem from="1575385511570" duration="1513000" />
     </task>
     <task id="LOCAL-00001" summary="Excelllplus cure can now be started and will ask for a checkup if needed. Next item to be worked on is the checkup form.">
       <created>1575127123059</created>
@@ -332,11 +324,28 @@
       <option name="project" value="LOCAL" />
       <updated>1575127123059</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Introduced a Singleton class as ControllerFactory instead of many objects. Also updated the header visual look and Ipad compatibality.">
+      <created>1575315836445</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575315836445</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -353,7 +362,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Excelllplus cure can now be started and will ask for a checkup if needed. Next item to be worked on is the checkup form." />
-    <option name="LAST_COMMIT_MESSAGE" value="Excelllplus cure can now be started and will ask for a checkup if needed. Next item to be worked on is the checkup form." />
+    <MESSAGE value="Introduced a Singleton class as ControllerFactory instead of many objects. Also updated the header visual look and Ipad compatibality." />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduced a Singleton class as ControllerFactory instead of many objects. Also updated the header visual look and Ipad compatibality." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

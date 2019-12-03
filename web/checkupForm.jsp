@@ -19,7 +19,7 @@
     <form method="post" action="#" class="red" validate>
         <div class="article-container">
             <article>
-                <h2>Omtrek van:</h2>
+                <h1>Omtrek van:</h1>
                 <p style="padding: 0">
                 <p class="row">
                 <div class="col-25">

@@ -13,7 +13,7 @@
 <main>
 
     <article>
-        <h2>Klant zoeken</h2>
+        <h1>Klant zoeken</h1>
         <c:if test="${error!=null}">
             <p class="error-message">${error}</p>
         </c:if>

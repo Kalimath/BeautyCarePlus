@@ -18,7 +18,7 @@
     <jsp:param name="title" value="Klanten"/>
 </jsp:include>
 <main>
-    <article><h2 id="pageTitle">Klanten</h2></article>
+    <article><h1 id="pageTitle">Klanten</h1></article>
     <article>
             <c:if test="${clients!=null}">
 

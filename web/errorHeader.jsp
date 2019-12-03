@@ -16,7 +16,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <article>
     <img src="images/info%20(1).png" alt="alert icon">
-    <h2 id="error" style="color: red; text-align: center; font-size: 200%">Waarschuwing: ${param.message}</h2>
+    <h1 id="error" style="color: red; text-align: center; font-size: 200%">Waarschuwing: ${param.message}</h1>
 </article>
 <article>
     <h3>Keer terug naar:</h3>

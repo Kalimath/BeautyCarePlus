@@ -13,7 +13,7 @@
 
 </jsp:include>
 <main>
-    <article><h2 style="font-weight: bolder">Excell+</h2></article>
+    <article><h1 style="font-weight: bolder">Excell+</h1></article>
     <div class="article-container">
         <article>
             <h2>Beurten resterend</h2>

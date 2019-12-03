@@ -21,7 +21,7 @@
 <main>
 
     <article>
-        <h2 style="font-weight: bolder">Nieuwe klant toevoegen</h2>
+        <h1 style="font-weight: bolder">Nieuwe klant toevoegen</h1>
     </article>
     <c:if test="${errors!=null}">
         <article class="alertContainer">

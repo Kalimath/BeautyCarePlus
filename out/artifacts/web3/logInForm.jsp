@@ -19,7 +19,7 @@
 <main>
 
     <article>
-        <h2 id="pageTitle">Log in</h2>
+        <h1 id="pageTitle">Log in</h1>
     </article>
     <c:if test="${errors!=null}">
         <article class="alertContainer">

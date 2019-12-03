@@ -57,9 +57,9 @@
             <article>
                 <h2>Meethoogtes</h2>
                 <c:choose>
-                <c:when test="${heights==null}">
-                <h3><a href="Controller?command=DefineHeightsForm">Definieer hoogtes (eenmalig)</a></h3>
-                </c:when>
+                    <c:when test="${heights==null}">
+                        <h3><a href="Controller?command=DefineHeightsForm">Definieer hoogtes (eenmalig)</a></h3>
+                    </c:when>
                     <c:otherwise>
                         <p> ~implementeer de table voor de hoogtes</p>
                     </c:otherwise>
@@ -67,37 +67,25 @@
             </article>
 
         </div>
-        <div>
-            <c:choose>
-                <c:when test="${clientsCurrentCure!=null}">
-                    <c:if test="${fn:length(clientsCurrentCure.visits)==0&&clientsCurrentCure.turnsLeft==0}">
-                        <article>
-                            <h2>Excell+ kuur aanmaken</h2>
-                            <form method="post" action="Controller?command=CreateExcellPlusCureWithTurns">
+        <c:if test="${clientsCurrentCure==null}">
+            <article>
+                <h2>Excell+ kuur aanmaken</h2>
+                <form method="post" action="Controller?command=CreateExcellPlusCureWithTurns">
 
-                                <input type="radio" name="turns" value="1" id="radio1" class="form-radio" checked>
-                                <label for="radio1">testbeurt</label>
+                    <input type="radio" name="turns" value="1" id="radio1" class="form-radio" checked>
+                    <label for="radio1">testbeurt</label>
 
-                                <input type="radio" name="turns" value="12" id="radio2" class="form-radio">
-                                <label for="radio2">12 beurten</label>
+                    <input type="radio" name="turns" value="12" id="radio2" class="form-radio">
+                    <label for="radio2">12 beurten</label>
 
-                                <input type="radio" name="turns" value="20" id="radio3" class="form-radio">
-                                <label for="radio3">20 beurten</label>
-                                <p>
-                                    <input type="submit" value="maak aan" class="button">
-                                </p>
-                            </form>
-                        </article>
-                    </c:if>
-                </c:when>
-                <c:otherwise>
-                    <article>
-                        <a href="Controller?command=CreateExcellPlusCure"><h2>Creër nieuwe kuur</h2></a>
-                    </article>
-                </c:otherwise>
-            </c:choose>
-
-        </div>
+                    <input type="radio" name="turns" value="20" id="radio3" class="form-radio">
+                    <label for="radio3">20 beurten</label>
+                    <p>
+                        <input type="submit" value="maak aan" class="button">
+                    </p>
+                </form>
+            </article>
+        </c:if>
     </div>
 </main>
 </body>

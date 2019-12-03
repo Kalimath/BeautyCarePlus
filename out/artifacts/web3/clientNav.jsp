@@ -22,7 +22,7 @@
         <li><a href="clientView.jsp">Overzicht</a></li>
         <li><a href="#">Gezondheidsfiche</a></li>
         <c:if test="${clientsCurrentCure!=null}">
-            <li><a href="cureView.jsp" id="excellPlusLink">Excell+</a></li>
+            <li><a href="Controller?command=ExcellPlusCureView" id="excellPlusLink">Excell+</a></li>
         </c:if>
         <c:if test="${clientsCurrentCure.getLatestCheckup()!=null}">
         <li><a href="#">Laatste meting</a></li>

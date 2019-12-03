@@ -8,9 +8,6 @@
 
 package ui.controller;
 
-import domain.model.cure.ExcellPlusCure;
-import domain.model.visit.Visit;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,9 +20,10 @@ public class InvalidateClient extends RequestHandler {
         request.getSession().removeAttribute("client");
         request.getSession().removeAttribute("clientId");
         if(request.getSession().getAttribute("todaysVisit")!=null){
-            ExcellPlusCure clientCure = getDatabaseService().getExcellPlusCureFromClientWithId(clientId);
-            clientCure.addVisit((Visit) request.getSession().getAttribute("todaysVisit"));
             request.getSession().removeAttribute("todaysVisit");
+        }
+        if(request.getSession().getAttribute("clientsCurrentCure")!=null){
+            request.getSession().removeAttribute("clientsCurrentCure");
         }
         this.getControllerFactory().getController("Home", getDatabaseService()).handleRequest(request,response);
     }

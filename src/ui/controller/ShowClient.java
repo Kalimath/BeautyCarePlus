@@ -11,10 +11,16 @@ public class ShowClient extends RequestHandler {
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int clientId = (int) request.getSession().getAttribute("clientId");
-        ExcellPlusCure cure = getDatabaseService().getExcellPlusCureFromClientWithId(clientId);
-        request.getSession().setAttribute("clientsCurrentCure", cure);
+
+        if(request.getSession().getAttribute("clientsCurrentCure")==null){
+            ExcellPlusCure cure = getDatabaseService().getExcellPlusCureFromClientWithId(clientId);
+            request.getSession().setAttribute("clientsCurrentCure", cure);
+        }
+
         //Heights
-        request.getSession().setAttribute("clientMeasureHeights",getDatabaseService().getHeightsFromClient(clientId));
-        request.getRequestDispatcher("clientView.jsp").forward(request,response);
+        if(request.getSession().getAttribute("clientMeasureHeights")==null) {
+            request.getSession().setAttribute("clientMeasureHeights", getDatabaseService().getHeightsFromClient(clientId));
+        }
+        request.getRequestDispatcher("clientView.jsp").forward(request, response);
     }
 }

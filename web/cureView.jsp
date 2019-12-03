@@ -12,49 +12,81 @@
     <jsp:include page="head.jsp">
         <jsp:param name="" value=""/>
     </jsp:include>
-        
+
 </head>
 <jsp:include page="header.jsp">
     <jsp:param name="" value=""/>
 </jsp:include>
 <body>
-    <main>
+<main>
 
-       <article><h1 id="title">Excell+</h1></article>
-        <div class="article-container">
-            <c:choose>
-                <c:when test="${checkupNeeded}">
+    <article><h1 id="title">Excell+</h1></article>
+    <div class="article-container">
+        <c:choose>
+            <c:when test="${todaysVisit!=null}">
                 <article>
-                    <h2>Opmeting aangeraden</h2>
-                    <form method="post" action="Controller?command=CureStartedWithCheckup">
-                        <input type="submit" value="Start nieuwe behandeling opmeting" id="submitStartCureWithCheckup">
-                    </form>
-                    <form method="post" action="Controller?command=CureStarted">
-                        <input type="submit" value="Start nieuwe behandeling zonder opmeting" id="submitStartCureWithoutCheckup">
+                    <h2>In behandeling</h2>
+                    <img src="/images/therapy.png" alt="therapy image">
+                    <form method="post" action="Controller?command=EndExcellPlusCure">
+                        <input type="submit" value=" Beïndig "
+                               id="submitEndCure">
                     </form>
                 </article>
-                </c:when>
-                <c:otherwise>
-                    <article>
-                        <h2>Nieuwe behandeling</h2>
-                        <form method="post" action="Controller?command=StartCureExcellPlus">
-                            <input type="submit" value=" Start " id="submitStartCure">
-                        </form>
-                    </article>
-                </c:otherwise>
-            </c:choose>
+            </c:when>
+            <c:otherwise>
+                <c:choose>
+                    <c:when test="${checkupNeeded}">
+                        <article>
+                            <h2>Opmeting aangeraden</h2>
+                            <form method="post" action="Controller?command=CureStartedWithCheckup">
+                                <input type="submit" value="Start nieuwe behandeling opmeting"
+                                       id="submitStartCureWithCheckup">
+                            </form>
+                            <form method="post" action="Controller?command=CureStarted">
+                                <input type="submit" value="Start nieuwe behandeling zonder opmeting"
+                                       id="submitStartCureWithoutCheckup">
+                            </form>
+                        </article>
+                    </c:when>
+                    <c:otherwise>
+                        <article>
+                            <h2>Nieuwe behandeling</h2>
+                            <form method="post" action="Controller?command=StartExcellPlusCure">
+                                <input type="submit" value=" Start " id="submitStartCure">
+                            </form>
+                        </article>
+                    </c:otherwise>
+                </c:choose>
+            </c:otherwise>
+        </c:choose>
+        <c:if test="${clientsCurrentCure.turnsLeft<12}">
             <article>
-                <h2>Beurten resterend</h2>
-                <h3 class="h3NumberField">${clientsCurrentCure.turnsLeft}</h3>
-            </article>
-            <c:if test="${clientsCurrentCure.latestCheckup!=null}">
-                <article>
-                    <h2>Laatste opmeting</h2>
-                    <h3>${clientsCurrentCure.latestCheckup}</h3>
-                </article>
-            </c:if>
+                <h2>Beurten toevoegen</h2>
+                <form method="post" action="Controller?command=AddTurnsToExcellPlusCure">
 
-        </div>
-    </main>
+                    <input type="radio" name="turns" value="12" id="radio2" class="form-radio">
+                    <label for="radio2">12 beurten</label>
+
+                    <input type="radio" name="turns" value="20" id="radio3" class="form-radio">
+                    <label for="radio3">20 beurten</label>
+                    <p>
+                        <input type="submit" value=" Voeg toe " class="button">
+                    </p>
+                </form>
+            </article>
+        </c:if>
+        <article>
+            <h2>Beurten resterend</h2>
+            <h3 class="h3NumberField">${clientsCurrentCure.turnsLeft}</h3>
+        </article>
+        <c:if test="${clientsCurrentCure.latestCheckup!=null}">
+            <article>
+                <h2>Laatste opmeting</h2>
+                <h3>${clientsCurrentCure.latestCheckup}</h3>
+            </article>
+        </c:if>
+
+    </div>
+</main>
 </body>
 </html>

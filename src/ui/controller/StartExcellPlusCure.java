@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class StartCureExcellPlus extends RequestHandler {
+public class StartExcellPlusCure extends RequestHandler {
 
 
     @Override
@@ -21,12 +21,15 @@ public class StartCureExcellPlus extends RequestHandler {
         } else {
             if (cure.getTurnsLeft() > 0) {
                 Visit newVisit = new Visit();
-                cure.addVisit(newVisit);
-                request.getSession().setAttribute("todaysVisit", newVisit);
+
 
                 if ((cure.getAllCheckUps().size() >= 0 &&/*getDatabaseService().>=1&&*/(cure.getTurnsLeft() == 12 || cure.getTurnsLeft() == 4)) || ((cure.getLatestCheckup() == null || cure.checkupTooLongAgo()) && (cure.getTurnsLeft() >= 12))) {
                     checkupNeeded = true;
                 }
+                cure.startNewVisit(newVisit);
+                getDatabaseService().updateExcellPlusCure(cure,clientId);
+                request.getSession().setAttribute("clientsCurrentCure", cure);
+                request.getSession().setAttribute("todaysVisit", newVisit);
                 request.setAttribute("checkupNeeded", checkupNeeded);
                 if (checkupNeeded) {
                     request.getRequestDispatcher("checkupForm.jsp").forward(request, response);

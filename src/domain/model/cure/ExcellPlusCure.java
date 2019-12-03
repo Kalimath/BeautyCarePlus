@@ -71,19 +71,20 @@ public class ExcellPlusCure implements Serializable {
         }
     }
 
-    public void addVisit(Visit newVisit){
+    public void startNewVisit(Visit newVisit){
         if(turnsLeft>0){
             visits.add(newVisit);
+            turnsLeft--;
         }else{
             throw new DomainException("Visit can't be added to this cure: no turns left!");
         }
     }
 
-    public void startCureOneTime(){
+    /*public void startCureOneTime(){
         Visit visit = new Visit();
         visits.add(visit);
         turnsLeft--;
-    }
+    }*/
 
     /*public void doCheckUp(double weight, double length){
         checkups.add(new Checkup(weight,length));

@@ -19,7 +19,7 @@
     <form method="post" action="#" class="red" validate>
         <div class="article-container">
             <article>
-                <h1>Omtrek van:</h1>
+                <h2>Omtrek van:</h2>
                 <p style="padding: 0">
                 <p class="row">
                 <div class="col-25">
@@ -62,44 +62,50 @@
 
             </article>
             <article>
-
+                <h2>Meting:</h2>
                 <p style="padding: 0">
                 <p class="row">
                 <div class="col-25">
-                    <label for="knieH" class="control-label">Knie:</label></div>
+                    <label for="gewicht" class="control-label">Gewicht:</label></div>
                 <div class="col-75">
-                    <input type="number" id="knieH" name="knieH" placeholder="in centimeter" min="0" step="1"
-                           value="${previousValueKnieH}"></div>
+                    <input type="number" id="gewicht" name="gewicht" placeholder="in kg" min="0" step="0.1"
+                           value="${previousValueGewicht}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="dijH" class="control-label">Dij:</label></div>
-                <div class="col-75"><input type="number" id="dijH" name="dijH" placeholder="in centimeter" min="0"
-                                           step="1"
-                                           value="${previousValueDijH}"></div>
+                <div class="col-25"><label for="vetmassa" class="control-label">Vetmassa:</label></div>
+                <div class="col-75"><input type="number" id="vetmassa" name="vetmassa" placeholder="in kg" min="0"
+                                           step=0.1"
+                                           value="${previousValueVetmassa}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="tailleH" class="control-label">Taille:</label></div>
-                <div class="col-75"><input type="number" id="tailleH" name="tailleH" placeholder="in centimeter" min="0"
-                                           step="1"
-                                           value="${previousValueTailleH}"></div>
+                <div class="col-25"><label for="spiermassa" class="control-label">Spiermassa:</label></div>
+                <div class="col-75"><input type="number" id="spiermassa" name="spiermassa" placeholder="in kg" min="0"
+                                           step="0.1"
+                                           value="${previousValueSpiermassa}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="armH" class="control-label">Arm:</label></div>
-                <div class="col-75"><input type="number" id="armH" name="armH" placeholder="in centimeter" min="0"
-                                           step="1"
-                                           value="${previousValueArmH}"></div>
+                <div class="col-25"><label for="lichaamsvocht" class="control-label">Lichaamsvocht:</label></div>
+                <div class="col-75"><input type="number" id="lichaamsvocht" name="lichaamsvocht" placeholder="in kg" min="0"
+                                           step="0.1"
+                                           value="${previousValueLichaamsvocht}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="heupH" class="control-label">Heup:</label></div>
-                <div class="col-75"><input type="number" id="heupH" name="heupH" placeholder="in centimeter" min="0"
+                <div class="col-25"><label for="bmr" class="control-label">Bmr:</label></div>
+                <div class="col-75"><input type="number" id="bmr" name="bmr" placeholder="in kJ" min="0"
                                            step="1"
-                                           value="${previousValueHeupH}"></div>
+                                           value="${previousValueBmr}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="kuitH" class="control-label">Kuit:</label></div>
-                <div class="col-75"><input type="number" id="kuitH" name="kuitH" placeholder="in centimeter" min="0"
+                <div class="col-25"><label for="metabolischeLeeftijd" class="control-label">Metabolische leeftijd:</label></div>
+                <div class="col-75"><input type="number" id="metabolischeLeeftijd" name="metabolischeLeeftijd" placeholder="in jaar" min="0"
                                            step="1"
-                                           value="${previousValueKuitH}"></div>
+                                           value="${previousValueMetabolischeLeeftijd}"></div>
+                </p>
+                <p class="row">
+                <div class="col-25"><label for="idealeVetmassa" class="control-label">Ideale vetmassa:</label></div>
+                <div class="col-75"><input type="number" id="idealeVetmassa" name="idealeVetmassa" placeholder="in kg" min="0"
+                                           step="0.1"
+                                           value="${previousValueIdealeVetmassa}"></div>
                 </p>
                 </fieldset>
 
@@ -107,7 +113,7 @@
         </div>
         <article>
             <p class="row">
-                <input type="submit" value="Verder" id="submit">
+                <input type="submit" value="Bevestig" id="submit">
             </p>
 
 

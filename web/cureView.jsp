@@ -45,7 +45,7 @@
             </c:choose>
             <article>
                 <h2>Beurten resterend</h2>
-                <h3>${clientsCurrentCure.turnsLeft}</h3>
+                <h3 class="h3NumberField">${clientsCurrentCure.turnsLeft}</h3>
             </article>
             <c:if test="${clientsCurrentCure.latestCheckup!=null}">
                 <article>

@@ -8,30 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4458b4d3-da1c-41cf-93a2-cfd5a5de3548" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/allClientsView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/allClientsView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/checkupForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/checkupForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/clientExcellPlusCure.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/clientExcellPlusCure.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/clientForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/clientForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/clientView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/clientView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/cureView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/cureView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/logInForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/logInForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/userForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/userForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/allClientsView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/allClientsView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/checkupForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/checkupForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/clientExcellPlusCure.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/clientExcellPlusCure.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/clientForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/clientForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/clientView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/clientView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/cureView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/cureView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/defineHeightsForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/defineHeightsForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/errorHeader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/errorHeader.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/logInForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logInForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/userForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/userForm.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -315,7 +295,7 @@
       <workItem from="1575109530536" duration="14955000" />
       <workItem from="1575289969955" duration="2912000" />
       <workItem from="1575306720208" duration="6317000" />
-      <workItem from="1575385511570" duration="1513000" />
+      <workItem from="1575385511570" duration="2435000" />
     </task>
     <task id="LOCAL-00001" summary="Excelllplus cure can now be started and will ask for a checkup if needed. Next item to be worked on is the checkup form.">
       <created>1575127123059</created>
@@ -331,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575315836445</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactored title styles to more meaningful names">
+      <created>1575387211712</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575387211712</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +350,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Excelllplus cure can now be started and will ask for a checkup if needed. Next item to be worked on is the checkup form." />
     <MESSAGE value="Introduced a Singleton class as ControllerFactory instead of many objects. Also updated the header visual look and Ipad compatibality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Introduced a Singleton class as ControllerFactory instead of many objects. Also updated the header visual look and Ipad compatibality." />
+    <MESSAGE value="Refactored title styles to more meaningful names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored title styles to more meaningful names" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

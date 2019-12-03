@@ -11,14 +11,12 @@ header nav li ul {
     padding: 5px;
     /*background-color: #B38D59;*/
     height: 100%;
-
 }
 
 .hc p {
     padding: 8px;
     font-family: Bellefair;
     font-size: 140%;
-
 }
 
 .hc .navTitle {
@@ -26,7 +24,6 @@ header nav li ul {
 }
 
 body {
-
     font-size: 100%;
     width: 100%;
     min-height: 100vh;
@@ -130,6 +127,16 @@ main {
     text-align: center;
     vertical-align: center;
 
+}
+
+main h3{
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat Alternates';
+}
+
+.h3NumberField{
+    font-size: 200%;
 }
 
 .error-message {
@@ -352,9 +359,9 @@ main .centered {
 
 }
 
-h2 {
+main h2 {
     display: block;
-    font-size: 190%;
+    font-size: 220%;
     font-weight: bold;
     color: #B38D59;
     padding: 15px 0px 18px 0px;

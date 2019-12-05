@@ -79,18 +79,12 @@ public class TestFormClient {
         emailForm.sendKeys("Jan.Janssens@gmail.com");
         phoneForm.sendKeys("0123456789");
 
-        //make variables of all birthday elements
-        WebElement dayForm = driver.findElement(By.id("day"));
-        WebElement monthForm = driver.findElement(By.id("month"));
-        WebElement yearForm = driver.findElement(By.id("year"));
-        //clear text in birthday elements
-        dayForm.clear();
-        monthForm.clear();
-        yearForm.clear();
-        //fill in dummy birthday form
-        dayForm.sendKeys("12");
-        monthForm.sendKeys("12");
-        yearForm.sendKeys("2012");
+        //clear text in birthday element
+        WebElement birthdayForm = driver.findElement(By.id("birthday"));
+        birthdayForm.clear();
+
+        //fill in dummy birthdate
+        birthdayForm.sendKeys("15-02-1959");
 
         //make variables of all address elements
         WebElement placeForm = driver.findElement(By.id("place"));

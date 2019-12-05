@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,9 +27,10 @@ public class AddClient extends RequestHandler {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String tel = request.getParameter("phone");
-        String dayString = request.getParameter("day");
+        /*String dayString = request.getParameter("day");
         String monthString = request.getParameter("month");
-        String yearString = request.getParameter("year");
+        String yearString = request.getParameter("year");*/
+        String birthdayString = request.getParameter("birthday");
         String place = request.getParameter("place");
         String zip = request.getParameter("zip");
         String street = request.getParameter("street");
@@ -58,13 +60,13 @@ public class AddClient extends RequestHandler {
             errors.add(exc.getMessage());
         }
         try {
-            int day = Integer.parseInt(dayString);
+            System.out.println(birthdayString);
+           /* int day = Integer.parseInt(dayString);
             int year = Integer.parseInt(monthString);
-            int month = Integer.parseInt(yearString);
-            temp.setBirthDate(day,month,year);
-            request.setAttribute("previousValueDay", day);
-            request.setAttribute("previousValueMonth", month);
-            request.setAttribute("previousValueYear", year);
+            int month = Integer.parseInt(yearString);*/
+            //temp.setBirthDate(LocalDate.parse(birthdayString,DateTimeFormatter.ofPattern("YYYY-MM-DD")));
+            temp.setBirthDate(LocalDate.parse(birthdayString));
+            request.setAttribute("previousValueBirthday",birthdayString);
         }catch (Exception exc){
             errors.add("geboortedatum is leeg");
         }

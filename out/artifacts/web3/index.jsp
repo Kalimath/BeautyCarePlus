@@ -11,30 +11,36 @@
     <jsp:param name="title" value="Beauty Care +"/>
 </jsp:include>
 <main>
+    <article><h1 id="title">Startpagina</h1></article>
+    <div class="article-container">
+        <article>
+            <h2>Klant zoeken</h2>
+            <c:if test="${error!=null}">
+                <p class="error-message">${error}</p>
+            </c:if>
+            <form autocomplete="off" action="Controller?command=FindClient" method="post">
+                <div class="autocomplete">
+                    <label for="name" class="control-label">Naam:</label>
+                    <input type="text" id="name" name="name" placeholder=""
+                           value="" class="search">
+                </div>
 
-    <article>
-        <h1>Klant zoeken</h1>
-        <c:if test="${error!=null}">
-            <p class="error-message">${error}</p>
-        </c:if>
-        <form autocomplete="off" action="Controller?command=FindClient" method="post">
-            <div class="autocomplete">
-                <label for="name" class="control-label">Naam:</label>
-                <input type="text" id="name" name="name" placeholder=""
-                       value="" class="search">
-            </div>
+                <div class="send">
+                    <input type="submit" value="Toon klant" id="submit" class="button">
+                </div>
+            </form>
+        </article>
+        <%--<article>
 
-            <div class="send">
-                <input type="submit" value="Toon klant" id="submit" class="button">
-            </div>
-        </form>
-    </article>
+            <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:240px;height:80px;"src="https://www.clocklink.com/html5embed.php?clock=004&timezone=Belgium_Brussels&color=white&size=240&Title=&Message=&Target=&From=2019,1,1,0,0,0&Color=white"></iframe>
+
+        </article>--%>
+    </div>
     <c:if test="${client!=null}">
         <article>
             <h3>Recente klant: <a href="Controller?command=ShowClient"> ${client.name}</a></h3>
         </article>
     </c:if>
-
 </main>
 <script>
     function autocomplete(inp, arr) {
@@ -141,7 +147,7 @@
     }
 
     /*An array containing all the country names in the world:*/
-    var clientNames = ["${clientNames.get(0)}"<c:forEach items="${clientNames.subList(1,clientNames.size())}" var="clientName">,"${clientName}"</c:forEach>];
+    var clientNames = ["${clientNames.get(0)}"<c:forEach items="${clientNames.subList(1,clientNames.size())}" var="clientName">, "${clientName}"</c:forEach>];
 
     /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
     autocomplete(document.getElementById("name"), clientNames);

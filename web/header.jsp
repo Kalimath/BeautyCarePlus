@@ -58,6 +58,10 @@
         </c:otherwise>
     </c:choose>
 
+    <nav class="hc">
+        <a href="www.MBDevelopment.vlaanderen">© MB-Development</a>
+
+    </nav>
     <%--<jsp:include page="Foot.jsp">
         <jsp:param name="" value=""/>
     </jsp:include>--%>

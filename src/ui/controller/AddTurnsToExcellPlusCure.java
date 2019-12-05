@@ -22,10 +22,11 @@ public class AddTurnsToExcellPlusCure extends RequestHandler {
             LocalDate today = LocalDate.now();
 
             if(lastUpdate==null||lastUpdate.getDayOfWeek()!=today.getDayOfWeek()){
-                int cureId = (int) request.getSession().getAttribute("cureId");
-                System.out.println("turns = "+request.getParameter("turns"));
-                cure.addTurnsToCure(Integer.parseInt(request.getParameter("turns")));
-                getDatabaseService().updateExcellPlusCure(cure,cureId);
+                int turns = Integer.parseInt(request.getParameter("turns"));
+                System.out.println("turns = "+turns);
+                cure.addTurnsToCure(turns);
+                getDatabaseService().updateExcellPlusCure(cure, (Integer) request.getSession().getAttribute("clientId"));
+                request.getSession().setAttribute("clientCure",cure);
                 this.getControllerFactory().getController("ShowClient", getDatabaseService()).handleRequest(request, response);
             }else{
                response.sendRedirect("cureView.jsp");

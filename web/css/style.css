@@ -20,7 +20,8 @@ header nav li ul {
 }
 
 .hc .navTitle {
-    border-bottom: solid 2px black;
+    border-bottom: solid 2px white;
+    /*border-bottom: solid 2px black;*/
 }
 
 body {
@@ -39,12 +40,13 @@ header nav a {
     font-size: 120%;*/
 
     font-family: Bellefair;
-    color: black;
+    color: white; /* or color: #B38D59;*/
     display: block;
     padding: 8px;
     text-align: center;
     font-size: 120%;
-    background-color: #B38D59;
+    /*color: black;
+    background-color: #B38D59;*/
 }
 
 header nav a:hover {
@@ -54,8 +56,9 @@ header nav a:hover {
     border-color: white;*/
 
     transition: 0.4s;
-    background-color: #666666;
-    color: white;
+    /*background-color: #666666;
+    color: white;*/
+    color: #B38D59;
 }
 
 
@@ -234,6 +237,7 @@ td, th {
 
 td {
     text-align: left;
+    color: black;
 }
 
 main h1 {
@@ -696,7 +700,7 @@ footer {
 
 .containerHeader {
     display: grid;
-    grid-template-rows: 20% 20% 30% 20% 10%;
+    grid-template-rows: 25% 20% 20% 30% 5%;
     grid-template-columns: 1fr;
 
 }

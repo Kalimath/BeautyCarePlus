@@ -211,4 +211,8 @@ public class DatabaseService {
     public int getCurrentExcellPlusCureId(int clientId) {
         return excellPlusCureDb.getCurrentExcellPlusCureId(clientId);
     }
+
+    public void addHeightsFromClient(Heights clientHeights, int clientId) {
+        heightsDb.add(clientHeights,clientId);
+    }
 }

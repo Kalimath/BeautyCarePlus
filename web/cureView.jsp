@@ -32,6 +32,7 @@
                                id="submitEndCure">
                     </form>
                 </article>
+                <p>meethoggtes krijg ik nog niet uit de database</p>
             </c:when>
             <c:otherwise>
                 <c:choose>
@@ -39,7 +40,7 @@
                         <article>
                             <h2>Opmeting aangeraden</h2>
                             <form method="post" action="Controller?command=CureStartedWithCheckup">
-                                <input type="submit" value="Start nieuwe behandeling opmeting"
+                                <input type="submit" value="Start nieuwe behandeling met opmeting"
                                        id="submitStartCureWithCheckup">
                             </form>
                             <form method="post" action="Controller?command=CureStarted">
@@ -49,17 +50,30 @@
                         </article>
                     </c:when>
                     <c:otherwise>
+
                         <article>
                             <h2>Nieuwe behandeling</h2>
                             <form method="post" action="Controller?command=StartExcellPlusCure">
                                 <input type="submit" value=" Start " id="submitStartCure">
                             </form>
+                            <c:if test="${errorMessage!=null}">
+                                <div class="alertContainer">
+                                    <div class="alertIcon"><img src="images/info%20(1).png" alt="alert icon red"></div>
+                                    <div>
+                                        <ul id="error">
+                                            <p id="errorMessage" style="color: red; text-align: left"
+                                               class="error-message">${errorMessage}</p>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </c:if>
                         </article>
+
                     </c:otherwise>
                 </c:choose>
             </c:otherwise>
         </c:choose>
-        <c:if test="${clientsCurrentCure.turnsLeft<12}">
+        <c:if test="${clientCure.turnsLeft<12}">
             <article>
                 <h2>Beurten toevoegen</h2>
                 <form method="post" action="Controller?command=AddTurnsToExcellPlusCure">
@@ -77,14 +91,31 @@
         </c:if>
         <article>
             <h2>Beurten resterend</h2>
-            <h3 class="h3NumberField">${clientsCurrentCure.turnsLeft}</h3>
+            <h3 class="h3NumberField">${clientCure.turnsLeft}</h3>
         </article>
-        <c:if test="${clientsCurrentCure.latestCheckup!=null}">
+        <c:if test="${clientCure.latestCheckup!=null}">
             <article>
                 <h2>Laatste opmeting</h2>
-                <h3>${clientsCurrentCure.latestCheckup}</h3>
+                <h3>${clientCure.latestCheckup}</h3>
             </article>
         </c:if>
+        <div>
+
+            <article>
+                <h2>Meethoogtes</h2>
+                <c:choose>
+                    <c:when test="${clientHeights==null}">
+                        <h3><a href="Controller?command=DefineHeightsForm">Definieer hoogtes (eenmalig)</a></h3>
+                    </c:when>
+                    <c:otherwise>
+                        <jsp:include page="heightsTable.jsp">
+                            <jsp:param name="fullLength" value="false"/>
+                        </jsp:include>
+                    </c:otherwise>
+                </c:choose>
+            </article>
+
+        </div>
 
     </div>
 </main>

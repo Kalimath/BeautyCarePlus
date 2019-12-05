@@ -21,11 +21,27 @@ public class ExcellPlusCureDbSql extends ObjectDb implements ExcellPlusCureDb {
 
     @Override
     public void update(ExcellPlusCure cure, int clientId) {
-        try {
-            throw new InstantiationException("updating cure to database failed: method is not implemented yet");
+        try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())){
+
+            int totalTurns = cure.getTurnsTotal();
+            int turnsLeft = cure.getTurnsLeft();
+            Date cureStart = cure.getCureStart();
+            String querie = "UPDATE excellplus SET beurtenover=?, startdatum=?, aantalbeurten=? WHERE klantid=?";
+            PreparedStatement statementp = connection.prepareStatement(querie);
+
+            statementp.setInt(1,turnsLeft);
+            statementp.setDate(2,new java.sql.Date(cureStart.getTime()));
+            statementp.setInt(3,totalTurns);
+            statementp.setInt(4,clientId);
+
+            statementp.execute();
+            statementp.close();
+
         } catch (Exception e) {
+            System.out.println("update Excell+ is not error-proof yet");
 
         }
+        System.out.println("excell+ has been updated");
     }
 
     @Override
@@ -134,7 +150,7 @@ public class ExcellPlusCureDbSql extends ObjectDb implements ExcellPlusCureDb {
         return  pastCures;
     }
 
-    @Override
+     @Override
     public List<ExcellPlusCure> getPastCures(int clientId) {
         List<ExcellPlusCure> pastCures = getAllFromClient(clientId);
         pastCures.remove(getCurrent(clientId));
@@ -145,7 +161,7 @@ public class ExcellPlusCureDbSql extends ObjectDb implements ExcellPlusCureDb {
         try {
             throw new InstantiationException("getting all cures from client with id from database failed: method is not implemented yet");
         } catch (Exception e) {
-
+            System.out.println("get all Excell+ from client is not implemented yet");
         }
         return null;
     }

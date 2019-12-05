@@ -40,8 +40,8 @@
     <form method="post" action="Controller?command=AddClient" class="red" validate>
         <div class="article-container">
             <article>
-                <p>
-                <p class="row">
+                <p style="padding-top: 0px">
+                <p class="row" style="padding-top: 0px">
                 <div class="col-25">
                     <label for="name" class="control-label">Naam:</label></div>
                 <div class="col-75">

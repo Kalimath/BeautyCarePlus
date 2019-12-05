@@ -17,14 +17,28 @@ public class InvalidateClient extends RequestHandler {
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int clientId = (int) request.getSession().getAttribute("clientId");
+
+        //client
         request.getSession().removeAttribute("client");
+
+        //client id
         request.getSession().removeAttribute("clientId");
+
+        //visit
         if(request.getSession().getAttribute("todaysVisit")!=null){
             request.getSession().removeAttribute("todaysVisit");
         }
-        if(request.getSession().getAttribute("clientsCurrentCure")!=null){
-            request.getSession().removeAttribute("clientsCurrentCure");
+
+        //Excell+
+        if(request.getSession().getAttribute("clientCure")!=null){
+            request.getSession().removeAttribute("clientCure");
         }
+
+        //Heights
+        if(request.getSession().getAttribute("clientHeights")!=null){
+            request.getSession().removeAttribute("clientHeights");
+        }
+
         this.getControllerFactory().getController("Home", getDatabaseService()).handleRequest(request,response);
     }
 }

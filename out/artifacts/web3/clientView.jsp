@@ -52,22 +52,8 @@
                 <p>${client.comment}</p>
             </article>
         </c:if>
-        <div>
 
-            <article>
-                <h2>Meethoogtes</h2>
-                <c:choose>
-                    <c:when test="${heights==null}">
-                        <h3><a href="Controller?command=DefineHeightsForm">Definieer hoogtes (eenmalig)</a></h3>
-                    </c:when>
-                    <c:otherwise>
-                        <p> ~implementeer de table voor de hoogtes</p>
-                    </c:otherwise>
-                </c:choose>
-            </article>
-
-        </div>
-        <c:if test="${clientsCurrentCure==null}">
+        <c:if test="${clientCure==null}">
             <article>
                 <h2>Excell+ kuur aanmaken</h2>
                 <form method="post" action="Controller?command=CreateExcellPlusCureWithTurns">

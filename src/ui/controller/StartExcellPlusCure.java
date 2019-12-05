@@ -16,8 +16,14 @@ public class StartExcellPlusCure extends RequestHandler {
         int clientId = (int) request.getSession().getAttribute("clientId");
         ExcellPlusCure cure = getDatabaseService().getExcellPlusCureFromClientWithId(clientId);
         boolean checkupNeeded = false;
-        if (request.getSession().getAttribute("todaysVisit") != null) {
-            response.sendRedirect("cureView.jsp");
+        if (request.getSession().getAttribute("todaysVisit") != null||getDatabaseService().getHeightsFromClient(clientId)==null) {
+            if(getDatabaseService().getHeightsFromClient(clientId)==null){
+                request.setAttribute("errorMessage", "Meethoogtes zijn nog niet gedefinieerd!");
+                request.getRequestDispatcher("cureView.jsp").forward(request, response);
+            }else{
+                request.setAttribute("errorMessage", "Er is reeds een behandeling bezig!");
+                request.getRequestDispatcher("cureView.jsp").forward(request, response);
+            }
         } else {
             if (cure.getTurnsLeft() > 0) {
                 Visit newVisit = new Visit();
@@ -37,8 +43,7 @@ public class StartExcellPlusCure extends RequestHandler {
                     this.getControllerFactory().getController("ShowClient", getDatabaseService()).handleRequest(request, response);
                 }
             } else {
-                request.setAttribute("errorStart", "Voeg eerst beurten toe!");
-
+                    request.setAttribute("errorMessage", "Voeg eerst beurten toe!");
                 this.getControllerFactory().getController("ShowClient", getDatabaseService()).handleRequest(request, response);
             }
 

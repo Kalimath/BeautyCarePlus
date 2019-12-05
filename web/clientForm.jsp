@@ -11,9 +11,7 @@
 <jsp:include page="head.jsp">
     <jsp:param name="addon" value=" - klant toevoegen"/>
 </jsp:include>
-<head>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
+
 <body>
 <jsp:include page="header.jsp">
     <jsp:param name="title" value="Voeg klant toe"/>
@@ -40,8 +38,8 @@
     <form method="post" action="Controller?command=AddClient" class="red" validate>
         <div class="article-container">
             <article>
-                <p>
-                <p class="row">
+                <p style="padding-top: 0px">
+                <p class="row" style="padding-top: 0px">
                 <div class="col-25">
                     <label for="name" class="control-label">Naam:</label></div>
                 <div class="col-75">

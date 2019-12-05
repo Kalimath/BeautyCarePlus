@@ -19,7 +19,7 @@
     <h1 id="error" style="color: red; text-align: center; font-size: 200%">Waarschuwing: ${param.message}</h1>
 </article>
 <article>
-    <h3>Keer terug naar:</h3>
-    <p><a href="Controller?command=Home">Startpagina</a></p>
-    <p><a href="Controller?command=ClientView">Klantenoverzicht</a></p>
+    <h2>Keer terug naar:</h2>
+    <h3><a href="Controller?command=Home">Startpagina</a></h3>
+    <h3><a href="Controller?command=ClientView">Klantenoverzicht</a></h3>
 </article>

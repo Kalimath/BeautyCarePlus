@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Kalimath
@@ -16,6 +17,9 @@
 
 </jsp:include>
 <main>
+    <article>
+        <h1>Opmeting 1/2</h1>
+    </article>
     <form method="post" action="#" class="red" validate>
         <div class="article-container">
             <article>
@@ -26,43 +30,44 @@
                     <label for="knieO" class="control-label">Knie:</label></div>
                 <div class="col-75">
                     <input type="number" id="knieO" name="knieO" placeholder="in centimeter" min="0" step="0.1"
-                           value="${previousValueKnieO}"></div>
+                           value="${previousValueKnieO}"><c:out value="${clientHeights.knee}"/></div>
                 </p>
                 <p class="row">
                 <div class="col-25"><label for="dijO" class="control-label">Dij:</label></div>
                 <div class="col-75"><input type="number" id="dijO" name="dijO" placeholder="in centimeter" min="0"
                                            step="0.1"
-                                           value="${previousValueDijO}"></div>
+                                           value="${previousValueDijO}"><c:out value="${clientHeights.thigh}"/></div>
                 </p>
                 <p class="row">
                 <div class="col-25"><label for="tailleO" class="control-label">Taille:</label></div>
                 <div class="col-75"><input type="number" id="tailleO" name="tailleO" placeholder="in centimeter" min="0"
                                            step="0.1"
-                                           value="${previousValueTailleO}"></div>
+                                           value="${previousValueTailleO}"><c:out value="${clientHeights.waist}"/></div>
                 </p>
                 <p class="row">
                 <div class="col-25"><label for="armO" class="control-label">Arm:</label></div>
                 <div class="col-75"><input type="number" id="armO" name="armO" placeholder="in centimeter" min="0"
                                            step="0.1"
-                                           value="${previousValueArmO}"></div>
+                                           value="${previousValueArmO}"><c:out value="${clientHeights.arm}"/></div>
                 </p>
                 <p class="row">
                 <div class="col-25"><label for="heupO" class="control-label">Heup:</label></div>
                 <div class="col-75"><input type="number" id="heupO" name="heupO" placeholder="in centimeter" min="0"
                                            step="0.1"
-                                           value="${previousValueHeupO}"></div>
+                                           value="${previousValueHeupO}"><c:out value="${clientHeights.hip}"/></div>
                 </p>
                 <p class="row">
                 <div class="col-25"><label for="kuitO" class="control-label">Kuit:</label></div>
                 <div class="col-75"><input type="number" id="kuitO" name="kuitO" placeholder="in centimeter" min="0"
                                            step="0.1"
-                                           value="${previousValueKuitO}"></div>
+                                           value="${previousValueKuitO}"><c:out value="${clientHeights.calf}"/></div>
                 </p>
-                </fieldset>
 
+
+                </fieldset>
+                <p>De opmeethoogte staat naast elk invoerveld</p>
             </article>
-            <article>
-                <h2>Meting:</h2>
+            <article> <h2>Meting:</h2>
                 <p style="padding: 0">
                 <p class="row">
                 <div class="col-25">
@@ -107,16 +112,12 @@
                                            step="0.01"
                                            value="${previousValueIdealeVetmassa}"></div>
                 </p>
-                </fieldset>
-                <p>er ontbreken nog inputs!!!</p>
             </article>
         </div>
         <article>
             <p class="row">
                 <input type="submit" value="Bevestig" id="submit">
             </p>
-
-
         </article>
     </form>
 </main>

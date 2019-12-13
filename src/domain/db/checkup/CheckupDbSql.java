@@ -65,7 +65,7 @@ public class CheckupDbSql extends ObjectDb implements CheckupDb {
         int clientId = 0;
         try (Connection connection = DriverManager.getConnection(getUrl(), getProperties());
         ) {
-            String querie = "SELECT e.klantid FROM controle c natural join excellplus e where bezoekid = ?";
+            String querie = "SELECT e.klantid FROM controle c natural join bezoek natural join excellplus e where bezoekid = ?";
             PreparedStatement statementp = connection.prepareStatement(querie);
             statementp.setInt(1, visitId);
             ResultSet result = statementp.executeQuery();
@@ -107,18 +107,36 @@ public class CheckupDbSql extends ObjectDb implements CheckupDb {
         try {
             throw new InstantiationException("adding checkup to database failed: method is not implemented yet");
         } catch (Exception e) {
-
+            System.out.println("adding checkup to database failed: method is not implemented yet");
         }
     }
 
     @Override
-    public List<Checkup> getAllFromCure(int visitId) {
-        try {
-            throw new InstantiationException("getting all checkups of cure from database failed: method is not implemented yet");
-        } catch (Exception e) {
+    public Checkup getFromLatestVisit(int clientId) {
+        Checkup checkup = null;
+        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties());
+        ) {
+            String querie = "SELECT * FROM excellplus e inner join bezoek b on (e.kuurid = b.kuurid) " +
+                                                "inner join controle c2 on (b.bezoekid = c2.bezoekid)  "+
+                                                "where e.klantid = ? Order by moment desc LIMIT 1";
+            PreparedStatement statementp = connection.prepareStatement(querie);
+            statementp.setInt(1, clientId);
+            ResultSet result = statementp.executeQuery();
+            while (result.next()) {
+                int checkupId = result.getInt("controleid");
+                Date date = result.getDate("datum");
+                int weightsId = result.getInt("wegingid");
+                int circumferencesId = result.getInt("omtrekkenid");
+                String comment = result.getString("commentaar");
+                checkup = new Checkup(heightsDb.get(clientId),weightsDb.get(weightsId),circumferencesDb.get(circumferencesId));
+            }
+
+        } catch (Exception se) {
+            se.printStackTrace();
+            throw new DbException(se.getMessage());
 
         }
-        return null;
+        return checkup;
     }
 
     @Override
@@ -126,7 +144,7 @@ public class CheckupDbSql extends ObjectDb implements CheckupDb {
         try {
             throw new InstantiationException("getting all checkups of client from database failed: method is not implemented yet");
         } catch (Exception e) {
-
+            System.out.println("getting all checkups of client from database failed: method is not implemented yet");
         }
         return null;
     }

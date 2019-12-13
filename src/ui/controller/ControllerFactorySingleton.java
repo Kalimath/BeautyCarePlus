@@ -22,7 +22,8 @@ public class ControllerFactorySingleton {
 			handler = (RequestHandler) handlerObject;
 	    	handler.setModel(model);
 		} catch (Exception e) {
-			throw new RuntimeException("pagina bestaat niet");
+			System.out.println("Handler \""+handlerName+"\" bestaat niet");
+			throw new IllegalArgumentException("Handler \""+handlerName+"\" bestaat niet");
 		}
 		return handler;
 	}

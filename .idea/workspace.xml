@@ -7,48 +7,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4458b4d3-da1c-41cf-93a2-cfd5a5de3548" name="Default Changelist" comment="meethoogtes form works, add new client works">
-      <change afterPath="$PROJECT_DIR$/web/heightsTable.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/controller/Checkup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b3302661-76a0-440f-b454-2ca7c53e552d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b3302661-76a0-440f-b454-2ca7c53e552d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/excellPlusCure/ExcellPlusCureDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/excellPlusCure/ExcellPlusCureDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/heights/HeightsDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/heights/HeightsDbSql.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/DatabaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/DatabaseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ClientExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ClientExcellPlusCure.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ShowClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ShowClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/CreateExcellPlusCureWithTurns.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/CreateExcellPlusCureWithTurns.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/CureStartedWithCheckup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/UserLogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/UserLogIn.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/checkupForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/checkupForm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/clientForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/clientForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/clientNav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/clientNav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/clientView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/clientView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/cureView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/cureView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/excellPlusCure/ExcellPlusCureDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/excellPlusCure/ExcellPlusCureDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/logInForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/logInForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/heights/HeightsDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/heights/HeightsDbSql.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/DatabaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/DatabaseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ClientExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ClientExcellPlusCure.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ShowClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ShowClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BC-Support/TestFormClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BC-Support/TestFormClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/db/excellPlusCure/ExcellPlusCureDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/excellPlusCure/ExcellPlusCureDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/CreateExcellPlusCureWithTurns.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/CreateExcellPlusCureWithTurns.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/CureStartedWithCheckup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/UserLogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/UserLogIn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/Visit/VisitDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/Visit/VisitDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/Visit/VisitDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/Visit/VisitDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/checkup/CheckupDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/checkup/CheckupDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/checkup/CheckupDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/checkup/CheckupDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/measures/circumferences/CircumferencesDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/measures/circumferences/CircumferencesDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/measures/heights/HeightsDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/measures/heights/HeightsDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/measures/weights/WeightsDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/measures/weights/WeightsDbSql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/model/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/model/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/AddClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/AddClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/model/measures/Weights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/model/measures/Weights.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/controller/AddTurnsToExcellPlusCure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/AddTurnsToExcellPlusCure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/ClientExcellPlusCure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/ClientExcellPlusCure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/DefineHeights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/DefineHeights.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/ExcellPlusCureView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/ExcellPlusCureView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/InvalidateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/InvalidateClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/ShowClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/ShowClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/ControllerFactorySingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/ControllerFactorySingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/CreateExcellPlusCureWithTurns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/CreateExcellPlusCureWithTurns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/CureStartedWithCheckup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/StartExcellPlusCureWithCheckup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/controller/StartExcellPlusCure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/StartExcellPlusCure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/TestFormClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/TestFormClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/UserLogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/UserLogIn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/checkupForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/checkupForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/clientForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/clientForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/clientNav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/clientNav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/clientView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/clientView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/cureView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/cureView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/defineHeightsForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/defineHeightsForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/errorHeader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/errorHeader.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/heightsTable.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/heightsTable.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/logInForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logInForm.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +86,14 @@
         <item name="klanten_BC+" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="klanten: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="hoogtes: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="bezoek: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="klanten_BC+" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="klanten: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="controle: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -111,8 +113,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -135,27 +137,23 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../web4/BroeckhovenMathieu-UserApp/UserApp" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Informatica\Fase 2\WebOntwikkeling_3\BroeckhovenMathieuProefExamen - kopie" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="domain.db.checkup" />
       <recent name="domain.db.Visit" />
       <recent name="domain.db.address" />
       <recent name="domain.db.client" />
       <recent name="domain.db.excellPlusCure" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ui.controller" />
-      <recent name="domain.db.excellPlusCure" />
-      <recent name="domain.db.sport" />
-      <recent name="domain.model" />
-      <recent name="domain.db" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Informatica\Fase 2\WebOntwikkeling_3\BroeckhovenMathieuProefExamen - kopie\web" />
@@ -168,8 +166,12 @@
       <recent name="domain.model" />
       <recent name="domain.db.client" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Informatica\Fase 2\WebOntwikkeling_3\BroeckhovenMathieuProefExamen - kopie" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ui.controller" />
+      <recent name="domain.db.excellPlusCure" />
+      <recent name="domain.db.sport" />
+      <recent name="domain.model" />
+      <recent name="domain.db" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -336,6 +338,12 @@
       <workItem from="1575561203012" duration="927000" />
       <workItem from="1575563555182" duration="3656000" />
       <workItem from="1575568891772" duration="14739000" />
+      <workItem from="1575625200854" duration="72000" />
+      <workItem from="1575628128523" duration="1535000" />
+      <workItem from="1575635636276" duration="630000" />
+      <workItem from="1575708718874" duration="13409000" />
+      <workItem from="1575802145380" duration="6548000" />
+      <workItem from="1576153820667" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="Excelllplus cure can now be started and will ask for a checkup if needed. Next item to be worked on is the checkup form.">
       <created>1575127123059</created>
@@ -420,7 +428,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ui/controller/StartExcellPlusCure.java</url>
-          <line>27</line>
+          <line>26</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -442,6 +450,16 @@
           <url>file://$PROJECT_DIR$/src/ui/controller/ClientExcellPlusCure.java</url>
           <line>24</line>
           <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/domain/db/measures/heights/HeightsDbSql.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ui/controller/ShowClient.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

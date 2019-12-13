@@ -15,7 +15,8 @@ public class AddTurnsToExcellPlusCure extends RequestHandler {
         int clientId = (int) request.getSession().getAttribute("clientId");
         ExcellPlusCure cure = getDatabaseService().getExcellPlusCureFromClientWithId(clientId);
 
-        if (cure.getTurnsLeft() == 1 || cure.getTurnsLeft() == 12 || cure.getTurnsLeft() == 20) {
+        if (cure.getTurnsLeft() == 1 || cure.getTurnsLeft()>=12) {
+            System.out.println("Redirected, turns left is higher than 11!");
             response.sendRedirect("cureView.jsp");
         } else {
             LocalDate lastUpdate = TurnsleftUpdateControllerSingleton.getInstance().getLastUpdateTime();

@@ -87,6 +87,7 @@ public class HeightsDbSql extends ObjectDb implements HeightsDb {
     public Heights get(int clientId) {
         Heights heights = null;
         try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
+            System.out.println("Heights query started");
             String querie= "SELECT * FROM hoogtes where klantid = ?";
             PreparedStatement statementp = connection.prepareStatement(querie);
             statementp.setInt(1,clientId);
@@ -103,6 +104,7 @@ public class HeightsDbSql extends ObjectDb implements HeightsDb {
                 heights.setFullLength(result.getDouble("volledigelengte"));
                 heights.setComment(result.getString("commentaar"));
             }
+            System.out.println("Heights query ended");
         }catch (Exception se){
             se.printStackTrace();
             throw new DbException(se.getMessage());

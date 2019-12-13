@@ -21,15 +21,13 @@
     <article>
         <h1 id="pageTitle">Log in</h1>
     </article>
-    <c:if test="${errors!=null}">
+    <c:if test="${errorMessage!=null}">
         <article class="alertContainer">
             <div class="alertIcon"><img src="images/info%20(1).png" alt="alert icon red"></div>
             <div>
-                <ul id="errorList">
-                    <c:forEach items="${errors}" var="message">
-                        <li id="error" style="color: red; list-style: circle; text-align: left"
-                            class="error-message">${message}</li>
-                    </c:forEach>
+                <ul id="error">
+                    <p id="errorMessage" style="color: red; text-align: left; padding: 13px"
+                       class="error-message">${errorMessage}</p>
                 </ul>
             </div>
         </article>
@@ -42,12 +40,12 @@
                 <p class="row">
                 <div class="col-25"><label for="email" class="control-label">Email:</label></div>
                 <div class="col-75"><input type="email" id="email" name="email"
-                                           value="${previousValueEmail}"></div>
+                                           value="${previousValueEmail}<c:out value="${param.email}">"></div>
                 </p>
 
                 <p class="row">
                 <div class="col-25"><label for="password" class="control-label">Wachtwoord:</label></div>
-                <div class="col-75"><input type="password" id="password" name="password"></div>
+                <div class="col-75"><input type="password" id="password" name="password" value="<c:out value="${param.password}">"></div>
                 </p>
 
                 <div class="col-75">

@@ -15,9 +15,9 @@ import java.util.List;
 public interface VisitDb {
     Visit get(int cureId);
 
-    void add(Visit visit);
+    void add(Visit visit, int cureId);
 
     List<Visit> getAllFromCure(int cureId);
 
-    List<Visit> getAllFromClient(int clientId);
+    Visit getLatest(int clientId);
 }

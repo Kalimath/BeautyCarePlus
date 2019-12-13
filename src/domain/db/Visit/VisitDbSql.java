@@ -30,8 +30,7 @@ public class VisitDbSql extends ObjectDb implements VisitDb {
     public Visit get(int cureId) {
         Visit visit = null;
         CheckupDbSql checkupDbSql = new CheckupDbSql(getProperties());
-        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties());
-        ){
+        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
             String querie= "SELECT bezoekid,moment,commentaar FROM bezoek where kuurid = ?";
             PreparedStatement statementp = connection.prepareStatement(querie);
             statementp.setInt(1,cureId);
@@ -72,11 +71,19 @@ public class VisitDbSql extends ObjectDb implements VisitDb {
     }*/
 
     @Override
-    public void add(Visit visit){
-        try {
-            throw new InstantiationException("adding visit to cure from database failed: method is not implemented yet");
-        } catch (Exception e) {
+    public void add(Visit visit, int cureId){
+        try(Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())){
+            String querie = "INSERT INTO bezoek(hoogtesid, moment,commentaar ,kuurid) values (?,?,?,?,?,?,?,?,?,?)";
+            PreparedStatement statementp = connection.prepareStatement(querie);
+            statementp.setInt(1,getNewRandomId());
+            statementp.setTimestamp(2,visit.getMoment());
+            statementp.setString(3,visit.getComment());
+            statementp.setInt(4,cureId);
 
+            statementp.execute();
+            statementp.close();
+        }catch (Exception se){
+            throw new DbException("adding visit to database failed!");
         }
     }
 
@@ -102,13 +109,28 @@ public class VisitDbSql extends ObjectDb implements VisitDb {
     }
 
     @Override
-    public List<Visit> getAllFromClient(int clientId){
-        try {
-            throw new InstantiationException("getting all visits of client from database failed: method is not implemented yet");
-        } catch (Exception e) {
+    public Visit getLatest(int cureId) {
+        Visit visit = null;
+        CheckupDbSql checkupDbSql = new CheckupDbSql(getProperties());
+        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
+            String querie= "SELECT bezoekid,moment,commentaar FROM bezoek where kuurid = ? ORDER BY moment DESC LIMIT 1";
+            //SELECT kuurid FROM excellplus where klantid = 1936 ORDER BY startdatum DESC LIMIT 1
+            PreparedStatement statementp = connection.prepareStatement(querie);
+            statementp.setInt(1,cureId);
+            ResultSet result = statementp.executeQuery();
+            while (result.next()) {
+                int visitId = result.getInt("bezoekid");
+                Timestamp moment = result.getTimestamp("moment");
+                String comment = result.getString("commentaar");
+                visit = new Visit(moment,checkupDbSql.get(visitId),comment);
+            }
+
+        }catch (Exception se){
+            se.printStackTrace();
+            throw new DbException(se.getMessage());
 
         }
-        return null;
+        return visit;
     }
 
 }

@@ -9,20 +9,23 @@
 package domain.model.measures;
 
 public class Weights {
-    private double weight, bmr,fatMass,muscleMass,moistureMass,idealFatMass;
+    private double weight, bmr, fatmass, musclemass, bonemass,visceralFat, moisturemass, idealFatMassBegin, idealFatMassEnd;
     private int metabolicAge;
 
     public Weights() {
     }
 
-    public Weights(double weight, double bmr, double fatMass, double muscleMass, double moistureMass, double idealFatMass, int metabolicAge) {
+    public Weights(double weight, double bmr, double fatMass, double muscleMass, double boneMass,double visceralFat, double moistureMass, double idealFatMassBegin, double idealFatMassEnd, int metabolicAge) {
         setWeight(weight);
         setBmr(bmr);
-        setFatMass(fatMass);
-        setMuscleMass(muscleMass);
-        setMoistureMass(moistureMass);
-        setIdealFatMass(idealFatMass);
+        setFatmass(fatMass);
+        setMusclemass(muscleMass);
+        setBonemass(boneMass);
+        setVisceralFat(visceralFat);
+        setMoisturemass(moistureMass);
+        setIdealFatMassBegin(idealFatMassBegin);
         setMetabolicAge(metabolicAge);
+        setIdealFatMassEnd(idealFatMassEnd);
     }
 
     public double getWeight() {
@@ -41,36 +44,36 @@ public class Weights {
         this.bmr = bmr;
     }
 
-    public double getFatMass() {
-        return fatMass;
+    public double getFatmass() {
+        return fatmass;
     }
 
-    public void setFatMass(double fatMass) {
-        this.fatMass = fatMass;
+    public void setFatmass(double fatMass) {
+        this.fatmass = fatMass;
     }
 
-    public double getMuscleMass() {
-        return muscleMass;
+    public double getMusclemass() {
+        return musclemass;
     }
 
-    public void setMuscleMass(double muscleMass) {
-        this.muscleMass = muscleMass;
+    public void setMusclemass(double musclemass) {
+        this.musclemass = musclemass;
     }
 
-    public double getMoistureMass() {
-        return moistureMass;
+    public double getMoisturemass() {
+        return moisturemass;
     }
 
-    public void setMoistureMass(double moistureMass) {
-        this.moistureMass = moistureMass;
+    public void setMoisturemass(double moisturemass) {
+        this.moisturemass = moisturemass;
     }
 
-    public double getIdealFatMass() {
-        return idealFatMass;
+    public double getIdealFatMassBegin() {
+        return idealFatMassBegin;
     }
 
-    public void setIdealFatMass(double idealFatMass) {
-        this.idealFatMass = idealFatMass;
+    public void setIdealFatMassBegin(double idealFatMassBegin) {
+        this.idealFatMassBegin = idealFatMassBegin;
     }
 
     public int getMetabolicAge() {
@@ -79,5 +82,34 @@ public class Weights {
 
     public void setMetabolicAge(int metabolicAge) {
         this.metabolicAge = metabolicAge;
+    }
+
+    public double getBonemass() {
+        return bonemass;
+    }
+
+    public void setBonemass(double bonemass) {
+        this.bonemass = bonemass;
+    }
+
+    public double getVisceralFat() {
+        return visceralFat;
+    }
+
+    public void setVisceralFat(double visceralFat) {
+        this.visceralFat = visceralFat;
+    }
+
+    public double getIdealFatMassEnd() {
+        return idealFatMassEnd;
+    }
+
+    public void setIdealFatMassEnd(double idealFatMassEnd) {
+        this.idealFatMassEnd = idealFatMassEnd;
+    }
+
+    public int getBmi(){
+        System.out.println("nog niet geschreven");
+        return -1;
     }
 }

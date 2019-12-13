@@ -27,7 +27,7 @@ public class CreateExcellPlusCureWithTurns extends RequestHandler {
             //Client client = (Client)request.getSession().getAttribute("client");
             getDatabaseService().addExcellPlusCure(clientId, newCure);
             request.getSession().setAttribute("cureId",getDatabaseService().getCurrentExcellPlusCureId(clientId));
-            request.getSession().setAttribute("clientsCurrentCure", newCure);
+            request.getSession().setAttribute("clientCure", newCure);
             request.getRequestDispatcher("clientView.jsp").forward(request,response);
         }
     }

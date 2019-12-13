@@ -11,9 +11,7 @@
 <jsp:include page="head.jsp">
     <jsp:param name="addon" value=" - klant toevoegen"/>
 </jsp:include>
-<head>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
+
 <body>
 <jsp:include page="header.jsp">
     <jsp:param name="title" value="Voeg klant toe"/>

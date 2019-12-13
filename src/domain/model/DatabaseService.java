@@ -1,8 +1,12 @@
 package domain.model;
 
 import domain.db.DbException;
+import domain.db.Visit.VisitDb;
+import domain.db.Visit.VisitDbSql;
 import domain.db.address.AddressDb;
 import domain.db.address.AddressDbSql;
+import domain.db.checkup.CheckupDb;
+import domain.db.checkup.CheckupDbSql;
 import domain.db.client.ClientDb;
 import domain.db.client.ClientDbSql;
 import domain.db.error.ErrorDb;
@@ -19,9 +23,12 @@ import domain.model.cure.ExcellPlusCure;
 import domain.model.debug.DomainException;
 import domain.model.debug.Error;
 import domain.model.measures.Checkup;
+import domain.model.measures.Circumferences;
 import domain.model.measures.Heights;
+import domain.model.measures.Weights;
 import domain.model.personal.Address;
 import domain.model.personal.Client;
+import domain.model.visit.Visit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +44,8 @@ public class DatabaseService {
     private UserDb userDb;
     private ExcellPlusCureDb excellPlusCureDb;
     private AddressDb addressDb;
+    private CheckupDb checkupDb;
+    private VisitDb visitDb;
 
     public DatabaseService(Properties p) {
         setProperties(p);
@@ -47,6 +56,8 @@ public class DatabaseService {
         addressDb = new AddressDbSql(this.properties);
         sportDb = new SportDbSql(this.properties);
         excellPlusCureDb = new ExcellPlusCureDbSql(this.properties);
+        checkupDb = new CheckupDbSql(this.properties);
+        visitDb = new VisitDbSql(this.properties);
     }
 
     //CHECKUP METHODS
@@ -144,7 +155,6 @@ public class DatabaseService {
 
     public void updateExcellPlusCure(ExcellPlusCure cure, int clientId) {
         try {
-
             this.excellPlusCureDb.update(cure,clientId);
         } catch (Exception e) {
             errorDb.add(new Error(e.getMessage()));
@@ -200,12 +210,13 @@ public class DatabaseService {
     }
 
     public Heights getHeightsFromClient(int clientId) {
+        Heights heights = null;
         try {
-            throw new InstantiationException("getting heights of client from database failed: method is not implemented yet, "+ this.getClass().getSimpleName());
+            heights = heightsDb.get(clientId);
         } catch (Exception e) {
-
+            //System.out.println("getting heights of client from database failed: method is not implemented yet, "+ this.getClass().getSimpleName());
         }
-        return null;
+        return heights;
     }
 
     public int getCurrentExcellPlusCureId(int clientId) {
@@ -214,5 +225,31 @@ public class DatabaseService {
 
     public void addHeightsFromClient(Heights clientHeights, int clientId) {
         heightsDb.add(clientHeights,clientId);
+    }
+
+    public void addCheckup(Weights definedWeights, Circumferences definedCircumferences, Integer clientId) {
+        Checkup newCheckup = new Checkup(getHeightsFromClient(clientId),definedWeights,definedCircumferences);
+        checkupDb.add(newCheckup);
+    }
+
+    public Checkup getLatestCheckup(int clientId){
+        Checkup latest = checkupDb.getFromLatestVisit(clientId);
+        if(latest!=null){
+            return latest;
+        }else{
+            throw new NullPointerException("Databaseservice can't return empty object Checkup, in in method getLatestCheckup()");
+        }
+
+    }
+
+    public Visit getLatestVisit(int clientId) {
+        int cureId = excellPlusCureDb.getCurrentExcellPlusCureId(clientId);
+
+        Visit latest = visitDb.getLatest(cureId);
+        if(latest!=null){
+            return latest;
+        }else{
+            throw new NullPointerException("Databaseservice can't return empty object Visit, in in method getLatestVisit()");
+        }
     }
 }

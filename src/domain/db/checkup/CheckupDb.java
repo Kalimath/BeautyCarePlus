@@ -17,7 +17,7 @@ public interface CheckupDb {
 
     void add(Checkup checkup);
 
-    List<Checkup> getAllFromCure(int visitId);
+    Checkup getFromLatestVisit(int visitId);
 
     List<Checkup> getAllFromClient(int visitId);
 }

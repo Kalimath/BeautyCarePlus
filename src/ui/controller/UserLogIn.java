@@ -25,7 +25,7 @@ public class UserLogIn extends RequestHandler {
         String email = request.getParameter("email");
         List<String> errors = new ArrayList<>();
         User u = new User();
-        if(!email.trim().toLowerCase().isEmpty()){
+
             try{
                 u = getDatabaseService().getUser(email);
                 if(u==null){
@@ -53,18 +53,12 @@ public class UserLogIn extends RequestHandler {
 
             }
             if(errors.size()>0){
-                request.setAttribute("errors",errors);
+                request.setAttribute("errorMessage","email/wachtwoord onjuist");
                 System.out.println("Errors bij login: "+errors.size());
                 request.getRequestDispatcher(destination).forward(request,response);
             }else{
                 this.getControllerFactory().getController("Home",this.getDatabaseService()).handleRequest(request,response);
             }
-
-
-
-        }else{
-            response.sendRedirect(destination);
-        }
 
 
 

@@ -32,21 +32,32 @@
                                id="submitEndCure">
                     </form>
                 </article>
-                <p>meethoggtes krijg ik nog niet uit de database</p>
+
             </c:when>
             <c:otherwise>
                 <c:choose>
                     <c:when test="${checkupNeeded}">
                         <article>
                             <h2>Opmeting aangeraden</h2>
-                            <form method="post" action="Controller?command=CureStartedWithCheckup">
+                            <form method="post" action="Controller?command=StartExcellPlusCureWithCheckup">
                                 <input type="submit" value="Start nieuwe behandeling met opmeting"
                                        id="submitStartCureWithCheckup">
                             </form>
-                            <form method="post" action="Controller?command=CureStarted">
+                            <form method="post" action="Controller?command=StartExcellPlusCure">
                                 <input type="submit" value="Start nieuwe behandeling zonder opmeting"
                                        id="submitStartCureWithoutCheckup">
                             </form>
+                            <c:if test="${errorMessage!=null}">
+                                <div class="alertContainer">
+                                    <div class="alertIcon"><img src="images/info%20(1).png" alt="alert icon red"></div>
+                                    <div>
+                                        <ul id="error">
+                                            <p id="errorMessage" style="color: red; text-align: left"
+                                               class="error-message">${errorMessage}</p>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </c:if>
                         </article>
                     </c:when>
                     <c:otherwise>

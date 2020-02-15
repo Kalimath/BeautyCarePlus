@@ -21,5 +21,5 @@
 <article>
     <h2>Keer terug naar:</h2>
     <h3><a href="Controller?command=Home">Startpagina</a></h3>
-    <h3><a href="Controller?command=ClientView">Klantenoverzicht</a></h3>
+    <h3><a href="Controller?command=ShowClient">Klantenoverzicht</a></h3>
 </article>

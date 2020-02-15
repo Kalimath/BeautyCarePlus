@@ -8,9 +8,8 @@ header nav li ul {
 }
 
 .hc {
-    padding: 5px;
-    /*background-color: #B38D59;*/
-    height: 100%;
+    margin: 5px 5px 10px;
+    min-height: 100%;
 }
 
 .hc p {
@@ -20,6 +19,7 @@ header nav li ul {
 }
 
 .hc .navTitle {
+    color: #B38D59;
     border-bottom: solid 2px white;
     /*border-bottom: solid 2px black;*/
 }

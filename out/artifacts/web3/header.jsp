@@ -18,7 +18,7 @@
 
     <c:choose>
         <c:when test="${user!=null}">
-            <nav class="hc">
+            <nav class="hc" he>
                 <p class="navTitle">Algemeen</p>
                 <ul>
                     <li><a href="Controller">Home</a></li>

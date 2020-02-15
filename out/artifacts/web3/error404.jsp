@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <jsp:include page="head.jsp">
-    <jsp:param name="addon" value=" - error"/>
+    <jsp:param name="addon" value=" - error 404"/>
 </jsp:include>
 <body>
 <jsp:include page="header.jsp">

@@ -18,7 +18,7 @@
 </jsp:include>
 <main>
     <article>
-        <h1>Opmeting</h1>
+        <h1 id="pageName">Opmeting</h1>
     </article>
     <form method="post" action="#" class="red" validate>
         <div class="article-container">

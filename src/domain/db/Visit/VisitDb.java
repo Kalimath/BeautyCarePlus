@@ -20,4 +20,6 @@ public interface VisitDb {
     List<Visit> getAllFromCure(int cureId);
 
     Visit getLatest(int clientId);
+
+    int getLatestVisitId(int cureId);
 }

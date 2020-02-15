@@ -133,4 +133,28 @@ public class VisitDbSql extends ObjectDb implements VisitDb {
         return visit;
     }
 
+    @Override
+    public int getLatestVisitId(int cureId){
+        int visitId = 0;
+        Visit visit = null;
+        CheckupDbSql checkupDbSql = new CheckupDbSql(getProperties());
+        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
+            String querie= "SELECT bezoekid FROM bezoek where kuurid = ? ORDER BY moment DESC LIMIT 1";
+            //SELECT kuurid FROM excellplus where klantid = 1936 ORDER BY startdatum DESC LIMIT 1
+            PreparedStatement statementp = connection.prepareStatement(querie);
+            statementp.setInt(1,cureId);
+            ResultSet result = statementp.executeQuery();
+            while (result.next()) {
+                visitId = result.getInt("bezoekid");
+            }
+            if(visitId == 0) throw new DbException("getLatestVisitId failed, id is null");
+
+        }catch (Exception se){
+            se.printStackTrace();
+            throw new DbException(se.getMessage());
+
+        }
+        return visitId;
+    }
+
 }

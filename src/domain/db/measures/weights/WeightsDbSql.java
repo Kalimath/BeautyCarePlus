@@ -19,12 +19,12 @@ import java.sql.ResultSet;
 import java.util.Properties;
 
 public class WeightsDbSql extends ObjectDb implements WeightsDb {
-    public WeightsDbSql(Properties p) {
+    public WeightsDbSql(Properties p){
         super(p);
     }
 
     @Override
-    public void update(Weights weights, int clientId) {
+    public void update(Weights weights, int clientId){
         try {
             throw new InstantiationException("updating weights to database failed: method is not implemented yet");
         } catch (Exception e) {
@@ -33,13 +33,13 @@ public class WeightsDbSql extends ObjectDb implements WeightsDb {
     }
 
     @Override
-    public Weights get(int controleId) {
+    public Weights get(int controleId){
         Weights weights = null;
-        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
+        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())) {
             System.out.println("Circumferences query started");
-            String querie= "SELECT * FROM wegingen where controleid = ?";
+            String querie = "SELECT * FROM wegingen where controleid = ?";
             PreparedStatement statementp = connection.prepareStatement(querie);
-            statementp.setInt(1,controleId);
+            statementp.setInt(1, controleId);
             ResultSet result = statementp.executeQuery();
             while (result.next()) {
                 weights = new Weights();
@@ -57,7 +57,7 @@ public class WeightsDbSql extends ObjectDb implements WeightsDb {
                 //weights.setComment(result.getString("commentaar"));
             }
             System.out.println("Circumferences query ended");
-        }catch (Exception se){
+        } catch (Exception se) {
             se.printStackTrace();
             throw new DbException(se.getMessage());
 
@@ -66,33 +66,33 @@ public class WeightsDbSql extends ObjectDb implements WeightsDb {
     }
 
     @Override
-    public void add(Weights weights, int controleId) {
-        try(Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())){
+    public void add(Weights weights, int checkupId, int weightsId){
+        try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())) {
 
             String querie = "INSERT INTO wegingen(wegingenid,controleid, gewicht, vetmassa, spiermassa, vochtmassa, botmassa, bmr,metabolischeleeftijd,visceralevetwaade,idealevetmassabegin,idealevetmassaeinde) values (?,?,?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement statementp = connection.prepareStatement(querie);
-            statementp.setInt(1,getNewRandomId());
-            statementp.setDouble(2,controleId);
-            statementp.setDouble(3,weights.getWeight());
-            statementp.setDouble(4,weights.getFatmass());
-            statementp.setDouble(5,weights.getMusclemass());
-            statementp.setDouble(6,weights.getMoisturemass());
-            statementp.setDouble(7,weights.getBonemass());
-            statementp.setDouble(8,weights.getBmr());
-            statementp.setDouble(9,weights.getMetabolicAge());
-            statementp.setDouble(10,weights.getVisceralFat());
-            statementp.setDouble(11,weights.getIdealFatMassBegin());
-            statementp.setDouble(12,weights.getIdealFatMassEnd());
+            statementp.setInt(1, weightsId);
+            statementp.setDouble(2, weightsId);
+            statementp.setDouble(3, weights.getWeight());
+            statementp.setDouble(4, weights.getFatmass());
+            statementp.setDouble(5, weights.getMusclemass());
+            statementp.setDouble(6, weights.getMoisturemass());
+            statementp.setDouble(7, weights.getBonemass());
+            statementp.setDouble(8, weights.getBmr());
+            statementp.setDouble(9, weights.getMetabolicAge());
+            statementp.setDouble(10, weights.getVisceralFat());
+            statementp.setDouble(11, weights.getIdealFatMassBegin());
+            statementp.setDouble(12, weights.getIdealFatMassEnd());
 
             statementp.execute();
             statementp.close();
-        }catch (Exception se){
+        } catch (Exception se) {
             throw new DbException(se.getMessage());
         }
     }
 
     @Override
-    public void delete(int clientId) {
+    public void delete(int clientId){
         try {
             throw new InstantiationException("deleting weights from database failed: method is not implemented yet");
         } catch (Exception e) {

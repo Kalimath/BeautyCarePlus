@@ -15,9 +15,11 @@ import java.util.List;
 public interface CheckupDb {
     Checkup get(int visitId);
 
-    void add(Checkup checkup);
+    void add(Checkup checkup, int visitId, int clientId);
 
     Checkup getFromLatestVisit(int visitId);
 
     List<Checkup> getAllFromClient(int visitId);
+
+    int getLatestCheckupId(int visitId);
 }

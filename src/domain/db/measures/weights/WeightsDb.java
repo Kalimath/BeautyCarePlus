@@ -18,7 +18,7 @@ public interface WeightsDb {
     Weights get(int clientId);
 
     //not written yet
-    void add(Weights weights, int clientId);
+    void add(Weights weights, int checkupId, int weightsId);
 
     //not written yet
     void delete(int clientId);

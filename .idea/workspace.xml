@@ -7,45 +7,182 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4458b4d3-da1c-41cf-93a2-cfd5a5de3548" name="Default Changelist" comment="meethoogtes form works, add new client works">
-      <change afterPath="$PROJECT_DIR$/src/ui/controller/Checkup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/TestMeasureClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b3302661-76a0-440f-b454-2ca7c53e552d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b3302661-76a0-440f-b454-2ca7c53e552d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/DbException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/DbException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/ObjectDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/ObjectDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/Visit/VisitDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/Visit/VisitDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/Visit/VisitDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/Visit/VisitDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/address/AddressDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/address/AddressDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/address/AddressDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/address/AddressDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/checkup/CheckupDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/checkup/CheckupDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/checkup/CheckupDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/checkup/CheckupDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/client/ClientDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/client/ClientDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/client/ClientDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/client/ClientDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/error/ErrorDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/error/ErrorDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/error/ErrorDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/error/ErrorDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/excellPlusCure/ExcellPlusCureDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/excellPlusCure/ExcellPlusCureDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/excellPlusCure/ExcellPlusCureDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/excellPlusCure/ExcellPlusCureDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/circumferences/CircumferencesDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/circumferences/CircumferencesDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/circumferences/CircumferencesDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/circumferences/CircumferencesDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/heights/HeightsDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/heights/HeightsDb.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/heights/HeightsDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/heights/HeightsDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/weights/WeightsDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/weights/WeightsDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/weights/WeightsDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/weights/WeightsDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/sport/SportDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/sport/SportDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/sport/SportDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/sport/SportDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/user/UserDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/user/UserDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/user/UserDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/user/UserDbSql.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/DatabaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/DatabaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/ObjectWithId.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/ObjectWithId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/RandomIdGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/RandomIdGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/TurnsleftUpdateControllerSingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/TurnsleftUpdateControllerSingleton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/cure/ExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/cure/ExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/debug/DomainException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/debug/DomainException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/debug/Error.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/debug/Error.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/debug/NotAuthorizedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/debug/NotAuthorizedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/health/Birth.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/health/Birth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/health/Cellulitis.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/health/Cellulitis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/health/HealthOverview.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/health/HealthOverview.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/measures/BodyMeasures.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/measures/BodyMeasures.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/measures/CheckUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/measures/CheckUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/measures/Circumferences.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/measures/Circumferences.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/measures/Heights.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/measures/Heights.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/measures/Weights.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/measures/Weights.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/personal/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/personal/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/personal/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/personal/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/personal/Sport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/personal/Sport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/visit/Visit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/visit/Visit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/observer/Observer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/observer/Observer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/observer/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/observer/Subject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddClientForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddClientForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddTurnsToExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddTurnsToExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AllAppointmentsFromUserWithName.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AllAppointmentsFromUserWithName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ClientAllExcellPlusCures.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ClientAllExcellPlusCures.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ClientExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ClientExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ControllerFactorySingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ControllerFactorySingleton.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/CreateExcellPlusCureWithTurns.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/CreateExcellPlusCureWithTurns.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/CureStartedWithCheckup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/CustomersView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/CustomersView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/DefineHeights.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/DefineHeights.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/DefineHeightsForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/DefineHeightsForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/DeleteClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/DeleteClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/EndExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/EndExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ExcellPlusCureView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ExcellPlusCureView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/FindClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/FindClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/InvalidateClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/InvalidateClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/LogOffUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/LogOffUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/RequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/RequestHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/SaveCheckupStartCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/SaveCheckupStartCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ShowAllClients.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ShowAllClients.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ShowClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ShowClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ShowErrors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ShowErrors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/StartExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/StartExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/StartExcellPlusCureWithCheckup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/StartExcellPlusCureWithCheckup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/UserLogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/UserLogIn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/checkup2Form.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/checkupForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/checkupForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/clientForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/clientForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/cureView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/cureView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/logInForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/logInForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/META-INF/BC-Support.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/DbException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/DbException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/ObjectDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/ObjectDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/Visit/VisitDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/Visit/VisitDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/Visit/VisitDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/Visit/VisitDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/address/AddressDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/address/AddressDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/address/AddressDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/address/AddressDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/checkup/CheckupDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/checkup/CheckupDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/checkup/CheckupDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/checkup/CheckupDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/client/ClientDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/client/ClientDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/client/ClientDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/client/ClientDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/error/ErrorDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/error/ErrorDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/error/ErrorDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/error/ErrorDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/excellPlusCure/ExcellPlusCureDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/excellPlusCure/ExcellPlusCureDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/excellPlusCure/ExcellPlusCureDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/excellPlusCure/ExcellPlusCureDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/circumferences/CircumferencesDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/circumferences/CircumferencesDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/circumferences/CircumferencesDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/circumferences/CircumferencesDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/heights/HeightsDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/heights/HeightsDb.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/heights/HeightsDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/heights/HeightsDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/weights/WeightsDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/weights/WeightsDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/weights/WeightsDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/weights/WeightsDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/sport/SportDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/sport/SportDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/sport/SportDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/sport/SportDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/user/UserDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/user/UserDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/user/UserDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/user/UserDbSql.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/DatabaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/DatabaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/ObjectWithId.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/ObjectWithId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/RandomIdGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/RandomIdGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/TurnsleftUpdateControllerSingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/TurnsleftUpdateControllerSingleton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/cure/ExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/cure/ExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/debug/DomainException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/debug/DomainException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/debug/Error.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/debug/Error.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/debug/NotAuthorizedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/debug/NotAuthorizedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/health/Birth.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/health/Birth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/health/Cellulitis.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/health/Cellulitis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/health/HealthOverview.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/health/HealthOverview.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/measures/BodyMeasures.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/measures/BodyMeasures.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/measures/CheckUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/measures/CheckUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/measures/Circumferences.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/measures/Circumferences.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/measures/Heights.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/measures/Heights.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/measures/Weights.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/measures/Weights.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/personal/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/personal/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/personal/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/personal/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/personal/Sport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/personal/Sport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/visit/Visit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/visit/Visit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/observer/Observer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/observer/Observer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/observer/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/observer/Subject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddClientForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddClientForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddTurnsToExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddTurnsToExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AllAppointmentsFromUserWithName.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AllAppointmentsFromUserWithName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ClientAllExcellPlusCures.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ClientAllExcellPlusCures.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ClientExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ClientExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ControllerFactorySingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ControllerFactorySingleton.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/CreateExcellPlusCureWithTurns.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/CreateExcellPlusCureWithTurns.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/CureStartedWithCheckup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/CustomersView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/CustomersView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/DefineHeights.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/DefineHeights.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/DefineHeightsForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/DefineHeightsForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/DeleteClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/DeleteClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/EndExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/EndExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ExcellPlusCureView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ExcellPlusCureView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/FindClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/FindClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/InvalidateClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/InvalidateClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/LogOffUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/LogOffUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/RequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/RequestHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/SaveCheckupStartCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/SaveCheckupStartCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ShowAllClients.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ShowAllClients.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ShowClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ShowClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ShowErrors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ShowErrors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/StartExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/StartExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/StartExcellPlusCureWithCheckup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/StartExcellPlusCureWithCheckup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/UserLogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/UserLogIn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BC-Support/TestCureClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BC-Support/TestCureClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BC-Support/TestFormClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BC-Support/TestFormClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/db/Visit/VisitDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/Visit/VisitDb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/db/Visit/VisitDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/Visit/VisitDbSql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/db/checkup/CheckupDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/checkup/CheckupDb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/db/checkup/CheckupDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/checkup/CheckupDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/measures/circumferences/CircumferencesDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/measures/circumferences/CircumferencesDb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/db/measures/circumferences/CircumferencesDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/measures/circumferences/CircumferencesDbSql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/db/measures/heights/HeightsDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/measures/heights/HeightsDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/measures/weights/WeightsDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/measures/weights/WeightsDb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/db/measures/weights/WeightsDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/measures/weights/WeightsDbSql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/model/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/model/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/model/measures/Weights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/model/measures/Weights.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/AddTurnsToExcellPlusCure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/AddTurnsToExcellPlusCure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/ControllerFactorySingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/ControllerFactorySingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/CreateExcellPlusCureWithTurns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/CreateExcellPlusCureWithTurns.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/CureStartedWithCheckup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/StartExcellPlusCureWithCheckup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/Checkup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/Checkup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/SaveCheckupStartCure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/SaveCheckupStartCure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/controller/StartExcellPlusCure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/StartExcellPlusCure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/UserLogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/UserLogIn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/checkupForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/checkupForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/cureView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/cureView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/heightsTable.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/heightsTable.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/logInForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logInForm.jsp" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,13 +269,19 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../web4/BroeckhovenMathieu-UserApp/UserApp" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -174,18 +317,6 @@
       <recent name="domain.db" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.5">
     <configuration name="TestFormClient.form_shows_all_errors_when_form_is_submitted_empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BC-Support" />
@@ -197,7 +328,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.5" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.5" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.5" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.121" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Controller?command=Home" />
       <deployment>
         <artifact name="web3">
@@ -280,13 +411,20 @@
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -344,6 +482,12 @@
       <workItem from="1575708718874" duration="13409000" />
       <workItem from="1575802145380" duration="6548000" />
       <workItem from="1576153820667" duration="12000" />
+      <workItem from="1576248044189" duration="333000" />
+      <workItem from="1581337194588" duration="177000" />
+      <workItem from="1581337979054" duration="9820000" />
+      <workItem from="1581578336673" duration="1337000" />
+      <workItem from="1581607560707" duration="1203000" />
+      <workItem from="1581761263790" duration="4588000" />
     </task>
     <task id="LOCAL-00001" summary="Excelllplus cure can now be started and will ask for a checkup if needed. Next item to be worked on is the checkup form.">
       <created>1575127123059</created>
@@ -417,6 +561,82 @@
     <MESSAGE value="checkup form is ready, next the excell+ update method needs implementation." />
     <MESSAGE value="meethoogtes form works, add new client works" />
     <option name="LAST_COMMIT_MESSAGE" value="meethoogtes form works, add new client works" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="465" y="22" key="#Tomcat_9.0.5" timestamp="1581339260381">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="22" key="#Tomcat_9.0.5/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581339260381" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1581764240505">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1581764240505" />
+    <state x="618" y="300" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581337265511">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="618" y="300" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581337265511" />
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1581579123902">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581345497306" />
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581579123902" />
+    <state width="1024" height="194" key="GridCell.Tab.0.bottom" timestamp="1581347973020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="194" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347973020" />
+    <state width="1024" height="194" key="GridCell.Tab.0.center" timestamp="1581347973020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="194" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347973020" />
+    <state width="1024" height="194" key="GridCell.Tab.0.left" timestamp="1581347973020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="194" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347973020" />
+    <state width="1024" height="194" key="GridCell.Tab.0.right" timestamp="1581347973020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="194" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347973020" />
+    <state width="1024" height="194" key="GridCell.Tab.1.bottom" timestamp="1581347972933">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="194" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972933" />
+    <state width="1024" height="194" key="GridCell.Tab.1.center" timestamp="1581347972933">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="194" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972933" />
+    <state width="1024" height="194" key="GridCell.Tab.1.left" timestamp="1581347972933">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="194" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972933" />
+    <state width="1024" height="194" key="GridCell.Tab.1.right" timestamp="1581347972933">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="194" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972933" />
+    <state width="1024" height="194" key="GridCell.Tab.2.bottom" timestamp="1581347972934">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="194" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972934" />
+    <state width="1024" height="194" key="GridCell.Tab.2.center" timestamp="1581347972933">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="194" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972933" />
+    <state width="1024" height="194" key="GridCell.Tab.2.left" timestamp="1581347972933">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="194" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972933" />
+    <state width="1024" height="194" key="GridCell.Tab.2.right" timestamp="1581347972934">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="194" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972934" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1581337371301">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581337371301" />
+    <state x="209" y="0" key="new project wizard" timestamp="1581578427093">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="0" key="new project wizard/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581345501049" />
+    <state x="209" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1581578427093" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

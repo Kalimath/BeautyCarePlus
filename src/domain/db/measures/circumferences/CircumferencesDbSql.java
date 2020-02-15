@@ -19,12 +19,12 @@ import java.sql.ResultSet;
 import java.util.Properties;
 
 public class CircumferencesDbSql extends ObjectDb implements CircumferencesDb {
-    public CircumferencesDbSql(Properties p) {
+    public CircumferencesDbSql(Properties p){
         super(p);
     }
 
     @Override
-    public void update(Circumferences circumferences, int clientId) {
+    public void update(Circumferences circumferences, int clientId){
         try {
             throw new InstantiationException("updating circumferences to database failed: method is not implemented yet");
         } catch (Exception e) {
@@ -33,13 +33,13 @@ public class CircumferencesDbSql extends ObjectDb implements CircumferencesDb {
     }
 
     @Override
-    public Circumferences get(int controleId) {
+    public Circumferences get(int controleId){
         Circumferences circumferences = null;
-        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
+        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())) {
             System.out.println("Circumferences query started");
-            String querie= "SELECT * FROM omtrekken where controleid = ?";
+            String querie = "SELECT * FROM omtrekken where controleid = ?";
             PreparedStatement statementp = connection.prepareStatement(querie);
-            statementp.setInt(1,controleId);
+            statementp.setInt(1, controleId);
             ResultSet result = statementp.executeQuery();
             while (result.next()) {
                 circumferences = new Circumferences();
@@ -53,7 +53,7 @@ public class CircumferencesDbSql extends ObjectDb implements CircumferencesDb {
                 //circumferences.setComment(result.getString("commentaar"));
             }
             System.out.println("Circumferences query ended");
-        }catch (Exception se){
+        } catch (Exception se) {
             se.printStackTrace();
             throw new DbException(se.getMessage());
 
@@ -62,29 +62,29 @@ public class CircumferencesDbSql extends ObjectDb implements CircumferencesDb {
     }
 
     @Override
-    public void add(Circumferences circumferences, int controleId) {
-        try(Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())){
+    public void add(Circumferences circumferences, int checkupId, int circumferencesId){
+        try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())) {
 
             String querie = "INSERT INTO omtrekken(omtrekkenid,controleid, knieomtrek, dijomtrek, tailleomtrek, armomtrek, heupomtrek, kuitomtrek) values (?,?,?,?,?,?,?,?)";
             PreparedStatement statementp = connection.prepareStatement(querie);
-            statementp.setInt(1,getNewRandomId());
-            statementp.setDouble(2,controleId);
-            statementp.setDouble(3,circumferences.getKnee());
-            statementp.setDouble(4,circumferences.getThigh());
-            statementp.setDouble(5,circumferences.getWaist());
-            statementp.setDouble(6,circumferences.getArm());
-            statementp.setDouble(7,circumferences.getHip());
-            statementp.setDouble(8,circumferences.getCalf());
+            statementp.setInt(1, getNewRandomId());
+            statementp.setDouble(2, circumferencesId);
+            statementp.setDouble(3, circumferences.getKnee());
+            statementp.setDouble(4, circumferences.getThigh());
+            statementp.setDouble(5, circumferences.getWaist());
+            statementp.setDouble(6, circumferences.getArm());
+            statementp.setDouble(7, circumferences.getHip());
+            statementp.setDouble(8, circumferences.getCalf());
 
             statementp.execute();
             statementp.close();
-        }catch (Exception se){
+        } catch (Exception se) {
             throw new DbException(se.getMessage());
         }
     }
 
     @Override
-    public void delete(int clientId) {
+    public void delete(int clientId){
         try {
             throw new InstantiationException("deleting circumferences to database failed: method is not implemented yet");
         } catch (Exception e) {

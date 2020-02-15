@@ -34,7 +34,7 @@ public class Checkup extends RequestHandler {
             request.getRequestDispatcher(dest).forward(request,response);
         } else {
             try {
-                this.getDatabaseService().addCheckup(definedWeights,definedCircumferences, (Integer) request.getSession().getAttribute("clientId"));
+                this.getDatabaseService().addCheckupToLatestVisit(definedWeights,definedCircumferences, (Integer) request.getSession().getAttribute("clientId"));
 
                 request.getSession().setAttribute("clientHeights",getDatabaseService().getLatestVisit(clientId));
             } catch (Exception e) {

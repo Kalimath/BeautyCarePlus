@@ -15,10 +15,10 @@ public interface CircumferencesDb {
     void update(Circumferences circumferences, int clientId);
 
     //not written yet
-    Circumferences get(int clientId);
+    Circumferences get(int checkupId);
 
-    //not written yet
-    void add(Circumferences circumferences, int clientId);
+    //not tested yet
+    void add(Circumferences circumferences, int checkupId, int circumferencesId);
 
     //not written yet
     void delete(int clientId);

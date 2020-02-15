@@ -13,8 +13,12 @@ import domain.db.error.ErrorDb;
 import domain.db.error.ErrorDbSql;
 import domain.db.excellPlusCure.ExcellPlusCureDb;
 import domain.db.excellPlusCure.ExcellPlusCureDbSql;
+import domain.db.measures.circumferences.CircumferencesDb;
+import domain.db.measures.circumferences.CircumferencesDbSql;
 import domain.db.measures.heights.HeightsDb;
 import domain.db.measures.heights.HeightsDbSql;
+import domain.db.measures.weights.WeightsDb;
+import domain.db.measures.weights.WeightsDbSql;
 import domain.db.sport.SportDb;
 import domain.db.sport.SportDbSql;
 import domain.db.user.UserDb;
@@ -46,6 +50,8 @@ public class DatabaseService {
     private AddressDb addressDb;
     private CheckupDb checkupDb;
     private VisitDb visitDb;
+    private CircumferencesDb circumferencesDb;
+    private WeightsDb weightsDb;
 
     public DatabaseService(Properties p) {
         setProperties(p);
@@ -58,11 +64,30 @@ public class DatabaseService {
         excellPlusCureDb = new ExcellPlusCureDbSql(this.properties);
         checkupDb = new CheckupDbSql(this.properties);
         visitDb = new VisitDbSql(this.properties);
+        circumferencesDb = new CircumferencesDbSql(this.properties);
+        weightsDb = new WeightsDbSql(this.properties);
     }
 
     //CHECKUP METHODS
     public List<Checkup> getAllClientsCheckups(String name) {
         return null;
+    }
+
+    public Checkup getLatestCheckup(int clientId){
+        Checkup latest = checkupDb.getFromLatestVisit(clientId);
+        if(latest!=null){
+            return latest;
+        }else{
+            throw new NullPointerException("Databaseservice can't return empty object Checkup, in in method getLatestCheckup()");
+        }
+
+    }
+
+    public void addCheckupToLatestVisit(Weights definedWeights, Circumferences definedCircumferences, int clientId) {
+        int visitId = visitDb.getLatestVisitId(excellPlusCureDb.getCurrentExcellPlusCureId(clientId));
+        Checkup newCheckup = new Checkup(getHeightsFromClient(clientId),definedWeights,definedCircumferences);
+        checkupDb.add(newCheckup, visitId, clientId);
+        //nog niet getest
     }
 
     //USER METHODS
@@ -227,20 +252,7 @@ public class DatabaseService {
         heightsDb.add(clientHeights,clientId);
     }
 
-    public void addCheckup(Weights definedWeights, Circumferences definedCircumferences, Integer clientId) {
-        Checkup newCheckup = new Checkup(getHeightsFromClient(clientId),definedWeights,definedCircumferences);
-        checkupDb.add(newCheckup);
-    }
 
-    public Checkup getLatestCheckup(int clientId){
-        Checkup latest = checkupDb.getFromLatestVisit(clientId);
-        if(latest!=null){
-            return latest;
-        }else{
-            throw new NullPointerException("Databaseservice can't return empty object Checkup, in in method getLatestCheckup()");
-        }
-
-    }
 
     public Visit getLatestVisit(int clientId) {
         int cureId = excellPlusCureDb.getCurrentExcellPlusCureId(clientId);

@@ -18,10 +18,14 @@
 </jsp:include>
 <main>
     <article>
-        <h1>Opmeting 1/2</h1>
+        <h1>Opmeting</h1>
     </article>
     <form method="post" action="#" class="red" validate>
         <div class="article-container">
+            <article>
+                <h2>Invoer weegschaal</h2>
+                <p>lengte: <c:out value="${clientHeights.fullLength}"/></p>
+            </article>
             <article>
                 <h2>Omtrek van:</h2>
                 <p style="padding: 0">
@@ -65,9 +69,9 @@
 
 
                 </fieldset>
-                <p>De opmeethoogte staat naast elk invoerveld</p>
+                <h3>De opmeethoogte staat naast elk invoerveld</h3>
             </article>
-            <article> <h2>Meting:</h2>
+            <article><h2>Meting:</h2>
                 <p style="padding: 0">
                 <p class="row">
                 <div class="col-25">
@@ -89,10 +93,10 @@
                                            value="${previousValueSpiermassa}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="lichaamsvocht" class="control-label">Lichaamsvocht:</label></div>
-                <div class="col-75"><input type="number" id="lichaamsvocht" name="lichaamsvocht" placeholder="in kg" min="0"
+                <div class="col-25"><label for="vochtmassa" class="control-label">Lichaamsvocht:</label></div>
+                <div class="col-75"><input type="number" id="vochtmassa" name="vochtmassa" placeholder="in kg" min="0"
                                            step="0.01"
-                                           value="${previousValueLichaamsvocht}"></div>
+                                           value="${previousValueVochtmassa}"></div>
                 </p>
                 <p class="row">
                 <div class="col-25"><label for="bmr" class="control-label">Bmr:</label></div>
@@ -101,16 +105,42 @@
                                            value="${previousValueBmr}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="metabolischeLeeftijd" class="control-label">Metabolische leeftijd:</label></div>
-                <div class="col-75"><input type="number" id="metabolischeLeeftijd" name="metabolischeLeeftijd" placeholder="in jaar" min="0"
+                <div class="col-25"><label for="botmassa" class="control-label">Botmassa:</label></div>
+                <div class="col-75"><input type="number" id="botmassa" name="botmassa" placeholder="in kg" min="0"
+                                           step="0.01"
+                                           value="${previousValueBotmassa}"></div>
+                </p>
+                <p class="row">
+                <div class="col-25"><label for="metabolischeLeeftijd" class="control-label">Metabolische
+                    leeftijd:</label></div>
+                <div class="col-75"><input type="number" id="metabolischeLeeftijd" name="metabolischeLeeftijd"
+                                           placeholder="in jaar" min="0"
                                            step="0.01"
                                            value="${previousValueMetabolischeLeeftijd}"></div>
                 </p>
                 <p class="row">
-                <div class="col-25"><label for="idealeVetmassa" class="control-label">Ideale vetmassa:</label></div>
-                <div class="col-75"><input type="number" id="idealeVetmassa" name="idealeVetmassa" placeholder="in kg" min="0"
+                <div class="col-25"><label for="visceraleVetwaarde" class="control-label">VisceraleVetwaarde:</label>
+                </div>
+                <div class="col-75"><input type="number" id="visceraleVetwaarde" name="visceraleVetwaarde"
+                                           placeholder="" min="0"
                                            step="0.01"
-                                           value="${previousValueIdealeVetmassa}"></div>
+                                           value="${previousValueVisceraleVetwaarde}"></div>
+                </p>
+                <p class="row">
+                <div class="col-25"><label for="idealeVetmassaBegin" class="control-label">Ideale vetmassa
+                    begin:</label></div>
+                <div class="col-75"><input type="number" id="idealeVetmassaBegin" name="idealeVetmassaBegin"
+                                           placeholder="in kg" min="0"
+                                           step="0.01"
+                                           value="${previousValueIdealeVetmassaBegin}"></div>
+                </p>
+                <p class="row">
+                <div class="col-25"><label for="idealeVetmassaEinde" class="control-label">Ideale vetmassa
+                    einde:</label></div>
+                <div class="col-75"><input type="number" id="idealeVetmassaEinde" name="idealeVetmassaEinde"
+                                           placeholder="in kg" min="0"
+                                           step="0.01"
+                                           value="${previousValueIdealeVetmassaEinde}"></div>
                 </p>
             </article>
         </div>

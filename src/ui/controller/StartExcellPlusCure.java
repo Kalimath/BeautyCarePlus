@@ -39,7 +39,7 @@ public class StartExcellPlusCure extends RequestHandler {
                 request.setAttribute("errorMessage", "Voeg eerst beurten toe!");
             }
 
-            this.getControllerFactory().getController("ShowClient", getDatabaseService()).handleRequest(request, response);
+            this.getControllerFactory().getController("ExcellPlusCureView", getDatabaseService()).handleRequest(request, response);
         }
 
 

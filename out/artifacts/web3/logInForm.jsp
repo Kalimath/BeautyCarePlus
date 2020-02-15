@@ -40,12 +40,12 @@
                 <p class="row">
                 <div class="col-25"><label for="email" class="control-label">Email:</label></div>
                 <div class="col-75"><input type="email" id="email" name="email"
-                                           value="${previousValueEmail}<c:out value="${param.email}">"></div>
+                                           value="${previousValueEmail}"></div>
                 </p>
 
                 <p class="row">
                 <div class="col-25"><label for="password" class="control-label">Wachtwoord:</label></div>
-                <div class="col-75"><input type="password" id="password" name="password" value="<c:out value="${param.password}">"></div>
+                <div class="col-75"><input type="password" id="password" name="password" value="">"></div>
                 </p>
 
                 <div class="col-75">

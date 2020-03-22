@@ -18,7 +18,7 @@ public interface CircumferencesDb {
     Circumferences get(int checkupId);
 
     //not tested yet
-    void add(Circumferences circumferences, int checkupId, int circumferencesId);
+    void add(Circumferences circumferences, int circumferencesId);
 
     //not written yet
     void delete(int clientId);

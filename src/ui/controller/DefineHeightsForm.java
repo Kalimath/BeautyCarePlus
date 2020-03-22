@@ -5,7 +5,7 @@
  * Proprietary and confidential
  * Written by MB-Development (Kalimath), Month Year
  */
-
+/*
 package ui.controller;
 
 import domain.model.personal.Client;
@@ -26,4 +26,4 @@ public class DefineHeightsForm extends RequestHandler {
             request.getRequestDispatcher("defineHeightsForm.jsp").forward(request,response);
         }
     }
-}
+}*/

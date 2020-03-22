@@ -6,6 +6,7 @@
  * Written by MB-Development (mathi), Month Year
  */
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -170,8 +171,7 @@ public class TestMeasureClient {
 
         driver.findElement(By.id("submit")).click();
 
-//        CheckupDb checkupDb = new CheckupDbSql()
-//        nog niet af !!!
+        assertEquals(driver.getCurrentUrl(),"http://localhost:8080/Controller?command=ExcellPlusCureView");
 
     }
 
@@ -180,8 +180,8 @@ public class TestMeasureClient {
 
     }*/
 
-   /* @After
+   @After
     public void terminate(){
-//        driver.quit();
-    }*/
+        driver.quit();
+    }
 }

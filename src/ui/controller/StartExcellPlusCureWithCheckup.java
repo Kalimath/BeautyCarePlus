@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Timestamp;
 
 public class StartExcellPlusCureWithCheckup extends RequestHandler {
     @Override
@@ -14,7 +15,7 @@ public class StartExcellPlusCureWithCheckup extends RequestHandler {
         int clientId = (int) request.getSession().getAttribute("clientId");
         ExcellPlusCure cure = getDatabaseService().getExcellPlusCureFromClientWithId(clientId);
         boolean checkupNeeded = false;
-        if (request.getSession().getAttribute("todaysVisit") != null||getDatabaseService().getHeightsFromClient(clientId)==null) {
+        if (/*request.getSession().getAttribute("todaysVisit") != null||*/getDatabaseService().getHeightsFromClient(clientId)==null) {
             if(getDatabaseService().getHeightsFromClient(clientId)==null){
                 request.setAttribute("errorMessage", "Meethoogtes zijn nog niet gedefinieerd!");
                 request.getRequestDispatcher("cureView.jsp").forward(request, response);
@@ -24,13 +25,16 @@ public class StartExcellPlusCureWithCheckup extends RequestHandler {
             }
         } else {
             if (cure.getTurnsLeft() > 0) {
-                Visit newVisit = new Visit();
+                if(request.getSession().getAttribute("todaysVisit")==null){
+                    Visit newVisit = new Visit();
+                    newVisit.setMoment(new Timestamp(System.currentTimeMillis()));
+                    getDatabaseService().addVisit(newVisit,clientId);
+                    cure.startNewVisit(newVisit);
+                    request.getSession().setAttribute("todaysVisit", newVisit);
+                }
 
-                cure.startNewVisit(newVisit);
                 getDatabaseService().updateExcellPlusCure(cure,clientId);
                 request.getSession().setAttribute("clientsCurrentCure", cure);
-                request.getSession().setAttribute("todaysVisit", newVisit);
-
                 request.getRequestDispatcher("checkupForm.jsp").forward(request, response);
 
             } else {

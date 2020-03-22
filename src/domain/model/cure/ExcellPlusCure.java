@@ -15,6 +15,7 @@ public class ExcellPlusCure implements Serializable {
     private Date cureStart;
     private int turnsLeft,turnsTotal;
     private List<Visit> visits;
+    private Visit latestVisit;
 
     public ExcellPlusCure() {
         visits = new ArrayList<>();
@@ -27,6 +28,7 @@ public class ExcellPlusCure implements Serializable {
         setCureStart(cureStart);
         setTurnsLeft(turnsLeft);
         setTurnsTotal(turnsTotal);
+        setLatestVisit();
     }
 
     public int getTurnsTotal() {
@@ -47,6 +49,7 @@ public class ExcellPlusCure implements Serializable {
 
     public void setVisits(List<Visit> visits) {
         this.visits = visits;
+        setLatestVisit();
     }
 
     private void setTurnsLeft(int turnsLeft) {
@@ -104,7 +107,7 @@ public class ExcellPlusCure implements Serializable {
         return checkups;
     }
 
-    public Visit getLatestVisit(){
+    public Visit setLatestVisit(){
         Visit latestVisit = null;
         if(this.visits!=null||!this.visits.isEmpty()){
             for(Visit v : visits) {
@@ -166,5 +169,9 @@ public class ExcellPlusCure implements Serializable {
 
     public List<Visit> getVisits() {
         return visits;
+    }
+
+    public Visit getLatestVisit(){
+        return latestVisit;
     }
 }

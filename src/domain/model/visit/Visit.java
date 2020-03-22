@@ -29,6 +29,12 @@ public class Visit {
 
     public Visit(){
         this.moment = new Timestamp(System.currentTimeMillis());
+        this.comment = "";
+    }
+
+    public Visit(Checkup checkup){
+        this.moment = new Timestamp(System.currentTimeMillis());
+        this.comment = "";
     }
 
     public Timestamp getMoment() {

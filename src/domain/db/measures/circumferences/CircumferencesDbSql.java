@@ -25,11 +25,7 @@ public class CircumferencesDbSql extends ObjectDb implements CircumferencesDb {
 
     @Override
     public void update(Circumferences circumferences, int clientId){
-        try {
-            throw new InstantiationException("updating circumferences to database failed: method is not implemented yet");
-        } catch (Exception e) {
-            System.out.println("updating circumferences to database failed: method is not implemented yet");
-        }
+        System.out.println("updating circumferences to database failed: method is not implemented yet");
     }
 
     @Override
@@ -37,7 +33,7 @@ public class CircumferencesDbSql extends ObjectDb implements CircumferencesDb {
         Circumferences circumferences = null;
         try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())) {
             System.out.println("Circumferences query started");
-            String querie = "SELECT * FROM omtrekken where controleid = ?";
+            String querie = "SELECT * FROM omtrekken inner join controle on (omtrekken.omtrekkenid=controle.omtrekkenid) where controle.controleid = ?";
             PreparedStatement statementp = connection.prepareStatement(querie);
             statementp.setInt(1, controleId);
             ResultSet result = statementp.executeQuery();
@@ -50,7 +46,7 @@ public class CircumferencesDbSql extends ObjectDb implements CircumferencesDb {
                 circumferences.setArm(result.getDouble("arm"));
                 circumferences.setHip(result.getDouble("heup"));
                 circumferences.setCalf(result.getDouble("kuit"));
-                //circumferences.setComment(result.getString("commentaar"));
+                circumferences.setComment(result.getString("opmerking"));
             }
             System.out.println("Circumferences query ended");
         } catch (Exception se) {
@@ -62,33 +58,30 @@ public class CircumferencesDbSql extends ObjectDb implements CircumferencesDb {
     }
 
     @Override
-    public void add(Circumferences circumferences, int checkupId, int circumferencesId){
+    public void add(Circumferences circumferences, int circumferencesId){
         try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())) {
-
-            String querie = "INSERT INTO omtrekken(omtrekkenid,controleid, knieomtrek, dijomtrek, tailleomtrek, armomtrek, heupomtrek, kuitomtrek) values (?,?,?,?,?,?,?,?)";
+            System.out.println("Circumferences query ADD started");
+            String querie = "INSERT INTO omtrekken(omtrekkenid, knieomtrek, dijomtrek, tailleomtrek, armomtrek, heupomtrek, kuitomtrek, opmerking) values (?,?,?,?,?,?,?,?)";
             PreparedStatement statementp = connection.prepareStatement(querie);
             statementp.setInt(1, getNewRandomId());
-            statementp.setDouble(2, circumferencesId);
-            statementp.setDouble(3, circumferences.getKnee());
-            statementp.setDouble(4, circumferences.getThigh());
-            statementp.setDouble(5, circumferences.getWaist());
-            statementp.setDouble(6, circumferences.getArm());
-            statementp.setDouble(7, circumferences.getHip());
-            statementp.setDouble(8, circumferences.getCalf());
+            statementp.setDouble(2, circumferences.getKnee());
+            statementp.setDouble(3, circumferences.getThigh());
+            statementp.setDouble(4, circumferences.getWaist());
+            statementp.setDouble(5, circumferences.getArm());
+            statementp.setDouble(6, circumferences.getHip());
+            statementp.setDouble(7, circumferences.getCalf());
+            statementp.setString(8, circumferences.getComment());
 
             statementp.execute();
             statementp.close();
         } catch (Exception se) {
             throw new DbException(se.getMessage());
         }
+        System.out.println("Circumferences query ADD ended");
     }
 
     @Override
     public void delete(int clientId){
-        try {
-            throw new InstantiationException("deleting circumferences to database failed: method is not implemented yet");
-        } catch (Exception e) {
-            System.out.println("deleting circumferences to database failed: method is not implemented yet");
-        }
+        System.out.println("deleting circumferences to database failed: method is not implemented yet");
     }
 }

@@ -38,7 +38,6 @@ public class InvalidateClient extends RequestHandler {
         if(request.getSession().getAttribute("clientHeights")!=null){
             request.getSession().removeAttribute("clientHeights");
         }
-
         this.getControllerFactory().getController("Home", getDatabaseService()).handleRequest(request,response);
     }
 }

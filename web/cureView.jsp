@@ -38,7 +38,8 @@
                 <c:choose>
                     <c:when test="${checkupNeeded}">
                         <article>
-                            <h2>Opmeting aangeraden</h2>
+                            <h2>Nieuwe behandeling</h2>
+                            <h3>Opmeting aangeraden</h3>
                             <form method="post" action="Controller?command=StartExcellPlusCureWithCheckup">
                                 <input type="submit" value="Start nieuwe behandeling met opmeting"
                                        id="submitStartCureWithCheckup">
@@ -65,7 +66,12 @@
                         <article>
                             <h2>Nieuwe behandeling</h2>
                             <form method="post" action="Controller?command=StartExcellPlusCure">
-                                <input type="submit" value=" Start " id="submitStartCure">
+                                <input type="submit" value="Start"
+                                       id="submitStartCureNoCheckup">
+                            </form>
+                            <form method="post" action="Controller?command=StartExcellPlusCureWithCheckup">
+                                <input type="submit" value="Start met opmeting"
+                                       id="submitStartCureCheckup">
                             </form>
                             <c:if test="${errorMessage!=null}">
                                 <div class="alertContainer">
@@ -104,10 +110,12 @@
             <h2>Beurten resterend</h2>
             <h3 class="h3NumberField">${clientCure.turnsLeft}</h3>
         </article>
-        <c:if test="${clientCure.latestCheckup!=null}">
+        <c:if test="${latestCheckup!=null}">
             <article>
+                <h2>Laatste behandeling</h2>
+                <h3>${lastVisit.moment}</h3>
                 <h2>Laatste opmeting</h2>
-                <h3>${clientCure.latestCheckup}</h3>
+                <h3>${lastVisitWithCheckup.moment}</h3>
             </article>
         </c:if>
         <div>

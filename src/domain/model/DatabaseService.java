@@ -34,6 +34,7 @@ import domain.model.personal.Address;
 import domain.model.personal.Client;
 import domain.model.visit.Visit;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -53,7 +54,7 @@ public class DatabaseService {
     private CircumferencesDb circumferencesDb;
     private WeightsDb weightsDb;
 
-    public DatabaseService(Properties p) {
+    public DatabaseService(Properties p){
         setProperties(p);
         heightsDb = new HeightsDbSql(this.properties);
         userDb = new UserDbSql(this.properties);
@@ -69,13 +70,13 @@ public class DatabaseService {
     }
 
     //CHECKUP METHODS
-    public List<Checkup> getAllClientsCheckups(String name) {
+    public List<Checkup> getAllClientsCheckups(String name){
         return null;
     }
 
     public Checkup getLatestCheckup(int clientId){
         Checkup latest = checkupDb.getFromLatestVisit(clientId);
-        if(latest!=null){
+        if(latest != null){
             return latest;
         }else{
             throw new NullPointerException("Databaseservice can't return empty object Checkup, in in method getLatestCheckup()");
@@ -83,15 +84,12 @@ public class DatabaseService {
 
     }
 
-    public void addCheckupToLatestVisit(Weights definedWeights, Circumferences definedCircumferences, int clientId) {
-        int visitId = visitDb.getLatestVisitId(excellPlusCureDb.getCurrentExcellPlusCureId(clientId));
-        Checkup newCheckup = new Checkup(getHeightsFromClient(clientId),definedWeights,definedCircumferences);
-        checkupDb.add(newCheckup, visitId, clientId);
-        //nog niet getest
+    public void addVisitWithCheckup(Weights definedWeights, Circumferences definedCircumferences, int clientId){
+        visitDb.add(new Visit(new Checkup(heightsDb.get(clientId),definedWeights,definedCircumferences)),excellPlusCureDb.getCurrentExcellPlusCureId(clientId));
     }
 
     //USER METHODS
-    public void addUser(User user) {
+    public void addUser(User user){
         try {
             userDb.add(user);
         } catch (Exception e) {
@@ -102,16 +100,16 @@ public class DatabaseService {
     }
 
     //LOCAL METHODS
-    public Properties getProperties() {
+    public Properties getProperties(){
         return properties;
     }
 
-    public void setProperties(Properties properties) {
+    public void setProperties(Properties properties){
         this.properties = properties;
     }
 
     //CLIENT METHODS
-    public List<String> getClientnames() {
+    public List<String> getClientnames(){
 
         List<String> names = new ArrayList<>();
         try {
@@ -124,15 +122,15 @@ public class DatabaseService {
         return names;
     }
 
-    public Client getClientWithName(String name) {
+    public Client getClientWithName(String name){
         return clientDb.get(name);
     }
 
-    public Client getClientWithId(int clientId) {
+    public Client getClientWithId(int clientId){
         return clientDb.get(clientId);
     }
 
-    public void updateClient(Client client) {
+    public void updateClient(Client client){
         try {
             clientDb.add(client);
         } catch (Exception e) {
@@ -142,11 +140,11 @@ public class DatabaseService {
 
     }
 
-    public void addClient(Client client) {
+    public void addClient(Client client){
         clientDb.add(client);
     }
 
-    public void deleteClient(String name) {
+    public void deleteClient(String name){
         int clientId = clientDb.getClientId(name);
         clientDb.delete(clientId);
         addressDb.delete(clientId);
@@ -154,7 +152,7 @@ public class DatabaseService {
         heightsDb.delete(clientId);
     }
 
-    public int getClientId(String name) {
+    public int getClientId(String name){
         try {
             return clientDb.getClientId(name);
         } catch (Exception e) {
@@ -164,12 +162,12 @@ public class DatabaseService {
 
     }
 
-    public List<Client> getAllClients() {
+    public List<Client> getAllClients(){
         return clientDb.getAll();
     }
 
     // EXCELLPLUSCURE METHODS
-    public ExcellPlusCure getExcellPlusCureFromClientWithId(int clientId) {
+    public ExcellPlusCure getExcellPlusCureFromClientWithId(int clientId){
         try {
             return (ExcellPlusCure) excellPlusCureDb.get(clientId);
         } catch (Exception e) {
@@ -178,16 +176,16 @@ public class DatabaseService {
         }
     }
 
-    public void updateExcellPlusCure(ExcellPlusCure cure, int clientId) {
+    public void updateExcellPlusCure(ExcellPlusCure cure, int clientId){
         try {
-            this.excellPlusCureDb.update(cure,clientId);
+            this.excellPlusCureDb.update(cure, clientId);
         } catch (Exception e) {
             errorDb.add(new Error(e.getMessage()));
             throw new DomainException("No cure found for this client");
         }
     }
 
-    public List<ExcellPlusCure> getAllExcellPlusCuresFromClientWithId(int clientId) {
+    public List<ExcellPlusCure> getAllExcellPlusCuresFromClientWithId(int clientId){
         try {
             return excellPlusCureDb.getAllFromClient(clientId);
         } catch (Exception e) {
@@ -196,15 +194,15 @@ public class DatabaseService {
         }
     }
 
-    public void addExcellPlusCure(int clientId, ExcellPlusCure cure) {
+    public void addExcellPlusCure(int clientId, ExcellPlusCure cure){
         excellPlusCureDb.add(clientId, cure);
     }
 
     //ERROR METHODS
-    public List<Error> getAllErrors() {
+    public List<Error> getAllErrors(){
         List<Error> errors = new ArrayList<>();
         for (Object o : errorDb.getAll()) {
-            if (o instanceof Error) {
+            if(o instanceof Error){
                 errors.add((Error) o);
             }
         }
@@ -212,11 +210,11 @@ public class DatabaseService {
     }
 
 
-    public void addAddress(int clientId, Address tempAddress) {
+    public void addAddress(int clientId, Address tempAddress){
         addressDb.add(clientId, tempAddress);
     }
 
-    public Address getAddress(int clientId) {
+    public Address getAddress(int clientId){
         try {
             return addressDb.get(clientId);
         } catch (Exception e) {
@@ -225,7 +223,7 @@ public class DatabaseService {
         }
     }
 
-    public User getUser(String email) {
+    public User getUser(String email){
         try {
             return userDb.get(email);
         } catch (Exception e) {
@@ -234,7 +232,7 @@ public class DatabaseService {
         }
     }
 
-    public Heights getHeightsFromClient(int clientId) {
+    public Heights getHeightsFromClient(int clientId){
         Heights heights = null;
         try {
             heights = heightsDb.get(clientId);
@@ -244,24 +242,33 @@ public class DatabaseService {
         return heights;
     }
 
-    public int getCurrentExcellPlusCureId(int clientId) {
+    public int getCurrentExcellPlusCureId(int clientId){
         return excellPlusCureDb.getCurrentExcellPlusCureId(clientId);
     }
 
-    public void addHeightsFromClient(Heights clientHeights, int clientId) {
-        heightsDb.add(clientHeights,clientId);
+    public void addHeightsFromClient(Heights clientHeights, int clientId){
+        heightsDb.add(clientHeights, clientId);
     }
 
 
-
-    public Visit getLatestVisit(int clientId) {
+    public Visit getLatestVisit(int clientId){
         int cureId = excellPlusCureDb.getCurrentExcellPlusCureId(clientId);
 
         Visit latest = visitDb.getLatest(cureId);
-        if(latest!=null){
+        if(latest != null){
             return latest;
         }else{
             throw new NullPointerException("Databaseservice can't return empty object Visit, in in method getLatestVisit()");
         }
+    }
+
+    public void addVisitToday(int clientId){
+        Visit visit = new Visit();
+        visit.setMoment(new Timestamp(System.currentTimeMillis()));
+        visitDb.add(visit, getCurrentExcellPlusCureId(clientId));
+    }
+
+    public void addVisit(Visit visit, int clientId){
+        visitDb.add(visit,getCurrentExcellPlusCureId(clientId));
     }
 }

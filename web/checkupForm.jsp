@@ -20,7 +20,7 @@
     <article>
         <h1 id="pageName">Opmeting</h1>
     </article>
-    <form method="post" action="#" class="red" validate>
+    <form method="post" action="Controller?command=Checkup" class="red" validate>
         <div class="article-container">
             <article>
                 <h2>Invoer weegschaal</h2>

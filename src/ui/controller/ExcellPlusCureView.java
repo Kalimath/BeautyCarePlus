@@ -30,9 +30,9 @@ public class ExcellPlusCureView extends RequestHandler {
         int turns = cure.getTurnsLeft();
         System.out.println("turns = "+turns);
         request.getSession().setAttribute("turnsleft", turns);
-        request.getSession().setAttribute("lastCheckup", cure.getLatestCheckup());
+        request.getSession().setAttribute("lastVisit", cure.getLatestVisit());
+        request.getSession().setAttribute("lastVisitWithCheckup", cure.getLatestVisitWithCheckup());
         request.getSession().setAttribute("clientHeights",getDatabaseService().getHeightsFromClient((Integer) request.getSession().getAttribute("clientId")));
-
         request.getRequestDispatcher("cureView.jsp").forward(request,response);
     }
 }

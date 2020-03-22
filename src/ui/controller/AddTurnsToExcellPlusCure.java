@@ -13,7 +13,7 @@ public class AddTurnsToExcellPlusCure extends RequestHandler {
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int clientId = (int) request.getSession().getAttribute("clientId");
-        ExcellPlusCure cure = getDatabaseService().getExcellPlusCureFromClientWithId(clientId);
+        ExcellPlusCure cure = (ExcellPlusCure) request.getSession().getAttribute("clientCure");
 
         if (cure.getTurnsLeft() == 1 || cure.getTurnsLeft()>=12) {
             System.out.println("Redirected, turns left is higher than 11!");

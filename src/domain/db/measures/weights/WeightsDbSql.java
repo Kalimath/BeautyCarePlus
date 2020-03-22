@@ -72,7 +72,7 @@ public class WeightsDbSql extends ObjectDb implements WeightsDb {
             String querie = "INSERT INTO wegingen(wegingenid,controleid, gewicht, vetmassa, spiermassa, vochtmassa, botmassa, bmr,metabolischeleeftijd,visceralevetwaade,idealevetmassabegin,idealevetmassaeinde) values (?,?,?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement statementp = connection.prepareStatement(querie);
             statementp.setInt(1, weightsId);
-            statementp.setDouble(2, weightsId);
+            statementp.setDouble(2, checkupId);
             statementp.setDouble(3, weights.getWeight());
             statementp.setDouble(4, weights.getFatmass());
             statementp.setDouble(5, weights.getMusclemass());

@@ -7,16 +7,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4458b4d3-da1c-41cf-93a2-cfd5a5de3548" name="Default Changelist" comment="meethoogtes form works, add new client works">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_core_2_7_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_databind_2_7_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/model/JsonConverterSingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/web3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/web3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b3302661-76a0-440f-b454-2ca7c53e552d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b3302661-76a0-440f-b454-2ca7c53e552d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BC-Support.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BC-Support.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/Visit/VisitDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/Visit/VisitDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/Visit/VisitDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/Visit/VisitDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/checkup/CheckupDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/checkup/CheckupDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/circumferences/CircumferencesDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/circumferences/CircumferencesDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/circumferences/CircumferencesDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/circumferences/CircumferencesDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/heights/HeightsDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/heights/HeightsDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/weights/WeightsDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/db/measures/weights/WeightsDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/DatabaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/DatabaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/cure/ExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/cure/ExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/measures/Heights.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/measures/Heights.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/visit/Visit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/domain/model/visit/Visit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddTurnsToExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/AddTurnsToExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/Checkup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/Checkup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ClientAllExcellPlusCures.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ClientExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ClientExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/CreateExcellPlusCureWithTurns.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/CreateExcellPlusCureWithTurns.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/DefineHeights.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/DefineHeightsForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ExcellPlusCureView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/ExcellPlusCureView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/InvalidateClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/InvalidateClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/SaveCheckupStartCure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/StartExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/StartExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/StartExcellPlusCureWithCheckup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/StartExcellPlusCureWithCheckup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/UserLogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/WEB-INF/classes/ui/controller/UserLogIn.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web3/checkupForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/checkupForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/cureView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/cureView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/defineHeightsForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/defineHeightsForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web3/logInForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web3/logInForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/Visit/VisitDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/Visit/VisitDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/Visit/VisitDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/Visit/VisitDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/checkup/CheckupDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/checkup/CheckupDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/circumferences/CircumferencesDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/circumferences/CircumferencesDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/circumferences/CircumferencesDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/circumferences/CircumferencesDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/heights/HeightsDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/heights/HeightsDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/weights/WeightsDbSql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/db/measures/weights/WeightsDbSql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/DatabaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/DatabaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/cure/ExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/cure/ExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/measures/Heights.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/measures/Heights.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/domain/model/visit/Visit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/domain/model/visit/Visit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddTurnsToExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/AddTurnsToExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/Checkup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/Checkup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ClientAllExcellPlusCures.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ClientExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ClientExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/CreateExcellPlusCureWithTurns.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/CreateExcellPlusCureWithTurns.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/DefineHeights.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/DefineHeightsForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ExcellPlusCureView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/ExcellPlusCureView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/InvalidateClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/InvalidateClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/SaveCheckupStartCure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/StartExcellPlusCure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/StartExcellPlusCure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/StartExcellPlusCureWithCheckup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/StartExcellPlusCureWithCheckup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/UserLogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BC-Support/ui/controller/UserLogIn.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/BC-Support/TestMeasureClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BC-Support/TestMeasureClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/Visit/VisitDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/Visit/VisitDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/Visit/VisitDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/Visit/VisitDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/checkup/CheckupDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/checkup/CheckupDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/measures/circumferences/CircumferencesDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/measures/circumferences/CircumferencesDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/measures/circumferences/CircumferencesDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/measures/circumferences/CircumferencesDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/measures/heights/HeightsDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/measures/heights/HeightsDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/db/measures/weights/WeightsDbSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/db/measures/weights/WeightsDbSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/model/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/model/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/model/cure/ExcellPlusCure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/model/cure/ExcellPlusCure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/model/measures/Heights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/model/measures/Heights.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/model/visit/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/model/visit/Visit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/AddTurnsToExcellPlusCure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/AddTurnsToExcellPlusCure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/Checkup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/Checkup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/ClientAllExcellPlusCures.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/ClientExcellPlusCure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/ClientExcellPlusCure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/CreateExcellPlusCureWithTurns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/CreateExcellPlusCureWithTurns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/DefineHeights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/DefineHeights.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/DefineHeightsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/DefineHeightsForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/ExcellPlusCureView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/ExcellPlusCureView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/InvalidateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/InvalidateClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/SaveCheckupStartCure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/SaveCheckupStartCure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/StartExcellPlusCure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/StartExcellPlusCure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/StartExcellPlusCureWithCheckup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/StartExcellPlusCureWithCheckup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/UserLogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/UserLogIn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/TestMeasureClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/TestMeasureClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/checkupForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/checkupForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/clientView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/clientView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/error404.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/error404.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/errorHeader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/errorHeader.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/cureView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/cureView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/defineHeightsForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/defineHeightsForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/logInForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logInForm.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,8 +201,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../web4/jars/jackson-databind-2.7.4.jar!/" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -152,7 +238,7 @@
       <recent name="domain.db" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestMeasureClient">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.5">
     <configuration name="TestFormClient.form_shows_all_errors_when_form_is_submitted_empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BC-Support" />
       <option name="PACKAGE_NAME" value="" />
@@ -246,8 +332,8 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TestFormClient.form_shows_all_errors_when_form_is_submitted_empty" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.5" />
       <item itemvalue="JUnit.TestMeasureClient" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.5" />
     </list>
     <recent_temporary>
       <list>
@@ -269,7 +355,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -338,7 +424,11 @@
       <workItem from="1581337979054" duration="9820000" />
       <workItem from="1581578336673" duration="1337000" />
       <workItem from="1581607560707" duration="1203000" />
-      <workItem from="1581761263790" duration="11339000" />
+      <workItem from="1581761263790" duration="11950000" />
+      <workItem from="1582917634747" duration="239000" />
+      <workItem from="1583063370840" duration="11451000" />
+      <workItem from="1583351913002" duration="606000" />
+      <workItem from="1584876885088" duration="17962000" />
     </task>
     <task id="LOCAL-00001" summary="Excelllplus cure can now be started and will ask for a checkup if needed. Next item to be worked on is the checkup form.">
       <created>1575127123059</created>
@@ -418,83 +508,130 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="22" key="#Tomcat_9.0.5/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581339260381" />
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1581764240505">
+    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583073838912">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1581764240505" />
+    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583073838912" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1583063991051">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1583063991051" />
     <state x="618" y="300" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581337265511">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="618" y="300" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581337265511" />
-    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1581579123902">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2606" y="193" key="FileChooserDialogImpl" timestamp="1584882101579">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581345497306" />
-    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581579123902" />
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom" timestamp="1581786374835">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2606" y="193" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584882101579" />
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583063678233" />
+    <state width="1293" height="336" key="GridCell.Tab.0.bottom" timestamp="1584895608585">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="194" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347973020" />
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581786374835" />
-    <state width="1493" height="175" key="GridCell.Tab.0.center" timestamp="1581786374835">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1293" height="336" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608585" />
+    <state width="1024" height="325" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583082827335" />
+    <state width="1293" height="336" key="GridCell.Tab.0.center" timestamp="1584895608585">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="194" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347973020" />
-    <state width="1493" height="175" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581786374835" />
-    <state width="1493" height="175" key="GridCell.Tab.0.left" timestamp="1581786374835">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1293" height="336" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608585" />
+    <state width="1024" height="325" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583082827335" />
+    <state width="1293" height="336" key="GridCell.Tab.0.left" timestamp="1584895608585">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="194" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347973020" />
-    <state width="1493" height="175" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581786374835" />
-    <state width="1493" height="175" key="GridCell.Tab.0.right" timestamp="1581786374835">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1293" height="336" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608585" />
+    <state width="1024" height="325" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583082827335" />
+    <state width="1293" height="336" key="GridCell.Tab.0.right" timestamp="1584895608585">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="194" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347973020" />
-    <state width="1493" height="175" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581786374835" />
-    <state width="1024" height="318" key="GridCell.Tab.1.bottom" timestamp="1581785791404">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1293" height="336" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608585" />
+    <state width="1024" height="325" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583082827335" />
+    <state width="1293" height="336" key="GridCell.Tab.1.bottom" timestamp="1584895608585">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="194" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972933" />
-    <state width="1024" height="318" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581785791404" />
-    <state width="1024" height="318" key="GridCell.Tab.1.center" timestamp="1581785791404">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1293" height="336" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608585" />
+    <state width="1024" height="103" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583081045488" />
+    <state width="1293" height="336" key="GridCell.Tab.1.center" timestamp="1584895608585">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="194" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972933" />
-    <state width="1024" height="318" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1581785791404" />
-    <state width="1024" height="318" key="GridCell.Tab.1.left" timestamp="1581785791404">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1293" height="336" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608585" />
+    <state width="1024" height="103" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583081045488" />
+    <state width="1293" height="336" key="GridCell.Tab.1.left" timestamp="1584895608585">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="194" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972933" />
-    <state width="1024" height="318" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1581785791404" />
-    <state width="1024" height="318" key="GridCell.Tab.1.right" timestamp="1581785791404">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1293" height="336" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608585" />
+    <state width="1024" height="103" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583081045488" />
+    <state width="1293" height="336" key="GridCell.Tab.1.right" timestamp="1584895608585">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="194" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972933" />
-    <state width="1024" height="318" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581785791404" />
-    <state width="1024" height="318" key="GridCell.Tab.2.bottom" timestamp="1581785791404">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1293" height="336" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608585" />
+    <state width="1024" height="103" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583081045488" />
+    <state width="1293" height="336" key="GridCell.Tab.2.bottom" timestamp="1584895608586">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="194" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972934" />
-    <state width="1024" height="318" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581785791404" />
-    <state width="1024" height="318" key="GridCell.Tab.2.center" timestamp="1581785791404">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1293" height="336" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608586" />
+    <state width="1024" height="103" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583081017339" />
+    <state width="1293" height="336" key="GridCell.Tab.2.center" timestamp="1584895608586">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="194" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972933" />
-    <state width="1024" height="318" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1581785791404" />
-    <state width="1024" height="318" key="GridCell.Tab.2.left" timestamp="1581785791404">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1293" height="336" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608586" />
+    <state width="1024" height="103" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1583081017339" />
+    <state width="1293" height="336" key="GridCell.Tab.2.left" timestamp="1584895608585">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="194" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972933" />
-    <state width="1024" height="318" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1581785791404" />
-    <state width="1024" height="318" key="GridCell.Tab.2.right" timestamp="1581785791404">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1293" height="336" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608585" />
+    <state width="1024" height="103" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1583081017339" />
+    <state width="1293" height="336" key="GridCell.Tab.2.right" timestamp="1584895608586">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="194" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581347972934" />
-    <state width="1024" height="318" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1581785791404" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1581337371301">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1293" height="336" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608586" />
+    <state width="1024" height="103" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1583081017339" />
+    <state width="1293" height="336" key="GridCell.Tab.3.bottom" timestamp="1584895608586">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="336" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608586" />
+    <state width="1024" height="279" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583079768448" />
+    <state width="1293" height="336" key="GridCell.Tab.3.center" timestamp="1584895608586">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="336" key="GridCell.Tab.3.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608586" />
+    <state width="1024" height="279" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1583079768447" />
+    <state width="1293" height="336" key="GridCell.Tab.3.left" timestamp="1584895608586">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="336" key="GridCell.Tab.3.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608586" />
+    <state width="1024" height="279" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1583079768447" />
+    <state width="1293" height="336" key="GridCell.Tab.3.right" timestamp="1584895608586">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="336" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895608586" />
+    <state width="1024" height="279" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1583079768448" />
+    <state x="2231" y="0" key="SettingsEditor" timestamp="1584882124692">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1581337371301" />
+    <state x="2231" y="0" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584882124692" />
+    <state x="2739" y="399" width="326" height="242" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1584881361471">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2739" y="399" width="326" height="242" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584881361471" />
+    <state x="2518" y="67" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584881876620">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2518" y="67" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584881876620" />
+    <state x="478" y="53" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1583074203750" />
     <state x="209" y="0" key="new project wizard" timestamp="1581578427093">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -515,34 +652,29 @@
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/domain/model/cure/ExcellPlusCure.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/domain/db/excellPlusCure/ExcellPlusCureDbSql.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ui/controller/AddClient.java</url>
           <line>67</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/domain/db/checkup/CheckupDbSql.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ui/controller/AddTurnsToExcellPlusCure.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ui/controller/Checkup.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ui/controller/ClientExcellPlusCure.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/domain/db/measures/heights/HeightsDbSql.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ui/controller/ShowClient.java</url>
           <line>21</line>
-          <option name="timeStamp" value="48" />
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

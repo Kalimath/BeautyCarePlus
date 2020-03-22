@@ -13,7 +13,6 @@ import domain.model.visit.Visit;
 import java.util.List;
 
 public interface VisitDb {
-    Visit get(int cureId);
 
     void add(Visit visit, int cureId);
 

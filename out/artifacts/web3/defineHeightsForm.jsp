@@ -47,6 +47,12 @@
         <form method="post" action="Controller?command=DefineHeights" class="red" validate>
             <p style="padding: 0">
             <p class="row">
+            <div class="col-25"><label for="isLeftSide" class="control-label">Kant van meting:</label></div>
+            <div class="col-75">
+                <input type="radio" name="vorst" id="isRightSide" checked="" value="Rechts">
+                <input type="radio" name="vorst" id="isLeftSide" checked="" value="Links"></div>
+            </p>
+            <p class="row">
             <div class="col-25">
                 <label for="knieH" class="control-label">Knie:</label></div>
             <div class="col-75">

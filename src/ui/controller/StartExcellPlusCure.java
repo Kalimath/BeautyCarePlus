@@ -14,7 +14,7 @@ public class StartExcellPlusCure extends RequestHandler {
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int clientId = (int) request.getSession().getAttribute("clientId");
-        ExcellPlusCure cure = getDatabaseService().getExcellPlusCureFromClientWithId(clientId);
+        ExcellPlusCure cure = (ExcellPlusCure) request.getSession().getAttribute("clientCure");
         if (request.getSession().getAttribute("todaysVisit") != null||getDatabaseService().getHeightsFromClient(clientId)==null) {
             if(getDatabaseService().getHeightsFromClient(clientId)==null){
                 request.setAttribute("errorMessage", "Meethoogtes zijn nog niet gedefinieerd!");

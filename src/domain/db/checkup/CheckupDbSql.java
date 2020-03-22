@@ -110,6 +110,8 @@ public class CheckupDbSql extends ObjectDb implements CheckupDb {
             int circumferencesId = getNewRandomId();
             int weightsId = getNewRandomId();
 
+            circumferencesDb.add(checkup.getCircumferences(), clientId);
+            weightsDb.add(checkup.getWeights(), checkupId, clientId);
 
             String querie = "INSERT INTO controle(controleid, datum, bezoekid, wegingid, omtrekkenid, commentaar) values (?,?,?,?,?,?)";
             PreparedStatement statementp = connection.prepareStatement(querie);
@@ -121,9 +123,6 @@ public class CheckupDbSql extends ObjectDb implements CheckupDb {
             statementp.setString(6, checkup.getCircumferences().getComment());
             statementp.execute();
             statementp.close();
-
-            circumferencesDb.add(checkup.getCircumferences(), checkupId, clientId);
-            weightsDb.add(checkup.getWeights(), checkupId, clientId);
         } catch (Exception se) {
             throw new DbException(se.getMessage());
         }

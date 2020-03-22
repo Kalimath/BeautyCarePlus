@@ -4,7 +4,8 @@
  * Unauthorized copying of DefineHeights.java, via any medium is strictly prohibited
  * Proprietary and confidential
  * Written by MB-Development (Kalimath), Month Year
- */
+ *//*
+
 
 package ui.controller;
 
@@ -122,3 +123,4 @@ public class DefineHeights extends RequestHandler {
 
     }
 }
+*/

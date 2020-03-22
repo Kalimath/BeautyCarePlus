@@ -20,77 +20,85 @@ import java.util.Properties;
 
 public class HeightsDbSql extends ObjectDb implements HeightsDb {
 
-    public HeightsDbSql(Properties p) {
+    public HeightsDbSql(Properties p){
         super(p);
     }
 
     @Override
-    public void add(Heights heights, int clientId) {
-        try(Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())){
-            String querie = "INSERT INTO hoogtes(hoogtesid, knie, dij, taille, arm, heup, kuit, volledigelengte, klantid, commentaar) values (?,?,?,?,?,?,?,?,?,?)";
+    public void add(Heights heights, int clientId){
+        try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())) {
+            System.out.println("Heights query ADD started");
+            String querie = "INSERT INTO hoogtes(hoogtesid, knie, dij, taille, arm, heup, kuit, volledigelengte, meetzijde, klantid, commentaar) values (?,?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement statementp = connection.prepareStatement(querie);
-            statementp.setInt(1,getNewRandomId());
-            statementp.setDouble(2,heights.getKnee());
-            statementp.setDouble(3,heights.getThigh());
-            statementp.setDouble(4,heights.getWaist());
-            statementp.setDouble(5,heights.getArm());
-            statementp.setDouble(6,heights.getHip());
-            statementp.setDouble(7,heights.getCalf());
-            statementp.setDouble(8,heights.getFullLength());
-            statementp.setDouble(9,clientId);
-            statementp.setString(10,heights.getComment());
+            statementp.setInt(1, getNewRandomId());
+            statementp.setDouble(2, heights.getKnee());
+            statementp.setDouble(3, heights.getThigh());
+            statementp.setDouble(4, heights.getWaist());
+            statementp.setDouble(5, heights.getArm());
+            statementp.setDouble(6, heights.getHip());
+            statementp.setDouble(7, heights.getCalf());
+            statementp.setDouble(8, heights.getFullLength());
+            statementp.setBoolean(9, heights.getMeasureSide());
+            statementp.setString(10, heights.getComment());
+            statementp.setDouble(11, clientId);
 
             statementp.execute();
             statementp.close();
-        }catch (Exception se){
+        } catch (Exception se) {
             throw new DbException(se.getMessage());
         }
+        System.out.println("Heights query ADD ended");
     }
 
     @Override
-    public void update(Heights heights , int clientId) {
-        try(Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())){
-            String querie = "update hoogtes set hoogtesid=?, knie=?, dij=?, taille=?, arm=?, heup=?, kuit=?, volledigelengte=?,commentaar=? where klantid=?)";
+    public void update(Heights heights, int clientId){
+        try (Connection connection = DriverManager.getConnection(super.getUrl(), super.getProperties())) {
+            System.out.println("Heights query UPDATE started");
+            String querie = "update hoogtes set hoogtesid=?, knie=?, dij=?, taille=?, arm=?, heup=?, kuit=?, volledigelengte=?, meetzijde=?, commentaar=? where klantid=?)";
             PreparedStatement statementp = connection.prepareStatement(querie);
-            statementp.setInt(1,getNewRandomId());
-            statementp.setDouble(2,heights.getKnee());
-            statementp.setDouble(3,heights.getThigh());
-            statementp.setDouble(4,heights.getWaist());
-            statementp.setDouble(5,heights.getArm());
-            statementp.setDouble(6,heights.getHip());
-            statementp.setDouble(7,heights.getCalf());
-            statementp.setDouble(8,heights.getFullLength());
-            statementp.setString(9,heights.getComment());
-            statementp.setDouble(10,clientId);
+            statementp.setInt(1, getNewRandomId());
+            statementp.setDouble(2, heights.getKnee());
+            statementp.setDouble(3, heights.getThigh());
+            statementp.setDouble(4, heights.getWaist());
+            statementp.setDouble(5, heights.getArm());
+            statementp.setDouble(6, heights.getHip());
+            statementp.setDouble(7, heights.getCalf());
+            statementp.setDouble(8, heights.getFullLength());
+            statementp.setBoolean(9, heights.getMeasureSide());
+            statementp.setString(10, heights.getComment());
+            statementp.setDouble(11, clientId);
 
             statementp.execute();
             statementp.close();
-        }catch (Exception se){
+        } catch (Exception se) {
             throw new DbException(se.getMessage());
         }
+        System.out.println("Heights query UPDATE ended");
     }
 
     @Override
-    public void delete(int clientId) {
-        try (Connection connection = DriverManager.getConnection(this.getUrl(), this.getProperties())){
+    public void delete(int clientId){
+        try (Connection connection = DriverManager.getConnection(this.getUrl(), this.getProperties())) {
+            System.out.println("Heights query DELETE started");
             String querie = "DELETE from hoogtes where klantid = ?";
             PreparedStatement statementp = connection.prepareStatement(querie);
-            statementp.setInt(1,clientId);
+            statementp.setInt(1, clientId);
             statementp.execute();
             statementp.close();
-        }catch (Exception se){
+        } catch (Exception se) {
             throw new DbException(se.getMessage());
         }
+        System.out.println("Heights query DELETE ended");
     }
 
     @Override
-    public Heights get(int clientId) {
+    public Heights get(int clientId){
         Heights heights = null;
-        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())){
-            System.out.println("Heights query started");
-            String querie= "SELECT * FROM hoogtes where klantid = ?";
+        try (Connection connection = DriverManager.getConnection(getUrl(), getProperties())) {
+            System.out.println("Heights query GET started");
+            String querie = "SELECT * FROM hoogtes where klantid = ?";
             PreparedStatement statementp = connection.prepareStatement(querie);
-            statementp.setInt(1,clientId);
+            statementp.setInt(1, clientId);
             ResultSet result = statementp.executeQuery();
             while (result.next()) {
                 heights = new Heights();
@@ -102,10 +110,11 @@ public class HeightsDbSql extends ObjectDb implements HeightsDb {
                 heights.setHip(result.getDouble("heup"));
                 heights.setCalf(result.getDouble("kuit"));
                 heights.setFullLength(result.getDouble("volledigelengte"));
+                heights.setMeasureSide(result.getBoolean("meetzijde"));
                 heights.setComment(result.getString("commentaar"));
             }
-            System.out.println("Heights query ended");
-        }catch (Exception se){
+            System.out.println("Heights query GET ended");
+        } catch (Exception se) {
             se.printStackTrace();
             throw new DbException(se.getMessage());
 

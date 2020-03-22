@@ -1,3 +1,4 @@
+/*
 package ui.controller;
 
 import domain.model.measures.Circumferences;
@@ -54,7 +55,8 @@ public class SaveCheckupStartCure extends RequestHandler {
         weights.setIdealFatMassBegin(idealeVetmassaBegin);
         weights.setIdealFatMassEnd(idealeVetmassaEinde);
 
-        this.getDatabaseService().addCheckupToLatestVisit(weights,circumferences,clientid);
+        this.getDatabaseService().addVisitWithCheckup(weights,circumferences,clientid);
         //verwijs door naar behandeling
     }
 }
+*/

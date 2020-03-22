@@ -53,7 +53,6 @@ public class Controller extends HttpServlet {
     protected void processRequest(HttpServletRequest request,
                                   HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("command");
-        System.out.println(action);
         if((request.getSession()==null&&!action.equals("UserLogIn"))||(request.getSession().getAttribute("user")==null&&!action.equals("UserLogIn"))){
             request.getRequestDispatcher("logInForm.jsp").forward(request,response);
         }else{

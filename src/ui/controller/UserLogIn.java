@@ -55,6 +55,7 @@ public class UserLogIn extends RequestHandler {
             if(errors.size()>0){
                 request.setAttribute("errorMessage","email/wachtwoord onjuist");
                 System.out.println("Errors bij login: "+errors.size());
+                for (String errorMessage: errors) System.out.println(errorMessage);
                 request.getRequestDispatcher(destination).forward(request,response);
             }else{
                 this.getControllerFactory().getController("Home",this.getDatabaseService()).handleRequest(request,response);
